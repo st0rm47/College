@@ -53,5 +53,20 @@ int main()
              << "2. Pop an Element\n"
              << "3. Display Stack\n"
              << "4. Exit \n";
+        cout << "Enter your choice: ";
+        cin >> ch;
+        switch(ch)
+        {
+            case 1: cout << "Enter the element to be pushed: ";
+                    cin >> item;
+                    push(stack, item);
+                    break;
+            case 2: pop(stack);
+                    break;
+            case 3: display(stack);
+                    break;
+            case 4: exit(0);
+            default: cout << "Invalid Choice" << endl;
+        }
     }
 }
