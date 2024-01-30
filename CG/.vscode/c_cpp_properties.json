@@ -1,35 +1,45 @@
 {
-    "configurations": [
-        {
-            "name": "windows-clang-x64",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "C:\\MinGW\\include"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
-            "cStandard": "${default}",
-            "cppStandard": "${default}",
-            "intelliSenseMode": "windows-clang-x64"
-        },
-        {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "C:\\MinGW\\include"
-            ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "intelliSenseMode": "${default}",
-            "compilerPath": "C:/MinGW/bin/g++.exe"
-        }
-    ],
-    "version": 4
+  "configurations": [
+    {
+      "name": "windows-clang-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "C:\\msys64\\ucrt64\\include"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
+      "cStandard": "${default}",
+      "cppStandard": "${default}",
+      "intelliSenseMode": "windows-clang-x64"
+    },
+    {
+      "name": "Win32",
+      "includePath": [
+        "d:/Subodh/Github/College/CG/**",
+        "C:/MinGW/include"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:/MinGW/bin/g++.exe",
+      "compilerPathInCppPropertiesJson": "C:/MinGW/bin/g++.exe",
+      "mergeConfigurations": false,
+      "browse": {
+        "path": [
+          "d:/Subodh/Github/College/CG/**",
+          "C:/MinGW/include",
+          "${workspaceFolder}"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "intelliSenseMode": "windows-gcc-x86"
+    }
+  ],
+  "version": 4
 }

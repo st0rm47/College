@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Subodh/Github/College/CG/Home/src",
-      "program": "d:/Subodh/Github/College/CG/Home/src/build/Debug/outDebug",
+      "cwd": "d:/Subodh/Github/College/CG",
+      "program": "d:/Subodh/Github/College/CG/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
