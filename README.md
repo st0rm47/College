@@ -9,6 +9,12 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 1: Introduction to Arrays](./data_structures_algorithms/lab1_arrays.pdf)
 - [Lab Report 2: Linked Lists Implementation](./data_structures_algorithms/lab2_linked_lists.pdf)
 - [Lab Report 3: Tree Traversal Techniques](./data_structures_algorithms/lab3_tree_traversal.pdf)
+- [Lab Report 4: Factorial](./DSA/Lab5.cpp)
+- [Lab Report 5: Linked Lists Implementation](./DSA/Lab5.cpp)
+- [Lab Report 6: Factorial](./DSA/Lab6.cpp)
+- [Lab Report 7: Fibonacci Sequence](./DSA/Lab7.cpp)
+- [Lab Report 8: GCD Calculator](./DSA/Lab8.cpp)
+- [Lab Report 9: Tower of Hanoi](./DSA/Lab9.cpp)
 
 ### 2. Computer Architecture
 
