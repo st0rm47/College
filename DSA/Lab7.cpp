@@ -1,25 +1,28 @@
 // Write a recursive program to display the series of n number of fibonacci sequences.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+// Function to calculate fibonacci series using recursion
 int fibo(int n)
 {
-    if (n==0)
-        return 0;
-    else if(n==1)
-        return 1;
+    if (n <= 1)
+        return n;
     else
-        return(fibo(n-1)+fibo(n-2));
+        return (fibo(n - 1) + fibo(n - 2));
 }
-
 int main()
 {
-    int n,i;
-    cout << "Enter a number:";
+    cout << "\t\t========================" << endl;
+    cout << "\t\t  Fibonacci Calculator  " << endl;
+    cout << "\t\t========================" << endl;
+
+    int n, i;
+    cout << "Enter a non-negative integer: ";
     cin >> n;
+
     cout << "Fibonacci series:" << endl;
-    for(i=0;i<n;i++)
-        cout << fibo(i) << "\t" ;
+    for (i = 0; i < n; i++)
+        cout << fibo(i) << "\t";
     return 0;
 }
