@@ -20,7 +20,6 @@ This repository contains lab reports for various subjects as part of the college
 
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
-<!-- - [Lab Report 3: ](./CA/) -->
 
 ### 3. Numerical Methods
 
@@ -31,9 +30,9 @@ This repository contains lab reports for various subjects as part of the college
 
 ### 4. Computer Graphics
 
-- [Lab Report 1: Introduction to OpenGL](./computer_graphics/lab1_opengl_intro.pdf)
+<!-- - [Lab Report 1: Introduction to OpenGL](./computer_graphics/lab1_opengl_intro.pdf)
 - [Lab Report 2: 2D Transformations](./computer_graphics/lab2_2d_transformations.pdf)
-- [Lab Report 3: 3D Graphics Rendering](./computer_graphics/lab3_3d_graphics_rendering.pdf)
+- [Lab Report 3: 3D Graphics Rendering](./computer_graphics/lab3_3d_graphics_rendering.pdf) -->
 
 ## How to Use
 
