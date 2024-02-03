@@ -7,13 +7,9 @@ This repository contains lab reports for various subjects as part of the college
 ### 1. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
-- [Lab Report 2: ](./DSA/Lab2.cpp)
-- [Lab Report 3: Queue Implementation](./DSA/Lab3.cpp)
+- [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
+- [Lab Report 3: Linear Queue Implementation](./DSA/Lab3.cpp)
 - [Lab Report 4: Circular Queue Implementation](./DSA/Lab4.cpp)
-- [Lab Report 1: Memory Allocation](./data_structures_algorithms/lab1_arrays.pdf)
-- [Lab Report 2: Linked Lists Implementation](./data_structures_algorithms/lab2_linked_lists.pdf)
-- [Lab Report 3: Queue Implementation](./data_structures_algorithms/lab3_tree_traversal.pdf)
-- [Lab Report 4: Circular Queue Implementation](./DSA/Lab5.cpp)
 - [Lab Report 5: Linked Lists Implementation](./DSA/Lab5.cpp)
 - [Lab Report 6: Factorial](./DSA/Lab6.cpp)
 - [Lab Report 7: Fibonacci Sequence](./DSA/Lab7.cpp)
@@ -22,15 +18,16 @@ This repository contains lab reports for various subjects as part of the college
 
 ### 2. Computer Architecture
 
-- [Lab Report 1: Introduction to Assembly Language](./computer_architecture/lab1_assembly_intro.pdf)
-- [Lab Report 2: MIPS Architecture](./computer_architecture/lab2_mips_architecture.pdf)
-- [Lab Report 3: Memory Hierarchy](./computer_architecture/lab3_memory_hierarchy.pdf)
+- [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
+- [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
+<!-- - [Lab Report 3: ](./CA/) -->
 
 ### 3. Numerical Methods
 
-- [Lab Report 1: Introduction to Numerical Methods](./numerical_methods/lab1_intro_numerical_methods.pdf)
-- [Lab Report 2: Solving Linear Equations](./numerical_methods/lab2_linear_equations.pdf)
-- [Lab Report 3: Numerical Integration](./numerical_methods/lab3_numerical_integration.pdf)
+- [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
+- [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
+- [Lab Report 3: Secant Method](./NM/Secant.c)
+- [Lab Report 4: Fixed Point Method](./NM/FixedPoint.c)
 
 ### 4. Computer Graphics
 
