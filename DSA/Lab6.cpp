@@ -1,27 +1,29 @@
+//WAP to calculate factorial of a number using recursion.
+
 #include <iostream>
 using namespace std;
 
 // Function to calculate factorial using recursion
-int facto(int n)
+int factorial(int n) 
 {
-    if (n <= 1)
+    if (n <=1)
         return 1;
     else
-        return (n * facto(n - 1));
+        return n * factorial(n - 1);
 }
-int main()
-{
+int main() 
+{  
     cout << "\t\t========================" << endl;
     cout << "\t\t  Factorial Calculator  " << endl;
     cout << "\t\t========================" << endl;
-
-    int n;
+    
+    int num;
     cout << "Enter a non-negative integer: ";
-    cin >> n;
+    cin >> num;
 
-    if (n < 0)
+    if (num < 0)
         cout << "Factorial is not defined for negative numbers." << endl;
     else
-        cout << "Factorial of " << n << " is " << facto(n) << endl;
+        cout << "Factorial of " << num << " is " << factorial(num) << endl;
     return 0;
 }
