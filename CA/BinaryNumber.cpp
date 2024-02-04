@@ -8,6 +8,7 @@ void binary(int a){
 }
 int main(){
     int n;
+    cout << endl;
     cout << "Enter an integer: ";
     cin >> n;
     cout << "The hex equivalent is: " << hex << n << endl;
