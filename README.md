@@ -39,4 +39,4 @@ This repository contains lab reports for various subjects as part of the college
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/college-lab-reports.git
+   git clone https://github.com/st0rm47/College.git
