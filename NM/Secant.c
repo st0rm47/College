@@ -4,6 +4,7 @@ int a3, a2, a1, a0;
 float f(float x) {
     return (a3 * x * x * x + a2 * x * x + a1 * x + a0);
 }
+
 int main()
 {
     float x0, x1, x2, fx1, fx0, E, Era;
