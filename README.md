@@ -40,3 +40,5 @@ This repository contains lab reports for various subjects as part of the college
 
    ```bash
    git clone https://github.com/st0rm47/College.git
+
+
