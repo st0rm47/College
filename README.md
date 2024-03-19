@@ -15,6 +15,13 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 7: Fibonacci Sequence](./DSA/Lab7.cpp)
 - [Lab Report 8: GCD Calculator](./DSA/Lab8.cpp)
 - [Lab Report 9: Tower of Hanoi](./DSA/Lab9.cpp)
+- [Lab Report 10: Binary Search](./DSA/Lab10.cpp)
+- [Lab Report 11: Linear Search](./DSA/Lab11.cpp)
+- [Lab Report 12: Bubble Sort Algorithm](./DSA/Lab12.cpp)
+- [Lab Report 13: Shell Sort Algorithm](./DSA/Lab13.cpp)
+- [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
+- [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
+
 
 ### 2. Computer Architecture
 
@@ -35,10 +42,8 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 3: 3D Graphics Rendering](./computer_graphics/lab3_3d_graphics_rendering.pdf) -->
 
 ## How to Use
-
-1. Clone the repository to your local machine:
+   >*Clone the repository to your local machine*
 
    ```bash
    git clone https://github.com/st0rm47/College.git
-
-
+   ```
