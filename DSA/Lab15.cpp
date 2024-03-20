@@ -78,6 +78,7 @@ int main()
     cout << "Enter the elements: ";
     for (int i = 0; i < n; i++)
         cin >> A[i];
+    cout << endl;
 
     // Display original array
     cout << "Original array: ";
