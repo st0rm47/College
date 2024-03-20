@@ -1,4 +1,4 @@
-// Write a program to implement merge sort algorithm in ascending order and display each pass.
+// Write a program to implement merge sort algorithm in ascending order.
 
 #include <iostream>
 using namespace std;
