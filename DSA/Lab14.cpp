@@ -61,7 +61,7 @@ int main()
     int l = 0;     // Add variable assignment for l
     int r = n - 1; // Add variable assignment for r
 
-    // Perform merge sort
+    // Perform quick sort
     quickSort(A, l, r);
 
     // Display sorted array
