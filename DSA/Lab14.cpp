@@ -9,6 +9,7 @@ int partition(int A[], int left, int right)
     int x = left;
     int y = right;
     int pivot = A[left], temp;
+    cout << "Pivot: " << pivot << endl;
     while (x < y)
     {
         while (A[x] <= pivot)
@@ -20,12 +21,23 @@ int partition(int A[], int left, int right)
             int temp = A[x];
             A[x] = A[y];
             A[y] = temp;
+            cout << "Array after swap: ";
+            for (int i = left; i <= right; i++)
+                cout << A[i] << " ";
+            cout << endl;
+
         }
     }
     A[left] = A[y];
     A[y] = pivot;
+    
+    cout << "Array after swap: ";
+    for (int i = left; i <= right; i++)
+        cout << A[i] << " ";
+    cout << endl << endl;
     return y;
 }
+
 
 // Function to perform quick sort
 void quickSort(int A[], int left, int right)
@@ -56,7 +68,7 @@ int main()
     cout << "Original array: ";
     for (int i = 0; i < n; i++)
         cout << A[i] << " ";
-    cout << endl;
+    cout << endl << endl;
 
     int l = 0;     // Add variable assignment for l
     int r = n - 1; // Add variable assignment for r
