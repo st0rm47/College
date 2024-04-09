@@ -3,7 +3,6 @@
 #include <iostream>
 #include <graphics.h>
 #include <cmath>
-
 using namespace std;
 
 void DDA(int x1, int y1, int x2, int y2) {
