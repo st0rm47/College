@@ -27,7 +27,7 @@ void BLA(int X1, int Y1, int X2, int Y2){
 int main(){
     int x1, y1, x2, y2;
     int gd = DETECT, gm;
-    initgraph(&gd, &gm, "");
+    initgraph(&gd, &gm, NULL);
 
     cout << "Enter the coordinates of the first point: ";
     cin >> x1 >> y1;
