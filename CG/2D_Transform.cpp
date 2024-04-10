@@ -6,7 +6,7 @@ using namespace std;
 void translation(int x1, int y1, int x2, int y2, int tx, int ty) {
     setcolor(3);
     rectangle(x1, y1, x2, y2);
-    setcolor(3);
+    setcolor(13);
     rectangle(x1 + tx, y1 + ty, x2 + tx, y2 + ty);
     getch();
 }
@@ -16,14 +16,14 @@ void rotation(int x1, int y1, int x2, int y2, double angle) {
     angle = (angle * 3.14) / 180;
     long xr = x1 + ((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle));
     long yr = y1 + ((x2 - x1) * sin(angle) + (y2 - y1) * cos(angle));
-    setcolor(3);
+    setcolor(2);
     rectangle(x1, y1, xr, yr);
     getch();
 }
 void scaling(int x1, int y1, int x2, int y2, int x, int y) {
-    setcolor();
+    setcolor(3);
     rectangle(x1, y1, x2, y2);
-    setcolor(WHITE);
+    setcolor(10);
     rectangle(x1 * x, y1 * y, x2 * x, y2 * y);
     getch();
 }
