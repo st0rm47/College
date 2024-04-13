@@ -66,7 +66,7 @@ int main() {
     line(0, getmaxy() / 2, getmaxx(), getmaxy() / 2);
     line(getmaxx() / 2, 0, getmaxx() / 2, getmaxy());
 
-    cout << "What do you want to perform?\n";
+    cout << "Enter the choice of transformation:";
     cout << "1.Translation\n2.Rotation\n3.Scaling\n4.Reflection\n5.Shearing\n";
     cout << "\nSelection: ";
     cin >> s;
