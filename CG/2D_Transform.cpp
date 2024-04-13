@@ -59,14 +59,13 @@ int main() {
     int gd = DETECT, gm;
     int s, x, y, x1, y1, x2, y2, x3, y3, x4, y4, tx, ty, shx;
     double angle;
-    initgraph(&gd, &gm, "");
+    initgraph(&gd, &gm, NULL);
 
-    // Draw x and y axes
     setcolor(WHITE);
     line(0, getmaxy() / 2, getmaxx(), getmaxy() / 2);
     line(getmaxx() / 2, 0, getmaxx() / 2, getmaxy());
 
-    cout << "Enter the choice of transformation:";
+    cout << "Enter the choice of transformation:\n";
     cout << "1.Translation\n2.Rotation\n3.Scaling\n4.Reflection\n5.Shearing\n";
     cout << "\nSelection: ";
     cin >> s;
