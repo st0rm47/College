@@ -37,9 +37,13 @@ This repository contains lab reports for various subjects as part of the college
 
 ### 4. Computer Graphics
 
-<!-- - [Lab Report 1: Introduction to OpenGL](./computer_graphics/lab1_opengl_intro.pdf)
-- [Lab Report 2: 2D Transformations](./computer_graphics/lab2_2d_transformations.pdf)
-- [Lab Report 3: 3D Graphics Rendering](./computer_graphics/lab3_3d_graphics_rendering.pdf) -->
+- [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
+- [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./CG/DDA_Negative_Slope.cpp)
+- [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./CG/BLA_Positive_Slope.cpp)
+- [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
+- [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
+- [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+
 
 ## How to Use
    >*Clone the repository to your local machine*
