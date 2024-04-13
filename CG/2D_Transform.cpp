@@ -16,14 +16,14 @@ void rotation(int x1, int y1, int x2, int y2, double angle) {
     angle = (angle * 3.14) / 180;
     long xr = x1 + ((x2 - x1) * cos(angle) - (y2 - y1) * sin(angle));
     long yr = y1 + ((x2 - x1) * sin(angle) + (y2 - y1) * cos(angle));
-    setcolor(2);
+    setcolor(13);
     rectangle(x1, y1, xr, yr);
     getch();
 }
 void scaling(int x1, int y1, int x2, int y2, int x, int y) {
     setcolor(3);
     rectangle(x1, y1, x2, y2);
-    setcolor(10);
+    setcolor(13);
     rectangle(x1 * x, y1 * y, x2 * x, y2 * y);
     getch();
 }
@@ -32,7 +32,7 @@ void reflection(int x1, int y1, int x2, int y2, int x3, int y3) {
     line(x1, y1, x2, y2);
     line(x1, y1, x3, y3);
     line(x2, y2, x3, y3);
-    setcolor(5);
+    setcolor(13);
     line(x1, -y1 + 500, x2, -y2 + 500);
     line(x1, -y1 + 500, x3, -y3 + 500);
     line(x2, -y2 + 500, x3, -y3 + 500);
