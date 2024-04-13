@@ -27,6 +27,7 @@ This repository contains lab reports for various subjects as part of the college
 
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
+- [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
 
 ### 3. Numerical Methods
 
