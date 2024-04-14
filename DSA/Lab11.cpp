@@ -31,9 +31,7 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> A[i];
 
-    int key,l,r;
-    l = 0;
-    r = n - 1;
+    int key;
     cout << "Enter the element to search: ";
     cin >> key;
 
