@@ -1,33 +1,40 @@
-// Lagrange Interpolation
+//lagrange interpretation
 #include <stdio.h>
 #include <math.h>
-#define MAX 15
-
-int main(){
-    float x[MAX], fx[MAX], fd[MAX], xp, s, h, v, p;
-    int n, i, j;
-    char q;
-    printf("Lagrange Interpolation\n\n");
-    printf("\nEnter the number of data pairs: ");
-    scanf("%d", &n);
-    printf("\nEnter data pairs x(i) and values f(i) (one set in each line): ");
-    for (i = 1; i <= n; i++)
-        scanf("%f%f", &x[i], &fx[i]);
-    printf("\nEnter the value at which interpolation is required: ");
-    scanf("%f", &xp);
-    h = x[2] - x[1];
-    s = (xp - x[1]) / h;
-    p = 1;
-    v = fx[1];
-    for (i = 1; i <= n; i++)
-        fd[i] = fx[i];
-    for (i = 1; i <= n - 1; i++){
-        for (j = 1; j <= n - i; j++){
-            fd[j] = fd[j + 1] - fd[j];
-        }
-        p = p * (s - i + 1) / i;
-        v = v + p * fd[1];
-    }
-    printf("\nInterpolated function value at x=%f is %f.", xp, v);
-    return 0;
+#include <conio.h>
+int main()
+{
+	float x,v,l;
+	int i,j,n;
+	printf("Enter the number of points: ");
+	scanf("%d",&n);
+	printf("Enter value of x: ");
+	scanf("%f",&x);
+	float xi[n],L[n],fx[n];
+	for (i=0;i<n;i++)
+	{
+		printf("\nPoint %d:\n",i+1);
+		printf("Enter x: ");
+		scanf("%f",&xi[i]);
+		printf("Enter fx:");
+		scanf("%f",&fx[i]);
+	}
+	for (i=0;i<n;i++)
+	{
+		l=1.0;
+		for(j=0;j<n;j++)
+		{
+			if (j!=i)
+			{
+				l=l*((x-xi[j])/(xi[i]-xi[j]));
+			}
+		}
+		L[i]=l;
+	}
+	for (i=0;i<n;i++)
+	{
+		v= v + (fx[i] * L[i]);
+	}
+	printf("Value of v = %f",v);
+	return 0;
 }
