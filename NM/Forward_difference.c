@@ -13,6 +13,5 @@ int main(){
     printf("Enter value at which derivative is needed: ");
     scanf("%lf", &x);
     double d = (f(x + h) - f(x)) / h;
-    printf("Derivative = %.2lf", d);
-    return 0;
+    printf("Derivative = %.2lf", d);  
 }
