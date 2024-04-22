@@ -8,7 +8,7 @@ int main() {
     scanf("%d", &n);
     printf("Enter the value of x to estimate: ");
     scanf("%f", &xp);
-    printf("Enter values ofx and fx: ");
+    printf("Enter values of x and fx: ");
     for (i = 0; i < n; i++)
         scanf("%f%f", &x[i], &y[i]);
     for (i = 0; i < n; i++) {
