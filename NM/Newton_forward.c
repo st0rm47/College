@@ -35,6 +35,6 @@ int main() {
         }
         v = v + ((dd[i] * p) / fac(i));
     }
-    printf("The interpolated value of a=%.4f is %.4f", xp, v);
+    printf("The interpolated value of x=%.4f is %.4f", xp, v);
     return 0;
 }
