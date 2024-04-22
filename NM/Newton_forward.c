@@ -7,7 +7,7 @@ int fac(int n){
 }
 int main() {
     int n, i, j, k;
-    float x[n], fx[n], dd[n], xp, h, s;
+    float x[15], fx[15], dd[15], xp, h, s;
     printf("Forward Difference Interpolation\n\n");
     printf("Enter the number of data pairs: ");
     scanf("%d", &n);
@@ -21,14 +21,14 @@ int main() {
     for (i = 0; i < n; i++) {
         dd[i] = fx[i];
     }
-    for (i = 0; i <= n - 1; i++) {
-        for (j = n - 1; j >= i + 1; j--) {
+    for (i = 0; i < n ; i++) {
+        for (j = n - 1; j > i; j--) {
             dd[j] = dd[j] - dd[j - 1];
         }
     }
-    float v, p;
+    float v=0, p;
     v = dd[0];
-    for (i = 1; i <= n - 1; i++) {
+    for (i = 1; i < n ; i++) {
         p = 1;
         for (k = 1; k <= i; k++) {
             p = p * (s - k + 1);
