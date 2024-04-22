@@ -14,3 +14,4 @@ int main(){
     printf("\nThe value obtained after integration is %.2f",v);
     return 0;
 }
+
