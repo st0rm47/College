@@ -38,12 +38,14 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 5: Lagrange Interpolation](./NM/Lagrange.c)
 - [Lab Report 6: Newton Divided Difference Interpolation](./NM/Divided_difference.c)
 - [Lab Report 7: Newton Forward Difference Interpolation](./NM/Newton_forward.c)
-- [Lab Report 8: Newton Backward Difference Interpolation](./NM/Divided_difference.c)
-- [Lab Report 9: Linear Regression](./NM/Linear_regression.c)
-- [Lab Report 10: Central Difference](./NM/Central_difference.c)
-- [Lab Report 11: Trapezoidal Rule](./NM/Trapezoidal.c)
+<!-- - [Lab Report 8: Newton Backward Difference Interpolation](./NM/Divided_difference.c) -->
+- [Lab Report 8: Linear Regression](./NM/Linear_regression.c)
+- [Lab Report 9: Forward Difference](./NM/Forward_difference.c)
+- [Lab Report 10: Backward Difference](./NM/Backward_difference.c)
+- [Lab Report 11: Central Difference](./NM/Central_difference.c)
 - [Lab Report 12: Simpson's 1/3 Rule](./NM/Simpsons1_3.c)
 - [Lab Report 13: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
+- [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
 
 ### 4. Computer Graphics
 
