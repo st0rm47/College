@@ -1,0 +1,31 @@
+Theory:
+An 8:3 encoder (also known as octal-to-ternary encoder) is a combinational circuit that takes eight input lines and produces a three-bit binary output, indicating the position of the most significant (MSB) active input. 
+It’s commonly used in digital systems for encoding data or addressing schemes.
+
+
+Architecture:
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity encoder is
+    Port ( Input_vector : in  STD_LOGIC_VECTOR (7 downto 0);
+           Output_vector : out  STD_LOGIC_VECTOR (2 downto 0));
+end encoder;
+
+architecture Behavioral of encoder is
+begin
+    process(Input_vector)
+    begin
+        case Input_vector is
+            when "00000001" => Output_vector <= "000";
+            when "00000010" => Output_vector <= "001";
+            when "00000100" => Output_vector <= "010";
+            when "00001000" => Output_vector <= "011";
+            when "00010000" => Output_vector <= "100";
+            when "00100000" => Output_vector <= "101";
+            when "01000000" => Output_vector <= "110";
+            when "10000000" => Output_vector <= "111";
+            when others => Output_vector <= "000"; -- default case
+        end case;
+    end process;
+end Behavioral;
