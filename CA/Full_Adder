@@ -1,0 +1,25 @@
+Theory:
+A full adder is a fundamental building block in digital circuit design, used to add two binary numbers along with a carry input. 
+It outputs the sum of the inputs and a carry out.
+A full adder takes three inputs: two single-bit binary numbers (A and B) to be added and a carry input (Cin) from the previous stage of addition. 
+It produces two outputs: the sum (Sum) of the inputs and a carry out (Cout) to the next stage of addition.
+
+Architecture:
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity full_adder is
+    Port ( A : in  STD_LOGIC;
+           B : in  STD_LOGIC;
+           Cin : in  STD_LOGIC;
+           Sum : out  STD_LOGIC;
+           Cout : out  STD_LOGIC);
+end full_adder;
+
+architecture Behavioral of full_adder is
+begin
+    process(A, B, Cin)
+    begin
+        Sum <= A XOR B XOR Cin;
+        Cout <= (A AND B) OR (B AND Cin) OR (A AND Cin);
+    end process;
+end Behavioral;
