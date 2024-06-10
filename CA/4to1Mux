@@ -1,0 +1,27 @@
+Theory:
+A 4-to-1 multiplexer (often abbreviated as 4:1 MUX) is a combinational circuit that selects one of four input data lines and forwards it to the output line based on the select lines. 
+It's a fundamental building block in digital design and is widely used in various applications, including data routing, signal selection, and control logic.
+
+Architecture:
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity mux is
+    port ( A,B,C,D : in STD_LOGIC; 
+           S0,S1: in STD_L0GIC;
+           Z: out STD_LOGIC);
+end mux;
+
+architecture Behavioral of mux is
+begin
+    process (S0,S1,A,B,C,D)
+    begin
+        case S1 & S0 is
+            when "00" => Z <= A;
+            when "01" => Z <= B;
+            when "10" => Z <= C;
+            when "11" => Z <= D;
+            when others => Z <= 'X';
+        end case;
+    end process;
+end Behavioral;
