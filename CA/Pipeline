@@ -1,0 +1,42 @@
+Theory: 
+A 3 segment pipeline is a type of pipeline architecture commonly used in digital systems to improve processing throughput and efficiency.
+The pipeline is divided into segments or stages, with each segment responsible for performing specific operation on data.
+Y= (a+b)*c
+
+Architecture: 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use IEEE.NUMERIC_STD.ALL; 
+ 
+entity pipeline is 
+    Port ( a : in integer; 
+           b : in integer; 
+           c : in integer; 
+           clk : in STD_LOGIC; 
+           y : out integer); 
+end pipeline; 
+ 
+architecture Behavioral of pipeline is 
+signal r1,r2,r3,r4 : integer :=0; 
+begin 
+y<=r6; 
+process(clk) 
+begin 
+if(rising_edge(clk)) then 
+    for i in 0 to 2 loop 
+    case(i) is 
+    when 0=> 
+    r1<=a; 
+    r2<=b; 
+    r3<=c; 
+    when 1=> 
+    r4<=r1+r2; 
+    when 2=> 
+    r5<=r4*r3; 
+    when others=> 
+    null; 
+    end case; 
+    end loop; 
+end if; 
+end process; 
+end Behavioral; 
