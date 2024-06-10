@@ -21,5 +21,6 @@ begin
     begin
         Sum <= A XOR B XOR Cin;
         Cout <= (A AND B) OR (B AND Cin) OR (A AND Cin);
+        <!-- cout <= (A AND B) OR (A xor B)  AND Cin); -->
     end process;
 end Behavioral;
