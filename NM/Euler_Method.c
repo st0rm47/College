@@ -5,8 +5,10 @@ int main()
 {
     float x0, y0, h, x, y,xp;
     printf("Euler's Method\n\n");
-    printf("Enter the value of x0, y0 and x: ");
-    scanf("%f%f%f", &x0, &y0 ,&xp);
+    printf("Enter the value of x0, y0: ");
+    scanf("%f%f", &x0, &y0);
+    printf("Enter the value of x to be evaluated: ");
+    scanf("%f", &xp);
     printf("Enter the step size: ");
     scanf("%f", &h);
     x = x0;
