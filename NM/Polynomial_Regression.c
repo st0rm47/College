@@ -5,6 +5,7 @@ int main()
 {
     int i, j, k, n, degree;
     float x[n], y[n], X[degree + 1][degree + 2], sum;
+    printf("Polynomial Regression\n\n");
     printf("Enter the number of data points: ");
     scanf("%d", &n);
     printf("Enter the degree of the polynomial: ");
