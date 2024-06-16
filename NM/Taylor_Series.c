@@ -19,7 +19,7 @@ int main() {
     float x, x0, y0, yx;
     printf("Taylor's Series Method\n\n");
     printf("Enter the value of x and y:");
-    scanf("%f%f%f", &x0, &y0);
+    scanf("%f%f", &x0, &y0);
     printf("Enter the value of x at which function to be evaluated:");
     scanf("%f", &x);
     yx = y0;
