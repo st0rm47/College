@@ -1,74 +1,69 @@
 #include <stdio.h>
 #include <math.h>
-
-int main()
-{
-    int n, i, j, k;
-    float A[10][10], L[10][10], U[10][10] = {0}, B[10], Z[10], X[10], sum;
-
-    printf("Enter the number of equations: ");
+int main() {
+    float a[10][10], l[10][10] = {0}, u[10][10] = {0}, x[10] = {0}, z[10] = {0}, b[10] = {0};
+    int i = 0, j = 0, k = 0, n;
+    float sum = 0;
+    printf("Cholesky Method\n\n");
+    printf("Enter Dimension of Matrix\n");
     scanf("%d", &n);
 
-    printf("Enter the coefficients of the equations:\n");
+    printf("Enter coefficients Matrix\n");
     for (i = 0; i < n; i++)
         for (j = 0; j < n; j++)
-            scanf("%f", &A[i][j]);
+            scanf("%f", &a[i][j]);
 
-    printf("Enter the constants (B matrix):\n");
+    printf("Enter RHS vector\n");
     for (i = 0; i < n; i++)
-        scanf("%f", &B[i]);
+        scanf("%f", &b[i]);
 
-    // Cholesky decomposition
-    for (i = 0; i < n; i++)
-    {
-        for (j = 0; j <= n; j++)
-        {
+    // Decomposing matrix into Upper and Lower triangular matrix
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
             sum = 0;
-            if (i == j)
-            {
-                for (k = 0; k < j; k++)
-                    sum += pow(U[k][i], 2);
-                U[i][i] = sqrt(A[i][i] - sum);
+            if (j < i)
+                l[j][i] = 0;
+            else {
+                l[j][i] = a[j][i];
+                for (k = 0; k < i; k++) {
+                    l[j][i] = l[j][i] - l[j][k] * u[k][i];
+                }
             }
-            else
-            {
-                for (k = 0; k < i; k++)
-                    sum += (U[k][i] * U[k][j]);
-                U[i][j] = (A[i][j] - sum) / U[i][i];
+        }
+        for (j = 0; j < n; j++) {
+            if (j < i)
+                u[i][j] = 0;
+            else if (j == i)
+                u[i][j] = 1;
+            else {
+                u[i][j] = a[i][j] / l[i][i];
+                for (k = 0; k < i; k++) {
+                    u[i][j] = u[i][j] - ((l[i][k] * u[k][j]) / l[i][i]);
+                }
             }
         }
     }
 
-    // Find Transpose of L
-    for (i = 0; i < n; i++)
-    {
-        for (j = 0; j < n; j++)
-            L[i][j] = U[j][i];
-    }
-
-    // Forward substitution
-    Z[0] = B[0];// Corrected initialization
-    for (i = 1; i < n; i++)
-    {
+    // Solve for Z using Forward Substitution
+    for (i = 0; i < n; i++) {
         sum = 0;
         for (j = 0; j < i; j++)
-            sum += (L[i][j] * Z[j]);
-            Z[i] = (B[i] - sum);
+            sum += l[i][j] * z[j];
+        z[i] = (b[i] - sum) / l[i][i];
     }
 
-    // Backward substitution
-    X[n - 1] = Z[n - 1] / U[n - 1][n - 1];
-    for (i = n - 2; i >= 0; i--)
-    {
+    // Solve for X using Backward Substitution
+    for (i = n - 1; i >= 0; i--) {
         sum = 0;
         for (j = i + 1; j < n; j++)
-            sum += U[i][j] * X[j];
-            X[i] = (Z[i] - sum) / U[i][i];
+            sum += u[i][j] * x[j];
+        x[i] = (z[i] - sum) / u[i][i];
     }
 
-    printf("\nThe solution is:\n");
-    for (i = 0; i < n; i++)
-        printf("x%d = %.2f\n", i + 1, X[i]);
+    printf("Solution:\n");
+    for (i = 0; i < n; i++) {
+        printf("x%d = %f\n", i + 1, x[i]);
+    }
 
     return 0;
 }
