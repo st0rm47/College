@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main(){
     int i, j, k, n, degree;
     float x[n], y[n], X[degree + 1][degree + 2], sum;
     printf("Polynomial Regression\n\n");
