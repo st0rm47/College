@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 float f(float x)
 {
@@ -6,7 +6,7 @@ float f(float x)
 }
 int main(){
 	float x0,xn,h,v,sum;
-    printf("Composite Simpson's 3/8 Rule\n\n");
+    printf("Simpson's 3/8 Rule\n\n");
 	printf("Enter the lower limit and upper limit: ");
 	scanf("%f%f",&x0,&xn);
 	h = (xn-x0)/3;
