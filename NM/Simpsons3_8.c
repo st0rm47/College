@@ -1,23 +1,16 @@
-#include <stdio.h>
-#include <math.h>
-float f(float x)
-{
-	return (x*x*x)+1;
-}
+#include<stdio.h>
+#include<math.h>
+#define f(x) x * x*x +1
 int main(){
-	float x0,xn,h,v,sum;
+    float x0,x1,x2,xn,h,sum,v;
     printf("Simpson's 3/8 Rule\n\n");
-	printf("Enter the lower limit and upper limit: ");
-	scanf("%f%f",&x0,&xn);
-	h = (xn-x0)/3;
-	sum = f(x0) + f(xn);
-	for (int i=1;i<3;i++)
-	{
-		if (i % 3 != 0)
-			sum = sum + 3*f(x0 + i*h);
-		else
-			sum = sum + 2*f(x0 + i*h);
-	}
-	v = (3.0/8)*h*sum;
-	printf("\nThe value obtained after integration is %.4f",v);
+    printf("Enter the lower limit and upper limit: ");
+    scanf("%f%f",&x0,&xn);
+    h = (xn - x0) / 3;
+    x1 = x0 + h;
+    x2 = x1 + h;
+    sum = f(x0) + 3*f(x1) + 3*f(x2) + f(xn);
+    v = (3.0 / 8) * h * sum;
+    printf("\nThe value obtained after integration is %.2f",v);
+    return 0;
 }
