@@ -30,6 +30,6 @@ int main()
     if (state == 2)
         printf("String is accepted.\n");
     else
-        printf("String is not rejected.\n");
+        printf("String is rejected.\n");
     return 0;
 }
