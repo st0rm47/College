@@ -26,7 +26,7 @@ def water_jug_problem(cap1, cap2, goal):
     jug1 = 0
     jug2 = 0
     steps = []
-
+    print()
     print("Welcome to the Water Jug Problem game!")
     print(f"Jug 1 Capacity: {cap1} liters")
     print(f"Jug 2 Capacity: {cap2} liters")
