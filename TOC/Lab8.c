@@ -9,9 +9,9 @@ int main() {
     scanf("%s", str);
     for (int i = 0; i < strlen(str); i++) {
         if (str[i] == 'a') {
-            state = (state + 2) % 3;
+            state = (state + 1);
         } else if (str[i] == 'b') {
-            state = (state - 1 + 3) % 3;
+            state = (state - 2);
         }
     }
     if (state == 0)
