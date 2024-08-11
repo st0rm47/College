@@ -1,14 +1,19 @@
 from collections import deque
+from tabulate import tabulate
 
 def bfs(graph, start, goal):
     # Queue for BFS
     queue = deque([start])
-    # Set for visited nodes
     visited = set()
-    # Dictionary to track the path
     parent = {start: None}
-    # To store the table of steps
     steps = []
+
+    # Record the initial state
+    steps.append({
+        'Queue': list(queue),
+        'Visited': list(visited),
+        'Current Node': None
+    })
 
     while queue:
         current = queue.popleft()
@@ -21,8 +26,7 @@ def bfs(graph, start, goal):
                 current = parent[current]
             path.reverse()
             return path, steps
-        
-        # Mark the current node as visited
+
         visited.add(current)
 
         # Add neighbors to the queue
@@ -37,40 +41,36 @@ def bfs(graph, start, goal):
             'Visited': list(visited),
             'Current Node': current
         })
-
+    
+    # If no path is found
     return None, steps
 
 def print_steps_table(steps):
-    print("\nBFS Steps:")
-    print(f"+---------------------+---------------------+------------------+")
-    print(f"| {'Queue':<19} | {'Visited':<19} | {'Current Node':<14} |")
-    print(f"+---------------------+---------------------+------------------+")
+    headers = ['Queue', 'Visited', 'Current Node']
+    table = []
     for step in steps:
-        print(f"| {str(step['Queue']):<19} | {str(step['Visited']):<19} | {step['Current Node']:<14} |")
-        print(f"+---------------------+---------------------+------------------+")
+        table.append([
+            str(step['Queue']),
+            str(step['Visited']),
+            step['Current Node']
+        ])
+    print("\nBFS Steps:")
+    print(tabulate(table, headers=headers, tablefmt='grid'))
 
 def main():
-    # Input graph
     graph = {}
-    
-    # Input number of nodes
     num_nodes = int(input("Enter the number of nodes: "))
-    
+
     # Input graph edges
     for _ in range(num_nodes):
         node = input("Enter the node: ")
-        neighbors = input(f"Enter the neighbors of node {node} (comma-separated): ").split(',')
+        neighbors = input(f"Enter the neighbors of node {node}: ").split()
         graph[node] = [neighbor.strip() for neighbor in neighbors if neighbor.strip()]
 
-    # Input start and goal nodes
     start = input("Enter the start node: ")
     goal = input("Enter the goal node: ")
 
-    # Perform BFS using queue
     path, steps = bfs(graph, start, goal)
-    
-
-    # Print the BFS steps in table format
     print_steps_table(steps)
     if path:
         print("Path found:", " -> ".join(path))
