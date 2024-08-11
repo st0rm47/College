@@ -2,30 +2,54 @@
 
 #include <stdio.h>
 #include <string.h>
+
 int main() {
     char str[100];
     int state = 0;
     printf("Enter the string: ");
     scanf("%s", str);
+
     for (int i = 0; i < strlen(str); i++) {
         if (state == 0) {
-            if (str[i] == 'a')
+            if (str[i] == 'a') {
                 state = 1;  
-            else
+            } else {
                 state = 3; 
                 break;
+            }
         } else if (state == 1) {
-            if (str[i] == 'b')
+            if (str[i] == 'b') {
                 state = 2; 
+            } else {
+                state = 3; 
+                break;
+            }
         } else if (state == 2) {
-            if (str[i] == 'b')
-                state = 2;
-            else
+            if (str[i] == 'b') {
+                state = 3; 
+            } else if (str[i] == 'a') {
                 state = 1; 
+            } else {
+                state = 3;
+                break;
+            }
+        } else if (state == 3) {
+            if (str[i] == 'b') {
+                state = 3; 
+            } else if (str[i] == 'a') {
+                state = 1; 
+            } else {
+                state = 3; 
+                break;
+            }
         }
     }
-    if (state == 2)
+
+    if (state == 3) {
         printf("String is accepted.\n");
-    else
+    } else {
         printf("String is rejected.\n");
+    }
+
+    return 0;
 }
