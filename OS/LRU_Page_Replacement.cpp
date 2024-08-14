@@ -63,9 +63,9 @@ int lruPageReplacement(const vector<int> &page_references, int frame_size) {
 }
 
 int main() {
-    cout << "\t\t=========================" << endl;
+    cout << "\t\t========================" << endl;
     cout << "\t\t  LRU Page Replacement  " << endl;
-    cout << "\t\t=========================" << endl;
+    cout << "\t\t========================" << endl;
 
     int n, frame_size;
     cout << "Enter the number of pages: ";
