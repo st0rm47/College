@@ -1,84 +1,85 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <iomanip>
 using namespace std;
 
-int optimalPageReplacement(const vector<int> &page_references, int frame_size) {
-    vector<int> frames(frame_size, -1);  // Stores the page numbers in frames
+int optimalPageReplacement(const vector<int> &page_references, int frame_size)
+{
+    vector<int> frames(frame_size, -1); // Use a vector to manage frames
     int page_faults = 0;
 
     // Print the table header
-    cout << "+-----------------+----------+----------+----------+---------------+" << endl;
-    cout << "| Page Reference  | Frame 1  | Frame 2  | Frame 3  | Page Fault    |" << endl;
-    cout << "+-----------------+----------+----------+----------+---------------+" << endl;
+    cout << "+----------------+---------+---------+---------+------------+" << endl;
+    cout << "| Page Reference | Frame 1 | Frame 2 | Frame 3 | Page Fault |" << endl;
+    cout << "+----------------+---------+---------+---------+------------+" << endl;
 
-    for (int current_index = 0; current_index < page_references.size(); ++current_index) {
-        int page = page_references[current_index];
+    for (int i = 0; i < page_references.size(); ++i)
+    {
+        int page = page_references[i];
         bool page_fault_occurred = false;
-        bool page_in_frames = false;
+        auto it = find(frames.begin(), frames.end(), page);
 
-        // Check if the page is already in frames
-        for (int i = 0; i < frame_size; ++i) {
-            if (frames[i] == page) {
-                page_in_frames = true;
-                break;
-            }
-        }
-
-        if (!page_in_frames) {
+        if (it == frames.end())
+        {
             // Page fault occurs
-            if (find(frames.begin(), frames.end(), -1) != frames.end()) {
-                // Empty frame available
-                for (int i = 0; i < frame_size; ++i) {
-                    if (frames[i] == -1) {
-                        frames[i] = page;
-                        break;
-                    }
-                }
-            } else {
-                // Find the page to replace
-                vector<int> future_use(frame_size, -1);
-                for (int i = 0; i < frame_size; ++i) {
-                    for (int j = current_index + 1; j < page_references.size(); ++j) {
-                        if (frames[i] == page_references[j]) {
-                            future_use[i] = j;
+            page_fault_occurred = true;
+            page_faults++;
+
+            // Check if there is a free frame
+            if (find(frames.begin(), frames.end(), -1) != frames.end())
+            {
+                *find(frames.begin(), frames.end(), -1) = page;
+            }
+            else
+            {
+                // Find the frame that will not be used for the longest time in the future
+                int farthest = i, replace_index = 0;
+                for (int j = 0; j < frame_size; ++j)
+                {
+                    int k;
+                    for (k = i + 1; k < page_references.size(); ++k)
+                    {
+                        if (frames[j] == page_references[k])
+                        {
+                            if (k > farthest)
+                            {
+                                farthest = k;
+                                replace_index = j;
+                            }
                             break;
                         }
                     }
-                }
-                // Find the page that will not be used for the longest time
-                int replace_index = 0;
-                for (int i = 1; i < frame_size; ++i) {
-                    if (future_use[i] == -1) {
-                        replace_index = i;
+                    if (k == page_references.size())
+                    { // Not found in the future
+                        replace_index = j;
                         break;
-                    }
-                    if (future_use[i] > future_use[replace_index]) {
-                        replace_index = i;
                     }
                 }
                 frames[replace_index] = page;
             }
-            page_faults++;
-            page_fault_occurred = true;
         }
 
         // Display the current frame status
-        cout << "| " << setw(15) << page << " |";
-        for (int i = 0; i < frame_size; ++i) {
-            cout << setw(8) << frames[i] << "  |";
+        cout << "| " << setw(10) << page << "     |";
+        for (int j = 0; j < frame_size; j++)
+        {
+            if (frames[j] != -1)
+                cout << setw(5) << frames[j] << "    |";
+            else
+                cout << setw(5) << " " << "    |";
         }
-        cout << setw(11) << (page_fault_occurred ? "Yes" : "No") << "    |" << endl;
-        cout << "+-----------------+----------+----------+----------+---------------+" << endl;
+        cout << setw(10) << (page_fault_occurred ? "Yes" : "No") << "  |" << endl;
+        cout << "+----------------+---------+---------+---------+------------+" << endl;
     }
-
     return page_faults;
 }
 
-int main() {
-    cout << "\t\t=========================" << endl;
-    cout << "\t\t Optimal Page Replacement " << endl;
-    cout << "\t\t=========================" << endl;
+int main()
+{
+    cout << "\t\t========================" << endl;
+    cout << "\t\t  OPR Page Replacement  " << endl;
+    cout << "\t\t========================" << endl;
 
     int n, frame_size;
     cout << "Enter the number of pages: ";
@@ -93,5 +94,6 @@ int main() {
 
     int page_faults = optimalPageReplacement(page_references, frame_size);
     cout << endl << "Total number of page faults: " << page_faults << endl;
+    cout << endl << "Compiled by : Subodh Ghimire " << endl;
     return 0;
 }
