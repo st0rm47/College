@@ -131,7 +131,7 @@ int n = processes.size();
     cout << endl << endl;
 }
 
-// Function to calculate average waiting time and turn around time
+// Function to calculate average waiting time, turn around time and response time
 void calculateAverages(const vector<Process> &processes)
 {
     int totalWaitingTime = 0, totalTurnAroundTime = 0, totalRespsonseTime = 0;
