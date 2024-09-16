@@ -27,8 +27,7 @@ int findShortestBurstTimeProcess(const vector<Process> &processes, int currentTi
     int minBurstTime = INT_MAX;
     for (int i = 0; i < processes.size(); i++)
     {
-        if (!processes[i].completed && processes[i].arrivalTime <= currentTime &&
-            processes[i].burstTime < minBurstTime)
+        if (!processes[i].completed && processes[i].arrivalTime <= currentTime && processes[i].burstTime < minBurstTime)
         {
             minBurstTime = processes[i].burstTime;
             idx = i;
@@ -140,7 +139,7 @@ void displayGanttChart(vector<Process> &processes, int quantum)
     cout << endl << endl;
 }
 
-// Function to calculate average waiting time and turn around time
+// Function to calculate average waiting time, turn around time and response time
 void calculateAverages(const vector<Process> &processes)
 {
     int totalWaitingTime = 0, totalTurnAroundTime = 0, totalResponseTime = 0;
