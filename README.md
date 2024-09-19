@@ -1,6 +1,7 @@
 # College Lab Reports Repository
 
-This repository contains lab reports for various subjects as part of the college curriculum. The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, and Computer Graphics.
+This repository contains lab reports for various subjects as part of the college curriculum. 
+The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, Computer Graphics, Operating Systems, Theory of Computation and Artificial Intelligence.
 
 ## Subjects
 
@@ -55,6 +56,34 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+
+### 5. Operating Systems
+
+- [Lab Report 1: FIFO Page Replacement Algorithm](./OS/FIFO_Page_Replacement.cpp)
+- [Lab Report 2: LRU Page Replacement Algorithm](./OS/LRU_Page_Replacement.cpp)
+- [Lab Report 3: OPR Page Replacement Algorithm](./OS/OPR_Page_Replacement.cpp)
+- [Lab Report 4: Best Fit Algorithm](./OS/Best_Fit.cpp)
+- [Lab Report 5: Worst Fit Algorithm](./OS/Worst_Fit.cpp)
+- [Lab Report 6: First Fit Algorithm](./OS/First_Fit.cpp)
+- [Lab Report 7: Belady's Anomaly](./OS/BeLadys_Anomaly.cpp)
+- [Lab Report 8: FCFS Process Scheduling Algorithm ](./OS/FCFS.cpp)
+- [Lab Report 9: SJF Process Scheduling Algorithm](./OS/SJF.cpp)
+- [Lab Report 10: RR Process Scheduling Algorithm](./OS/Round_Robin.cpp)
+- [Lab Report 11: Priority Process Scheduling Algorithm](./OS/Priority_Scheduling.cpp)
+
+
+
+
+### 6. Artificial Intelligence
+
+- [Lab Report 1: Chatbot](./AI/Chatbot.py)
+- [Lab Report 2: Tower of Hanoi](./AI/TOH.py)
+- [Lab Report 3: Water Jug Problem](./AI/Waterjug.py)
+- [Lab Report 4: Breadth First Search Algorithm](./AI/BFS.py)
+- [Lab Report 5: Depth First Search Algorithm](./AI/DFS.py)
+- [Lab Report 6: Best First Search Algorithm](./AI/Best_First_Search.py)
+- [Lab Report 7: A* Search Algorithm](./AI/A_Search.py)
+
 
 
 ## How to Use
