@@ -6,7 +6,6 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 ## Subjects
 
 ### 1. Data Structures and Algorithms
-
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
 - [Lab Report 3: Linear Queue Implementation](./DSA/Lab3.cpp)
@@ -25,13 +24,11 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 
 
 ### 2. Computer Architecture
-
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
 - [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
 
 ### 3. Numerical Methods
-
 - [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
 - [Lab Report 3: Secant Method](./NM/Secant.c)
@@ -49,7 +46,6 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
 
 ### 4. Computer Graphics
-
 - [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
 - [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./CG/DDA_Negative_Slope.cpp)
 - [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./CG/BLA_Positive_Slope.cpp)
@@ -58,7 +54,6 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
 
 ### 5. Operating Systems
-
 - [Lab Report 1: FIFO Page Replacement Algorithm](./OS/FIFO_Page_Replacement.cpp)
 - [Lab Report 2: LRU Page Replacement Algorithm](./OS/LRU_Page_Replacement.cpp)
 - [Lab Report 3: OPR Page Replacement Algorithm](./OS/OPR_Page_Replacement.cpp)
@@ -71,11 +66,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 10: RR Process Scheduling Algorithm](./OS/Round_Robin.cpp)
 - [Lab Report 11: Priority Process Scheduling Algorithm](./OS/Priority_Scheduling.cpp)
 
-
-
-
 ### 6. Artificial Intelligence
-
 - [Lab Report 1: Chatbot](./AI/Chatbot.py)
 - [Lab Report 2: Tower of Hanoi](./AI/TOH.py)
 - [Lab Report 3: Water Jug Problem](./AI/Waterjug.py)
