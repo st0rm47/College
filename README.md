@@ -65,6 +65,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 9: SJF Process Scheduling Algorithm](./OS/SJF.cpp)
 - [Lab Report 10: RR Process Scheduling Algorithm](./OS/Round_Robin.cpp)
 - [Lab Report 11: Priority Process Scheduling Algorithm](./OS/Priority_Scheduling.cpp)
+- [Lab Report 12: FCFS Disk Scheduling Algorithm](./OS/FCFS_Disk.cpp)
 
 ### 6. Artificial Intelligence
 - [Lab Report 1: Chatbot](./AI/Chatbot.py)
