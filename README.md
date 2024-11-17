@@ -67,6 +67,8 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 11: Priority Process Scheduling Algorithm](./OS/Priority_Scheduling.cpp)
 - [Lab Report 12: FCFS Disk Scheduling Algorithm](./OS/FCFS_Disk.cpp)
 - [Lab Report 13: Scan Disk Scheduling Algorithm](./OS/Scan_Disk.cpp)
+- [Lab Report 14: C-Look Disk Scheduling Algorithm](./OS/CLook_Disk.cpp)
+- [Lab Report 15: Segmentation Memory Management](./OS/Segmentation.cpp)
 
 
 ### 6. Artificial Intelligence
