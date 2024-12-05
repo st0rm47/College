@@ -81,6 +81,16 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 7: A* Search Algorithm](./AI/A_Search.py)
 
 
+### 7. Database Management Systems
+- [Lab Report 1](./DBMS/Lab%20Report%201.pdf)
+- [Lab Report 2](./DBMS/Lab%20Report%202.pdf)
+- [Lab Report 3](./DBMS/Lab%20Report%203.pdf)
+- [Lab Report 4](./DBMS/Lab%20Report%204.pdf)
+- [Lab Report 5](./DBMS/Lab%20Report%205.pdf)
+- [Lab Report 6](./DBMS/Lab%20Report%206.pdf)
+- [Lab Report 7](./DBMS/Lab%20Report%207.pdf)
+
+
 
 ## How to Use
    >*Clone the repository to your local machine*
