@@ -79,7 +79,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: Depth First Search Algorithm](./AI/DFS.py)
 - [Lab Report 6: Best First Search Algorithm](./AI/Best_First_Search.py)
 - [Lab Report 7: A* Search Algorithm](./AI/A_Search.py)
-
+- [Lab Report 8: Naive Bayes](./AI/Naive_Baiyes.py)
 
 ### 7. Database Management Systems
 - [Lab Report 1](./DBMS/Lab%20Report%201.pdf)
