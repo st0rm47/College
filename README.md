@@ -81,6 +81,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 7: A* Search Algorithm](./AI/A_Search.py)
 - [Lab Report 8: Naive Bayes](./AI/Naive_Baiyes.py)
 
+
 ### 7. Database Management Systems
 - [Lab Report 1](./DBMS/Lab%20Report%201.pdf)
 - [Lab Report 2](./DBMS/Lab%20Report%202.pdf)
@@ -90,6 +91,9 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 6](./DBMS/Lab%20Report%206.pdf)
 - [Lab Report 7](./DBMS/Lab%20Report%207.pdf)
 
+
+### 8. Computer Networks
+- [Lab Report 1](./CN/Lab%20Report%2001.pdf)
 
 
 ## How to Use
