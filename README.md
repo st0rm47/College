@@ -5,6 +5,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 
 ## Subjects
 
+# 3RD SEMESTER
 ### 1. Data Structures and Algorithms
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
@@ -22,7 +23,6 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
 - [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
 
-
 ### 2. Computer Architecture
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
@@ -33,17 +33,41 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
 - [Lab Report 3: Secant Method](./NM/Secant.c)
 - [Lab Report 4: Fixed Point Method](./NM/FixedPoint.c)
-- [Lab Report 5: Lagrange Interpolation](./NM/Lagrange.c)
-- [Lab Report 6: Newton Divided Difference Interpolation](./NM/Divided_difference.c)
-- [Lab Report 7: Newton Forward Difference Interpolation](./NM/Newton_forward.c)
-<!-- - [Lab Report 8: Newton Backward Difference Interpolation](./NM/Divided_difference.c) -->
-- [Lab Report 8: Linear Regression](./NM/Linear_regression.c)
-- [Lab Report 9: Forward Difference](./NM/Forward_difference.c)
-- [Lab Report 10: Backward Difference](./NM/Backward_difference.c)
-- [Lab Report 11: Central Difference](./NM/Central_difference.c)
-- [Lab Report 12: Simpson's 1/3 Rule](./NM/Simpsons1_3.c)
-- [Lab Report 13: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
-- [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
+- [Lab Report 5: Synthetic Division](./NM/Synthetic_Division.c)
+- [Lab Report 6: Horner's Method](./NM/Horners_Method.c)
+- [Lab Report 7: Lagrange Interpolation](./NM/Lagrange.c)
+- [Lab Report 8: Newton Divided Difference Interpolation](./NM/Divided_difference.c)
+- [Lab Report 9: Newton Forward Difference Interpolation](./NM/Newton_forward.c)
+- [Lab Report 10: Newton Backward Difference Interpolation](./NM/Newton_backward.c)
+- [Lab Report 11: Forward Difference Formula](./NM/Forward_difference.c)
+- [Lab Report 12: Backward Difference Formula](./NM/Backward_difference.c)
+- [Lab Report 13: Central Difference Formula](./NM/Central_difference.c)
+- [Lab Report 14: Linear Regression](./NM/Linear_regression.c)
+- [Lab Report 15: Polynomial Regression](./NM/Polynomial_Regression.c)
+- [Lab Report 16: Exponential Regression](./NM/Exponential_Regression.c)
+- [Lab Report 17: Maxima and Minima](./NM/Maxima_Minima.c)
+- [Lab Report 18: Simpson's 1/3 Rule](./NM/Simpsons1_3.c)
+- [Lab Report 19: Composite Simpson's 1/3 Rule](./NM/Composite_Simpson1_3.c)
+- [Lab Report 20: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
+- [Lab Report 21: Composite Simpson's 3/8 Rule](./NM/Composite_Simpsons3_8.c)
+- [Lab Report 22: Trapezoidal Rule](./NM/Trapezoidal.c)
+- [Lab Report 23: Composite Trapezoidal Rule](./NM/Composite_Trapezoidal.c)
+- [Lab Report 24: Gauss Elimination Method](./NM/Gauss_Elimination.c)
+- [Lab Report 25: Gauss Elimination Method with Partial Pivoting](./NM/Gauss_Elimination_Pivoting.c)
+- [Lab Report 26: Gauss Jordan Method](./NM/Gauss_Jordan.c)
+- [Lab Report 27: Gauss Jacobi Method](./NM/Gauss_Jacobi.c)
+- [Lab Report 28: Gauss Seidel Method](./NM/Gauss_Seidel.c)
+- [Lab Report 29: Matrix Inversion](./NM/Matrix_Inversion.c)
+- [Lab Report 30: LU Decomposition Method](./NM/DoLittle_Lu_Decomposition.c)
+- [Lab Report 31: Cholesky Decomposition Method](./NM/Cholesky_Method.c)
+- [Lab Report 32: Taylor Series](./NM/Taylor_Series.c)
+- [Lab Report 33: Euler's Method](./NM/Euler_Method.c)
+- [Lab Report 34: Picard's Method](./NM/Picard_Method.c)
+- [Lab Report 35: Heun Method](./NM/Heun_Method.c)
+- [Lab Report 36: Runge-Kutta Method](./NM/RK_Method.c)
+- [Lab Report 37: Boundary Value Problem](./NM/Shooting_Method.c)
+- [Lab Report 38: Laplace Equation](./NM/Laplace_Equation.c)
+- [Lab Report 39: Poisson's Equation](./NM/Poisson_Equation.c)
 
 ### 4. Computer Graphics
 - [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
@@ -53,7 +77,10 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
 
-### 5. Operating Systems
+
+
+# 4TH SEMESTER
+### 1. Operating Systems
 - [Lab Report 1: FIFO Page Replacement Algorithm](./OS/FIFO_Page_Replacement.cpp)
 - [Lab Report 2: LRU Page Replacement Algorithm](./OS/LRU_Page_Replacement.cpp)
 - [Lab Report 3: OPR Page Replacement Algorithm](./OS/OPR_Page_Replacement.cpp)
@@ -71,7 +98,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 15: Segmentation Memory Management](./OS/Segmentation.cpp)
 
 
-### 6. Artificial Intelligence
+### 2. Artificial Intelligence
 - [Lab Report 1: Chatbot](./AI/Chatbot.py)
 - [Lab Report 2: Tower of Hanoi](./AI/TOH.py)
 - [Lab Report 3: Water Jug Problem](./AI/Waterjug.py)
@@ -84,7 +111,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 10: Natural Language Processing](./AI/NLP.py)
 
 
-### 7. Database Management Systems
+### 3. Database Management Systems
 - [Lab Report 1](./DBMS/Lab%20Report%201.pdf)
 - [Lab Report 2](./DBMS/Lab%20Report%202.pdf)
 - [Lab Report 3](./DBMS/Lab%20Report%203.pdf)
@@ -94,7 +121,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 7](./DBMS/Lab%20Report%207.pdf)
 
 
-### 8. Computer Networks
+### 4. Computer Networks
 - [Lab Report 1: Understanding of Network Equipment, Wiring in Details](./CN/Lab%20Report%2001.pdf)
 - [Lab Report 2: Installation of Operating System in Virtual Machine](./CN/Lab%20Report%2002.pdf)
 - [Lab Report 3: Introduction of Packet Tracer and Connection of Different Devices](./CN/Lab%20Report%2003.pdf)
@@ -109,7 +136,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 12: Configuration of DHCP Server](./CN/Lab%20Report%2012.pdf)
 
 
-
+### 5. Theory of Computation
 
 ## How to Use
    >*Clone the repository to your local machine*
