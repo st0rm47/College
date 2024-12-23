@@ -1,7 +1,7 @@
 # College Lab Reports Repository
 
 This repository contains lab reports for various subjects as part of the college curriculum. 
-The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, Computer Graphics, Operating Systems, Theory of Computation and Artificial Intelligence.
+The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, Computer Graphics, Operating Systems, Theory of Computation and Artificial Intelligence, Database Management Systems, and Computer Networks.
 
 ## Subjects
 
@@ -80,6 +80,8 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 6: Best First Search Algorithm](./AI/Best_First_Search.py)
 - [Lab Report 7: A* Search Algorithm](./AI/A_Search.py)
 - [Lab Report 8: Naive Bayes](./AI/Naive_Baiyes.py)
+- [Lab Report 9: Expert System](./AI/Expert_System.py)
+- [Lab Report 10: Natural Language Processing](./AI/NLP.py)
 
 
 ### 7. Database Management Systems
@@ -93,7 +95,20 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 
 
 ### 8. Computer Networks
-- [Lab Report 1](./CN/Lab%20Report%2001.pdf)
+- [Lab Report 1: Understanding of Network Equipment, Wiring in Details](./CN/Lab%20Report%2001.pdf)
+- [Lab Report 2: Installation of Operating System in Virtual Machine](./CN/Lab%20Report%2002.pdf)
+- [Lab Report 3: Introduction of Packet Tracer and Connection of Different Devices](./CN/Lab%20Report%2003.pdf)
+- [Lab Report 4: Peer to Peer Network Configuration](./CN/Lab%20Report%2004.pdf)
+- [Lab Report 5: Interconnection of LANs](./CN/Lab%20Report%2005.pdf)
+- [Lab Report 6: Interconnection of two LANs using Router](./CN/Lab%20Report%2006.pdf)
+- [Lab Report 7: Router Configuration using CLI](./CN/Lab%20Report%2007.pdf)
+- [Lab Report 8: Static Routing Implementation](./CN/Lab%20Report%2008.pdf)
+- [Lab Report 9: Dynamic Routing Implementation using RIP](./CN/Lab%20Report%2009.pdf)
+- [Lab Report 10: Dynamic Routing Implementation using OSPF](./CN/Lab%20Report%2010.pdf)
+- [Lab Report 11: Dynamic Routing Implementation using BGP](./CN/Lab%20Report%2011.pdf)
+- [Lab Report 12: Configuration of DHCP Server](./CN/Lab%20Report%2012.pdf)
+
+
 
 
 ## How to Use
