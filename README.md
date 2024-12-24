@@ -137,6 +137,16 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 
 
 ### 5. Theory of Computation
+- [Lab Report 1: DFA Accepting string "0010"](./TOC/Lab1.c)
+- [Lab Report 2: DFA Accepting string "aaabbb"](./TOC/Lab2.c)
+- [Lab Report 3: DFA Accepting string starting with "aa"](./TOC/Lab3.c)
+- [Lab Report 4: DFA Accepting string ending with "bb"](./TOC/Lab4.c)
+- [Lab Report 5: DFA Accepting sub-string "aa"](./TOC/Lab5.c)
+- [Lab Report 6: DFA Accepting odd number of 1's](./TOC/Lab6.c)
+- [Lab Report 7: DFA Accepting string starting with "a" and ending with "bb"](./TOC/Lab7.c)
+- [Lab Report 8: DFA Accepting string which has number of "a" twice than number of "b".](./TOC/Lab8.c)
+
+
 
 ## How to Use
    >*Clone the repository to your local machine*
