@@ -145,7 +145,9 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 6: DFA Accepting odd number of 1's](./TOC/Lab6.c)
 - [Lab Report 7: DFA Accepting string starting with "a" and ending with "bb"](./TOC/Lab7.c)
 - [Lab Report 8: DFA Accepting string which has number of "a" twice than number of "b".](./TOC/Lab8.c)
-
+- [Lab Report 9: NFA Accepting string which has substring "ab" and ends with "a".](./TOC/Lab9.c)
+- [Lab Report 10: PDA Accepting the language a^nb^n](./TOC/Lab10.c)
+- [Lab Report 11: TM Accepting the language a^nb^nc^n](./TOC/Lab11.c)
 
 
 ## How to Use
