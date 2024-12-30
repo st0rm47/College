@@ -77,6 +77,11 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
 
+### 5. Statistics II
+- [Lab Report 1: Sampling Distribution and Estimation](./Stats_2/Stats%20Lab%201.pdf)
+- [Lab Report 2: Testing of Hypothesis](./Stats_2/Stats%20Lab%202.pdf)
+- [Lab Report 3: Non parametric Testing of Hypothesis](./Stats_2/Stats%20Lab%203.pdf)
+- [Lab Report 4: Correlation and Regression](./Stats_2/Stats%20Lab%204.pdf)
 
 
 # 4TH SEMESTER
