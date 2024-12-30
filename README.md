@@ -112,13 +112,13 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 
 
 ### 3. Database Management Systems
-- [Lab Report 1](./DBMS/Lab%20Report%201.pdf)
-- [Lab Report 2](./DBMS/Lab%20Report%202.pdf)
-- [Lab Report 3](./DBMS/Lab%20Report%203.pdf)
-- [Lab Report 4](./DBMS/Lab%20Report%204.pdf)
-- [Lab Report 5](./DBMS/Lab%20Report%205.pdf)
-- [Lab Report 6](./DBMS/Lab%20Report%206.pdf)
-- [Lab Report 7](./DBMS/Lab%20Report%207.pdf)
+- [Lab Report 1: DDL Commands](./DBMS/Lab%20Report%201.pdf)
+- [Lab Report 2: DML Commands, Union and Intersection](./DBMS/Lab%20Report%202.pdf)
+- [Lab Report 3: Different Join Operations](./DBMS/Lab%20Report%203.pdf)
+- [Lab Report 4: Cartesian Join](./DBMS/Lab%20Report%204.pdf)
+- [Lab Report 5: Product Management Database](./DBMS/Lab%20Report%205.pdf)
+- [Lab Report 6: School Management Database](./DBMS/Lab%20Report%206.pdf)
+- [Lab Report 7: Banking Database](./DBMS/Lab%20Report%207.pdf)
 
 
 ### 4. Computer Networks
