@@ -57,7 +57,7 @@
     <hr>
 
     <!-- Table -->
-    <h2 style="font-family: Arial; text-align:center"> Creating Table Routine</h2> 
+    <h2 style="font-family: Arial; text-align:center"> Creating Table Routine</h2>
     <table border="1" align="center" cellspacing="0">
         <tr bgcolor="grey">
             <th>Period</th>
@@ -98,6 +98,43 @@
         </tr>
     </table>
 
+    <hr>
+
+    <!-- Registration Form -->
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form action="">
+            <label for="username">Enter Username:</label>
+            <input type="text" name="username" id="username" placeholder="Enter your username" autofocus><br><br>
+
+            <label for="email">Enter Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email"><br><br>
+
+            <label for="password">Enter Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob"><br><br>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="Region">Are you from Asia?</label>
+            <input type="radio" name="Region" id="Region" checked>Yes
+            <input type="radio" name="Region" id="Region">No<br><br>
+
+            <label for="Check">Select your hobbies</label>
+            <input type="checkbox" name="Check" id="Check">Reading
+            <input type="checkbox" name="Check" id="Check">Writing
+            <input type="checkbox" name="Check" id="Check">Travelling<br><br>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </form>
+    </fieldset>
 
 </body>
 
