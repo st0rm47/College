@@ -21,3 +21,10 @@ p {
     border-radius: 15px; 
     text-indent: 50px;
 }
+div{
+    margin: 20px;
+    background-color: lightgray;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px; 
+}
