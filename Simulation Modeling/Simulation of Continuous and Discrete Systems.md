@@ -141,10 +141,10 @@
     - An equation describing the flow of heat in a three-dimensional body. There are four independent variables, representing the three dimensions and time and one dependent variable representing temperatures.
 
     - The general heat conduction equation:
-        ``` math
+    ``` math
         \frac{d}{dx}(k.(\frac{dT}{dx})) + \frac{d}{dy}(k.(\frac{dT}{dy})) + \frac{d}{dz}(k.(\frac{dT}{dz})) + qv = \rho \space C_p \frac{dT}{dt}
-        ```
-    >- ***where k is the material conductivity.
+    ```
+    >- where k is the material conductivity.
     >- $qv$ is the rate at which energy is generated per unit volume of the medium.
     >- $\rho$ is the density
     >- $C_p$ is the specific heat capacity.
