@@ -113,6 +113,7 @@
 - A continuous system is one in which the predominant activities of the system cause smooth changes in the attributes of the system entities. 
 - When such a system is modelled mathematically the variables of the model representing the attributes are controlled by the continuous system.
 - More generally in a continuous system the relationship describes the rate at which the variables representing the attributes change, so that the model circuit of differential equation. 
+---
 
 ## Differential and partial differential equation
 
@@ -126,10 +127,11 @@
 
 > ### Linear Differential Equation
 - A linear differential equation of order `n` is a differential equation written in the following form.
-```math
-a_n(x) d_n \frac{y}{dx^n} + a_{(n-1)}(x) + \frac{d_{(n-1)}(y)}{dx^(n-1)} + ... +a_1(x) \frac{dy}{dx}+ a_0(x)y = f(x)
-```
-where `a_n(x), a_(n-1)(x), a_1(x), a_0(x)` are functions of `x` and `f(x)` is a function of `x`.
+    ```math
+    a_n(x) d_n \frac{y}{dx^n} + a_{(n-1)}(x) + \frac{d_{(n-1)}(y)}{dx^(n-1)} + ... +a_1(x) \frac{dy}{dx}+ a_0(x)y = f(x)
+    ```
+
+    where `a_n(x), a_(n-1)(x), a_1(x), a_0(x)` are functions of `x` and `f(x)` is a function of `x`.
 --- 
 
 > ### Partial Differential Equation
@@ -139,13 +141,13 @@ where `a_n(x), a_(n-1)(x), a_1(x), a_0(x)` are functions of `x` and `f(x)` is a 
     - An equation describing the flow of heat in a three-dimensional body. There are four independent variables, representing the three dimensions and time and one dependent variable representing temperatures.
 
     - The general heat conduction equation:
-```math
-    \frac{d}{dx}(k.(\frac{dT}{dx})) + \frac{d}{dy}(k.(\frac{dT}{dy})) + \frac{d}{dz}(k.(\frac{dT}{dz})) + qv = \rho \space C_p \frac{dT}{dt}
-```
->- where k is the material conductivity.
->- $qv$ is the rate at which energy is generated per unit volume of the medium.
->- $\rho$ is the density
->- $C_p$ is the specific heat capacity.
+        ``` math
+        \frac{d}{dx}(k.(\frac{dT}{dx})) + \frac{d}{dy}(k.(\frac{dT}{dy})) + \frac{d}{dz}(k.(\frac{dT}{dz})) + qv = \rho \space C_p \frac{dT}{dt}
+        ```
+    >- ***where k is the material conductivity.
+    >- $qv$ is the rate at which energy is generated per unit volume of the medium.
+    >- $\rho$ is the density
+    >- $C_p$ is the specific heat capacity.
 
     This equation is also known as the Fourier-Biot equation and provides the basic tool for heat conduction analysis.
 ---
@@ -158,3 +160,4 @@ where `a_n(x), a_(n-1)(x), a_1(x), a_0(x)` are functions of `x` and `f(x)` is a 
 - Editors, CAD-CAM(Computer Aided Design - Computer Aided Manufacture) system, and data entry systems are all computer systems involving a high degree of human - computer interaction. Games and simulations are interactive systems. Web browsers and integrated development environments (IDE) are also examples of very complex interactive systems.
 
 > #### Feedback Systems
+
