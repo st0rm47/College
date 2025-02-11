@@ -1,0 +1,29 @@
+*{
+    margin: 0px auto;
+}
+.main{
+    height: auto;
+    width:1000px;
+    margin: 0px auto;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 30px;
+}
+
+.one, .two, .three, .four, .five{
+    height: 200px;
+    margin: 10px;
+    background-color: rgb(109, 109, 109);
+    border-radius: 20px ;
+    overflow: hidden;
+}
+
+.two_a, .two_b{
+    height: 200px;
+    width: 486px;
+    background-color: rgb(0, 0, 0);
+    border:2px rgb(255, 255, 255) solid;
+    border-radius: 20px;
+    float: left;
+}
+
+
