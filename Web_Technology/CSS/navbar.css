@@ -1,8 +1,8 @@
 *{
     margin: 0px;
     padding: 0px;
-    
 }
+
 body{
     background-color: gray;
 }
@@ -12,9 +12,10 @@ body{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin: 0 auto; /* Center the navbar */
-    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 .navbar a{
@@ -25,29 +26,31 @@ body{
     padding: 14px 16px;
 }
 
-.navbar a:hover{
-    background-color:gray;
-    color: black;
+.dropdown {
+    position: relative;
 }
 
+.navbar a:hover{
+    background-color: gray;
+    color: black;
+}
 
 /* Hidden by Default */
 .navbar .dropdown .dropdown-content{
     display: none;
 }
 
-
 /* Show on Hover */
 .navbar .dropdown:hover .dropdown-content{
-    display:block;
+    display: block;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
     background-color: #333;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
+    top: 50px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it stays on top */
 }
 
 .dropdown-content a {
@@ -61,4 +64,18 @@ body{
 
 .dropdown-content a:hover{
     background-color: gray;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 54px;
+}
+
+p {
+    color: white;
+    text-align: justify;
+    margin: 20px 20px;
+    font-size: 36px;
 }
