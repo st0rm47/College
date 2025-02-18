@@ -412,8 +412,13 @@ $$
 
 We use random number generator method to determine the sample points that lie inside or outside the curve. let (x0,y0) be an initial guess for the sample point then from a linear congruential method of random number generation 
 
-$$ x_{i+1} = (a*x_i + c) \mod m $$
-$$ y_{i+1} = (a*y_i + c) \mod m $$
+$$ 
+x_{i+1} = (a*x_i + c) \mod m 
+$$
+
+$$ 
+y_{i+1} = (a*y_i + c) \mod m 
+$$
 
 where a and c are constants, m is the  upper limit of generated random numbers.
 $$\text{If } y \leq y_i \text{ then increment } n.$$
