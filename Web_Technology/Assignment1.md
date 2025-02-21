@@ -105,7 +105,7 @@ Example:
       text-align: center;
       line-height: 150px;
       border-radius: 15px;
-      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.3);
       transition: all 0.5s ease;
     }
 
