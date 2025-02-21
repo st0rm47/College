@@ -14,7 +14,7 @@
     border-radius: 20px;
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 1200px){
     .box1, .box2, .box3, .box4, .box4, .box5, .box6{
         background-color: gray;
     }
