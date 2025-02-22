@@ -62,7 +62,7 @@ Example:
 ```
 ----
 
-# 2. *List the properties associated with 2d effects and transformations. Show examples.*
+# *2. List the properties associated with 2d effects and transformations. Show examples.*
 
 ## 2D TRANSFORMATIONS
 - 2D transformations are used to manipulate elements in 2D space.
@@ -141,6 +141,107 @@ Example:
 ```
 ----
 
-# 3. *What is CSS 3 animation? Demonstrate it by dragging a box in any one direction.*
+# *3. What is CSS 3 animation? Demonstrate it by dragging a box in any one direction.*
 
+## CSS 3 ANIMATION
+- CSS 3 Animation allows you to create animated effects on web pages without using JavaScript.
+- Animations are created using the @keyframes rule along with the animation property.
+
+### Key properties:
+- @keyframes: Defines the animation sequence.
+- animation-name: Specifies the name of the @keyframes rule.
+- animation-duration: Specifies the duration of the animation.
+- animation-timing-function: Specifies the speed curve of the animation.
+- animation-delay: Specifies when the animation will start.
+- animation-iteration-count: Specifies the number of times an animation should run.
+- animation-direction: Specifies whether the animation should play in reverse.
+
+Example:
+```html
+<html>
+<head>
+  <title>CSS 3 Animation</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      position: absolute;
+      border-radius: 20px;
+      animation: slide 4s infinite alternate;
+    }
+
+    @keyframes slide {
+      from {
+        left: 0px;
+      }
+      to {
+        left: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+```
+----
+
+# *4. Show the use of active, focus and hover effects.*
+
+## ACTIVE, FOCUS, HOVER EFFECTS
+- CSS pseudo-classes like :active, :focus, and :hover allow you to style elements based on user interaction.
+- They help create interactive and engaging web pages by changing the appearance of elements when they are clicked, focused, or hovered over.
+
+### Key properties:
+- :active: Applies styles when an element is being activated (clicked).
+- :focus: Applies styles when an element is focused (selected).
+- :hover: Applies styles when an element is hovered over.
+
+Example:
+```html
+<html>
+<head>
+  <title>Interactive Effects</title>
+  <style>
+    .button {
+      padding: 10px 20px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+    .button:hover {
+      background-color: gray;
+      color: black;
+    }
+
+    .button:active {
+      background-color: blue;
+    }
+
+    .input {
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .input:focus {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="button">Button</a>
+  <input type="text" class="input" placeholder="Focus Me">
+</body>
+</html>
+```
+---
 
