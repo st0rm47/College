@@ -145,7 +145,7 @@ Example:
 
 ## CSS 3 ANIMATION
 - CSS 3 Animation allows you to create animated effects on web pages without using JavaScript.
-- Animations are created using the @keyframes rule along with the animation property.
+- Animations are created using the `@keyframes` rule along with the animation property.
 
 ### Key properties:
 - @keyframes: Defines the animation sequence.
@@ -195,9 +195,9 @@ Example:
 - They help create interactive and engaging web pages by changing the appearance of elements when they are clicked, focused, or hovered over.
 
 ### Key properties:
-- :active: Applies styles when an element is being activated (clicked).
-- :focus: Applies styles when an element is focused (selected).
-- :hover: Applies styles when an element is hovered over.
+- `:active`: Applies styles when an element is being activated (clicked).
+- `:focus`: Applies styles when an element is focused (selected).
+- `:hover`: Applies styles when an element is hovered over.
 
 Example:
 ```html
@@ -245,3 +245,94 @@ Example:
 ```
 ---
 
+# *5. Using CSS, draw the following objects:*
+  - *Triangle*
+  - *Circle*
+  - *Oval*
+  - *Triangle upon rectangle*
+  - *Two circles joint together*
+
+
+```html
+<html>
+  <head>
+    <title>>Shapes</title>
+    <style>
+      body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 10px;
+        gap: 50px;
+      }
+
+      .triangle{
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid gray;
+      }
+
+      .circle{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+
+      .oval{
+        width: 150px;
+        height: 80px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+
+      .triangle-rectangle .triangle{
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid black;
+      }
+
+      .triangle-rectangle .rectangle{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+      }
+
+      .double-circle{
+        display: flex;
+        gap:0;
+      }
+
+      .double-circle div{
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+    <div class="triangle"></div>
+    <div class="circle"></div>
+    <div class="oval"></div>
+    <div class="triangle-rectangle">
+      <div class = "triangle"></div>
+      <div class = "rectangle"></div>
+    </div>
+    <div class="double-circle">
+      <div></div>
+      <div></div>
+    </div>
+</body>
+</html>
+```
+----
+
+# *6. Design the following template.*
