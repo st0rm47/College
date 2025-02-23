@@ -339,3 +339,148 @@ Example:
 <div align="center">
   <img src="./images/qsn6.png" alt="Template" width="400px">
 </div>
+
+
+```html
+<html>
+<head>
+    <title>Template Design</title>
+    <style>
+        body {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr 1fr 1fr auto;
+            gap: 5px;
+            padding: 10px;
+            width: 400px;
+            height:500px;
+            border: 2px solid gray;
+            border-radius: 20px;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        header {
+            grid-column: 1 / 4;
+            background-color: skyblue;
+            padding: 15px;
+        }
+
+        nav {
+            grid-column: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        nav div {
+            background-color: red;
+            padding: 10px;
+        }
+
+        .content1, .content2 {
+            grid-column: span 2;
+            background-color: yellow;
+        }
+
+        .ad {
+            background-color: gray;
+            text-align: center;
+            padding: 10px;
+            height: 120px;
+        }
+
+        .content {
+            grid-column: 2 / 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+
+        .content div {
+            background-color: yellow;
+            padding: 10px;
+            height: 80px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap : 10px;
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+        
+        .images .circle {
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            border-radius: 50%;
+            align-self: flex-start;
+            margin-top: -30px; 
+        }
+        
+        .footer {
+            grid-column: span 4;
+            background-color: lightblue;
+            padding: 10px;
+            margin-top: -10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div style="display: flex; 
+        justify-content: space-between; 
+        align-items: center;">
+            <div class="circle"></div>
+            <div>This is header</div>
+            <div class="circle"></div>
+        </div>
+    </header>
+
+    <div class="ad">ad1</div>
+    <nav>
+        <div>nav</div>
+        <div>nav</div>
+        <div>nav</div>
+        <div>nav</div>
+        <div class="content1">Content 1</div>
+        <div class="content2">Content 2</div>
+    </nav>
+    <div class="ad">ad4</div>
+
+    <div class="ad">ad2</div>
+    <div class="content">
+        <div>Content 3</div>
+        <div>Content 4</div>
+    </div>
+    <div class="ad">ad5</div>
+
+    <div class="ad">ad3</div>
+    <div class="images">
+        <div class = "circle"></div>
+        <div class = "circle"></div>
+        <div class = "circle"></div>
+        <div class="footer">Footer</div>
+    </div>
+    <div class="ad">ad6</div>
+</div>
+</body>
+</html>
+```
