@@ -5,10 +5,22 @@
 - To understand the basic concepts of animation in Macromedia Flash
 
 ## Introduction
-Animation in Macromedia Flash combines graphics and timeline-based movements to create dynamic scenes.
+Animation in Macromedia Flash combines graphics and timeline-based movements to create dynamic scenes. 
+Computer based animations are created by changing the position of objects over time. 
+This process involves creating keyframes at different intervals on the timeline and moving objects between these keyframes to create the illusion of motion.
+
+Key frames are crucial in creating animations. They are the frames where the content changes.
+The timeline is where you can see the keyframes and the content of the animation.
+The timeline is divided into frames, and each frame represents a specific point in time. 
+By moving objects between keyframes, you can create smooth transitions and realistic movements in your animations.
 
 
 
+<div>
+  <img src = "image.png" alt="Bouncing Ball Animation" width="300">
+  <img src = "image2.png" alt="Bouncing Ball Animation" width="300">
+
+</div>
 
 ## Materials
 - Software: Macromedia Flash 8
