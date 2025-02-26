@@ -17,7 +17,7 @@ By moving objects between keyframes, you can create smooth transitions in your a
 
 
 <div>
-  <img src = "image.png" alt="Bouncing Ball Animation" width="300">
+  <img src = "image1.png" alt="Bouncing Ball Animation" width="300">
   <img src = "image2.png" alt="Bouncing Ball Animation" width="300">
 
 </div>
