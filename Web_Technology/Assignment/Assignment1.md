@@ -60,6 +60,14 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/output1.png" alt="Output" width="400px">
+  <img src="./images/output2.png" alt="Output" width="400px">
+  <img src="./images/output3.png" alt="Output" width="400px">
+</div>
+
 ----
 
 # *2. List the properties associated with 2d effects and transformations. Show examples.*
