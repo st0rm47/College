@@ -63,9 +63,9 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output1_1.png" alt="Output" width="400px">
-  <img src="./images/output1_2.png" alt="Output" width="400px">
-  <img src="./images/output1_3.png" alt="Output" width="400px">
+  <img src="./images/Output1_1.png" alt="Output" width="400px">
+  <img src="./images/Output1_2.png" alt="Output" width="400px">
+  <img src="./images/Output1_3.png" alt="Output" width="400px">
 </div>
 
 ----
@@ -150,11 +150,11 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output2_1.png" alt="Output" width="200px">
-  <img src="./images/output2_2.png" alt="Output" width="200px">
-  <img src="./images/output2_3.png" alt="Output" width="200px">
-  <img src="./images/output2_4.png" alt="Output" width="200px">
-  <img src="./images/output2_5.png" alt="Output" width="200px">
+  <img src="./images/Output2_1.png" alt="Output" width="200px">
+  <img src="./images/Output2_2.png" alt="Output" width="200px">
+  <img src="./images/Output2_3.png" alt="Output" width="200px">
+  <img src="./images/Output2_4.png" alt="Output" width="200px">
+  <img src="./images/Output2_5.png" alt="Output" width="200px">
 </div>
 
 ----
@@ -207,7 +207,7 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output3.gif" alt="Output" width="400px">
+  <img src="./images/Output3.gif" alt="Output" width="400px">
 </div>
 
 ----
@@ -270,7 +270,7 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output4.png" alt="Output" width="400px">
+  <img src="./images/Output4.png" alt="Output" width="400px">
 </div>
 
 ---
@@ -366,7 +366,7 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output5.png" alt="Output" width="400px">
+  <img src="./images/Output5.png" alt="Output" width="400px">
 </div>
 
 ----
@@ -523,7 +523,7 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/output6.png" alt="Output" width="400px">
+  <img src="./images/Output6.png" alt="Output" width="400px">
 </div>
 
 ----
