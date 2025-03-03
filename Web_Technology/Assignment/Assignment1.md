@@ -63,9 +63,9 @@ Example:
 
 `Output:`
 <div align="center">
-  <img src="./images/Output1_1.png" alt="Output" width="400px">
-  <img src="./images/Output1_2.png" alt="Output" width="400px">
-  <img src="./images/Output1_3.png" alt="Output" width="400px">
+  <img src="./images/output1_1.png" alt="Output" width="400px">
+  <img src="./images/output1_2.png" alt="Output" width="400px">
+  <img src="./images/output1_3.png" alt="Output" width="400px">
 </div>
 
 ----
