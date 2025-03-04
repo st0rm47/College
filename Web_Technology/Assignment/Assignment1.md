@@ -60,6 +60,14 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/output1_1.png" alt="Output" width="400px">
+  <img src="./images/output1_2.png" alt="Output" width="400px">
+  <img src="./images/output1_3.png" alt="Output" width="400px">
+</div>
+
 ----
 
 # *2. List the properties associated with 2d effects and transformations. Show examples.*
@@ -139,6 +147,16 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/Output2_1.png" alt="Output" width="200px">
+  <img src="./images/Output2_2.png" alt="Output" width="200px">
+  <img src="./images/Output2_3.png" alt="Output" width="200px">
+  <img src="./images/Output2_4.png" alt="Output" width="200px">
+  <img src="./images/Output2_5.png" alt="Output" width="200px">
+</div>
+
 ----
 
 # *3. What is CSS 3 animation? Demonstrate it by dragging a box in any one direction.*
@@ -186,6 +204,12 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/Output3.gif" alt="Output" width="400px">
+</div>
+
 ----
 
 # *4. Show the use of active, focus and hover effects.*
@@ -243,6 +267,12 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/Output4.png" alt="Output" width="400px">
+</div>
+
 ---
 
 # *5. Using CSS, draw the following objects:*
@@ -333,6 +363,12 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/Output5.png" alt="Output" width="400px">
+</div>
+
 ----
 
 # *6. Design the following template.*
@@ -484,3 +520,10 @@ Example:
 </body>
 </html>
 ```
+
+`Output:`
+<div align="center">
+  <img src="./images/Output6.png" alt="Output" width="400px">
+</div>
+
+----
