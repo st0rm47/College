@@ -23,5 +23,6 @@ int main()
     cin >> num2;
     cout << "The GCD of " << num1 << " and " << num2 << " is: " << GCD(num1, 
     num2) << endl;
+    cout << "\nCompiled by : Subodh Ghimire " << endl;
     return 0;
 }
