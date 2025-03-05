@@ -1,22 +1,27 @@
 #include <iostream>
 using namespace std;
 
-// Function to calculate the nth term of the Fibonacci sequence using recursion
-int fibo(int n) 
-{
-    if (n <= 1)
-        return n;
-    else
-        return fibo(n - 1) + fibo(n - 2);
+int fibo(int n) {
+    if (n == 0) 
+        return 0;
+    if (n == 1) 
+        return 1;
+
+    int first = 0, second = 1;
+    for (int i = 2; i <= n; i++) {
+        int temp = first + second;
+        first = second;
+        second = temp;
+    }
+    return second;
 }
 
-int main() 
-{
+int main() {
     cout << "\t\t======================" << endl;
     cout << "\t\t  Fibonacci Sequence  " << endl;
     cout << "\t\t======================" << endl;
     
-    int i,n;
+    int i, n;
     cout << "Enter a non-negative integer: ";
     cin >> n;
     cout << "Fibonacci series:" << endl;
