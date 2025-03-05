@@ -1,13 +1,19 @@
 #include <iostream>
 using namespace std;
 
-// Function to calculate GCD using recursion
 int GCD(int a, int b) 
 {
     if (b == 0) 
         return a;
+    else if (a == 0)
+        return b;
     else
-        return GCD(b, a % b);
+        while (b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
+        }
+    return a;
 }
 
 int main()
@@ -21,8 +27,7 @@ int main()
     cin >> num1;
     cout << "Enter the second number: ";
     cin >> num2;
-    cout << "The GCD of " << num1 << " and " << num2 << " is: " << GCD(num1, 
-    num2) << endl;
+    cout << "The GCD of " << num1 << " and " << num2 << " is: " << GCD(num1, num2) << endl;
     cout << "\nCompiled by : Subodh Ghimire " << endl;
     return 0;
 }
