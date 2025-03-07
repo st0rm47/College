@@ -98,8 +98,8 @@
 
 ## e. _Input two arrays containing first names and surnames in each array. Print the full name._
 ```html
+<html>
 <head>
-    <html>
     <title> Full Name </title>
     <script>
         function fullname() {
