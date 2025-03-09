@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Function to find the minimum and maximum element in an array
 void findMinMax(int A[], int l, int r, int &min, int &max)
 {
     if (l == r)
@@ -23,22 +24,20 @@ void findMinMax(int A[], int l, int r, int &min, int &max)
     }
     else
     {
-        // Divide the problem into smaller subproblems
+        // Divide the array into two parts 
         int mid = (l + r) / 2;
-
-        // Recursive calls for left and right halves
         int min1, max1;
-        findMinMax(A, l, mid, min1, max1);
 
-        int min2, max2;
-        findMinMax(A, mid + 1, r, min2, max2);
+        // Recursively find the minimum and maximum of the two parts
+        findMinMax(A, l, mid, min, max);
+        findMinMax(A, mid + 1, r, min1, max1);
 
-        // Merge results
-        min = (min1 < min2) ? min1 : min2;
-        max = (max1 > max2) ? max1 : max2;
+        if (min1 < min)
+            min = min1;
+        if (max1 > max)
+            max = max1;
     }
 }
-
 
 int main()
 {
@@ -55,11 +54,11 @@ int main()
         cin >> A[i];
     cout << endl;
 
-
     int l = 0;
     int r = n - 1;
-
     int min, max;
+
+    // Perform min-max finding
     findMinMax(A, l, r, min, max);
 
     cout << "Minimum element: " << min << endl;
