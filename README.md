@@ -155,6 +155,36 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 11: TM Accepting the language a^nb^nc^n](./TOC/Lab11.c)
 
 
+# 5TH SEMESTER
+### 1. Multimedia Computing
+- [Lab Report 1: Logo Design in Macromedia MX 11](./Multimedia/LAB_1/Readme.md)
+- [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
+- [Lab Report 3: Text Animation sin Swish Max](./Multimedia/LAB_3/Readme.md)
+
+
+### 2. Design and Analysis of Algorithms
+- [Lab Report 1: GCD](./DAA/GCD.cpp)
+- [Lab Report 2: Fibonacci Series](./DAA/Fibonacci_Series.cpp)
+- [Lab Report 3: Bubble Sort](./DAA/Bubble_Sort.cpp)
+- [Lab Report 4: Selection Sort](./DAA/Selection_Sort.cpp)
+- [Lab Report 5: Insertion  Sort](./DAA/Insertion_Sort.cpp)
+- [Lab Report 6: Binary Search](./DAA/Binary_Search.cpp)
+- [Lab Report 7: Min Max Problem](./DAA/MinMax.cpp)
+- [Lab Report 8: Merge Sort](./DAA/Merge_Sort.cpp)
+- [Lab Report 9: Quick Sort](./DAA/Quick_Sort.cpp)
+
+
+### 3. Web Technology
+- [Assignment 1: HTML and CSS Basics](./Web_Technology/Assignment/Assignment1.md)
+- [Assignment 2: JavaScript Basics](./Web_Technology/Assignment/Assignment2.md)
+
+### 4. Simulation and Modeling
+
+### 5. System Analysis and Design
+
+### 6. Cryptography
+
+
 ## How to Use
    >*Clone the repository to your local machine*
 
