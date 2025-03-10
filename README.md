@@ -1,12 +1,10 @@
 # College Lab Reports Repository
 
-This repository contains lab reports for various subjects as part of the college curriculum. 
-The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, Computer Graphics, Operating Systems, Theory of Computation and Artificial Intelligence, Database Management Systems, and Computer Networks.
-
-## Subjects
 
 # 3RD SEMESTER
-### 1. Data Structures and Algorithms
+<details>
+<summary>Data Structures and Algorithms</summary>
+
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
 - [Lab Report 3: Linear Queue Implementation](./DSA/Lab3.cpp)
@@ -22,13 +20,21 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 13: Shell Sort Algorithm](./DSA/Lab13.cpp)
 - [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
 - [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
+---
+</details>
 
-### 2. Computer Architecture
+<details>
+<summary>Computer Architecture</summary>
+
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
 - [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
+---
+</details>
 
-### 3. Numerical Methods
+<details>
+<summary>Numerical Methods</summary>
+
 - [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
 - [Lab Report 3: Secant Method](./NM/Secant.c)
@@ -68,24 +74,36 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 37: Boundary Value Problem](./NM/Shooting_Method.c)
 - [Lab Report 38: Laplace Equation](./NM/Laplace_Equation.c)
 - [Lab Report 39: Poisson's Equation](./NM/Poisson_Equation.c)
+---
+</details>
 
-### 4. Computer Graphics
+<details>
+<summary>Computer Graphics</summary>
+
 - [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
 - [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./CG/DDA_Negative_Slope.cpp)
 - [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./CG/BLA_Positive_Slope.cpp)
 - [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+---
+</details>
 
-### 5. Statistics II
+<details>
+<summary>Statistics II</summary>
+
 - [Lab Report 1: Sampling Distribution and Estimation](./Stats_2/Stats%20Lab%201.pdf)
 - [Lab Report 2: Testing of Hypothesis](./Stats_2/Stats%20Lab%202.pdf)
 - [Lab Report 3: Non parametric Testing of Hypothesis](./Stats_2/Stats%20Lab%203.pdf)
 - [Lab Report 4: Correlation and Regression](./Stats_2/Stats%20Lab%204.pdf)
+---
+</details>
 
-
+---
 # 4TH SEMESTER
-### 1. Operating Systems
+<details>
+<summary>Operating Systems</summary>
+
 - [Lab Report 1: FIFO Page Replacement Algorithm](./OS/FIFO_Page_Replacement.cpp)
 - [Lab Report 2: LRU Page Replacement Algorithm](./OS/LRU_Page_Replacement.cpp)
 - [Lab Report 3: OPR Page Replacement Algorithm](./OS/OPR_Page_Replacement.cpp)
@@ -93,7 +111,7 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: Worst Fit Algorithm](./OS/Worst_Fit.cpp)
 - [Lab Report 6: First Fit Algorithm](./OS/First_Fit.cpp)
 - [Lab Report 7: Belady's Anomaly](./OS/BeLadys_Anomaly.cpp)
-- [Lab Report 8: FCFS Process Scheduling Algorithm ](./OS/FCFS.cpp)
+- [Lab Report 8: FCFS Process Scheduling Algorithm](./OS/FCFS.cpp)
 - [Lab Report 9: SJF Process Scheduling Algorithm](./OS/SJF.cpp)
 - [Lab Report 10: RR Process Scheduling Algorithm](./OS/Round_Robin.cpp)
 - [Lab Report 11: Priority Process Scheduling Algorithm](./OS/Priority_Scheduling.cpp)
@@ -101,9 +119,12 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 13: Scan Disk Scheduling Algorithm](./OS/Scan_Disk.cpp)
 - [Lab Report 14: C-Look Disk Scheduling Algorithm](./OS/CLook_Disk.cpp)
 - [Lab Report 15: Segmentation Memory Management](./OS/Segmentation.cpp)
+---
+</details>
 
+<details>
+<summary>Artificial Intelligence</summary>
 
-### 2. Artificial Intelligence
 - [Lab Report 1: Chatbot](./AI/Chatbot.py)
 - [Lab Report 2: Tower of Hanoi](./AI/TOH.py)
 - [Lab Report 3: Water Jug Problem](./AI/Waterjug.py)
@@ -114,9 +135,12 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 8: Naive Bayes](./AI/Naive_Baiyes.py)
 - [Lab Report 9: Expert System](./AI/Expert_System.py)
 - [Lab Report 10: Natural Language Processing](./AI/NLP.py)
+---
+</details>
 
+<details>
+<summary>Database Management Systems</summary>
 
-### 3. Database Management Systems
 - [Lab Report 1: DDL Commands](./DBMS/Lab%20Report%201.pdf)
 - [Lab Report 2: DML Commands, Union and Intersection](./DBMS/Lab%20Report%202.pdf)
 - [Lab Report 3: Different Join Operations](./DBMS/Lab%20Report%203.pdf)
@@ -124,9 +148,12 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: Product Management Database](./DBMS/Lab%20Report%205.pdf)
 - [Lab Report 6: School Management Database](./DBMS/Lab%20Report%206.pdf)
 - [Lab Report 7: Banking Database](./DBMS/Lab%20Report%207.pdf)
+---
+</details>
 
+<details>
+<summary>Computer Networks</summary>
 
-### 4. Computer Networks
 - [Lab Report 1: Understanding of Network Equipment, Wiring in Details](./CN/Lab%20Report%2001.pdf)
 - [Lab Report 2: Installation of Operating System in Virtual Machine](./CN/Lab%20Report%2002.pdf)
 - [Lab Report 3: Introduction of Packet Tracer and Connection of Different Devices](./CN/Lab%20Report%2003.pdf)
@@ -139,9 +166,12 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 10: Dynamic Routing Implementation using OSPF](./CN/Lab%20Report%2010.pdf)
 - [Lab Report 11: Dynamic Routing Implementation using BGP](./CN/Lab%20Report%2011.pdf)
 - [Lab Report 12: Configuration of DHCP Server](./CN/Lab%20Report%2012.pdf)
+---
+</details>
 
+<details>
+<summary>Theory of Computation</summary>
 
-### 5. Theory of Computation
 - [Lab Report 1: DFA Accepting string "0010"](./TOC/Lab1.c)
 - [Lab Report 2: DFA Accepting string "aaabbb"](./TOC/Lab2.c)
 - [Lab Report 3: DFA Accepting string starting with "aa"](./TOC/Lab3.c)
@@ -149,40 +179,61 @@ The lab reports cover topics such as Data Structures and Algorithms, Computer Ar
 - [Lab Report 5: DFA Accepting sub-string "aa"](./TOC/Lab5.c)
 - [Lab Report 6: DFA Accepting odd number of 1's](./TOC/Lab6.c)
 - [Lab Report 7: DFA Accepting string starting with "a" and ending with "bb"](./TOC/Lab7.c)
-- [Lab Report 8: DFA Accepting string which has number of "a" twice than number of "b".](./TOC/Lab8.c)
-- [Lab Report 9: NFA Accepting string which has substring "ab" and ends with "a".](./TOC/Lab9.c)
+- [Lab Report 8: DFA Accepting string which has number of "a" twice than number of "b"](./TOC/Lab8.c)
+- [Lab Report 9: NFA Accepting string which has substring "ab" and ends with "a"](./TOC/Lab9.c)
 - [Lab Report 10: PDA Accepting the language a^nb^n](./TOC/Lab10.c)
 - [Lab Report 11: TM Accepting the language a^nb^nc^n](./TOC/Lab11.c)
-
+---
+</details>
+---
 
 # 5TH SEMESTER
-### 1. Multimedia Computing
+<details>
+<summary>Multimedia Computing</summary>
+
 - [Lab Report 1: Logo Design in Macromedia MX 11](./Multimedia/LAB_1/Readme.md)
 - [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
-- [Lab Report 3: Text Animation sin Swish Max](./Multimedia/LAB_3/Readme.md)
+- [Lab Report 3: Text Animation in Swish Max](./Multimedia/LAB_3/Readme.md)
+---
+</details>
 
+<details>
+<summary>Design and Analysis of Algorithms</summary>
 
-### 2. Design and Analysis of Algorithms
 - [Lab Report 1: GCD](./DAA/GCD.cpp)
 - [Lab Report 2: Fibonacci Series](./DAA/Fibonacci_Series.cpp)
 - [Lab Report 3: Bubble Sort](./DAA/Bubble_Sort.cpp)
 - [Lab Report 4: Selection Sort](./DAA/Selection_Sort.cpp)
-- [Lab Report 5: Insertion  Sort](./DAA/Insertion_Sort.cpp)
+- [Lab Report 5: Insertion Sort](./DAA/Insertion_Sort.cpp)
 - [Lab Report 6: Binary Search](./DAA/Binary_Search.cpp)
 - [Lab Report 7: Min Max Problem](./DAA/MinMax.cpp)
 - [Lab Report 8: Merge Sort](./DAA/Merge_Sort.cpp)
 - [Lab Report 9: Quick Sort](./DAA/Quick_Sort.cpp)
+---
+</details>
 
+<details>
+<summary>Web Technology</summary>
 
-### 3. Web Technology
 - [Assignment 1: HTML and CSS Basics](./Web_Technology/Assignment/Assignment1.md)
 - [Assignment 2: JavaScript Basics](./Web_Technology/Assignment/Assignment2.md)
+---
+</details>
 
-### 4. Simulation and Modeling
+<details>
+<summary>Simulation and Modeling</summary>
 
-### 5. System Analysis and Design
+</details>
 
-### 6. Cryptography
+<details>
+<summary>System Analysis and Design</summary>
+
+</details>
+
+<details>
+<summary>Cryptography</summary>
+
+</details>
 
 
 ## How to Use
