@@ -34,4 +34,4 @@ function countdown(){
     }
 }
 
-var intervalId = setInterval(countdown, 1000);
+setInterval(countdown, 1000);
