@@ -1,9 +1,3 @@
-Maybe noone has told you this before, maybe me myself hasn't been able to do it for you.
-But i want you to know that, 
-I'll be there for the highs and lows
-Give you mine if your heart gets broke
-By your side when you're all alone
-I will be there for you
 
 # To create Bouncing Ball in Macromedia Director
 
