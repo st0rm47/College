@@ -18,4 +18,24 @@ Bouncing ball animations are a classic exercise in animation and motion graphics
 - Software: Macromedia Director
 
 ## Procedure
+1. Open Macromedia Director and create a new project.
+2. Create a new sprite.
+3. Use the paint tools to draw a ball on the stage.
+4. Set the initial position and size of the ball.
+5. Create a new cast member for the ball.
+6. Add a script to the ball sprite to control its movement.
+7. Use the Lingo scripting language to define the ball's behavior, including its speed, direction, and bounce.
+
+## Output
+<div align="center">
+  <img src="BouncingBall.gif" alt="Bouncing Ball" width="400" >
+</div>
+
+## Shortcut Keys
+- F5: Insert frame
+- Shift + F5: Remove frame
+- F6: Insert keyframe
+- F8: Convert to symbol
+
+
 
