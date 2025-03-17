@@ -195,6 +195,7 @@
 - [Lab Report 1: Logo Design in Macromedia MX 11](./Multimedia/LAB_1/Readme.md)
 - [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
 - [Lab Report 3: Text Animation in Swish Max](./Multimedia/LAB_3/Readme.md)
+- [Lab Report 4: Bouncing Ball Animation in Macromedia Director](./Multimedia/LAB_4/Readme.md)
 ---
 </details>
 

@@ -22,7 +22,6 @@ Steps of computer-based animation:
   <img src="image.png" alt="Image" width="400" >
 </div>
 
-
 ## Materials
 - Software: Macromedia Director
 
@@ -36,7 +35,6 @@ Steps of computer-based animation:
 7. Repeat steps 4-6 to create multiple frames with different positions for the ball.
 8. Play the animation to see the ball moving between the keyframes.
 9. Save the project and export the animation as .avi file.
-
 
 ## Output
 <div align="center">
