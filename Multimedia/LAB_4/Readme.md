@@ -7,7 +7,7 @@
 ## Introduction
 Computer-based animations are created by altering the properties of objects over time. A fundamental concept in animation is tweening, which refers to defining the starting and ending positions of an object and allowing the software to automatically generate the intermediate frames.
 
-Interpolation is a key process in this workflow, ensuring that the motion between keyframes is smooth and continuous. Interpolation adjusts the object's position, rotation, size, and other properties to create fluid transitions.
+Interpolation is a key process in this workflow, ensuring that the motion between keyframes is smooth and continuous. Interpolation adjusts the object's position, rotation, size, and other properties to create fluid transitions.Linear interpolation moves objects in a straight line between keyframes, while spline interpolation uses curves for more natural motion.
 
 Steps of computer-based animation:
 - Input Process – Drawings are digitized via scanning, tracing, or digital tools. Post-processing removes errors for cleaner input.
