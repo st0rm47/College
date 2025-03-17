@@ -1,12 +1,28 @@
 
-# To create Bouncing Ball in Macromedia Director
+# To create bouncing ball animation in Macromedia Director
 
 ## Objective
 - To create a bouncing ball animation in Macromedia Director.
 - To understand the basic principles of animation and motion in digital media.
 
 ## Introduction
-Bouncing ball animations are a classic exercise in animation and motion graphics. They involve creating a ball that moves in a realistic and dynamic manner, bouncing off surfaces and changing direction based on physics principles. The animation of a bouncing ball can be used to demonstrate key concepts such as gravity, momentum, and elasticity.
+Computer-based animations are created by altering the properties of objects over time. A fundamental concept in animation is tweening, which refers to defining the starting and ending positions of an object and allowing the software to automatically generate the intermediate frames.
+
+Interpolation is a key process in this workflow, ensuring that the motion between keyframes is smooth and continuous. Interpolation adjusts the object's position, rotation, size, and other properties to create fluid transitions.
+
+Steps of computer-based animation:
+- Input Process – Drawings are digitized via scanning, tracing, or digital tools. Post-processing removes errors for cleaner input.
+
+- Composition Stage – Foreground and background elements are combined. A pencil test previews animation using pan-zoom features at low resolution.
+
+- Inbetween Process – Intermediate frames are generated through interpolation (linear or spline) to create smooth motion. Skeleton-based interpolation is used in 2D, while 3D interpolation is more complex.
+
+- Changing Colors – Color Look-Up Tables (CLUT) enable fast color changes without redrawing frames, improving efficiency with double buffering.
+
+<div align="center">
+  <img src="image.png" alt="Image" width="400" >
+</div>
+
 
 ## Materials
 - Software: Macromedia Director
