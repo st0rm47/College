@@ -130,6 +130,7 @@
     - An unordered list is a list of items marked with bullets and not by numbers.
     - The `<ul>` tag is used to define an unordered list.
     - The `<li>` tag is used to define each list item.
+    - The `start` attribute of the `<ul>` tag is used to specify the starting number of the list.
     ``` html
     <ul>
         <li>Item 1</li>
@@ -154,6 +155,7 @@
     ## Ordered Lists
     - An ordered list is a list of items marked with numbers.
     - The `<ol>` tag is used to define an ordered list.
+    - The `start` attribute of the `<ol>` tag is used to specify the starting number of the list.
     ``` html
     <ol>
         <li>Item 1</li>
@@ -169,7 +171,7 @@
         - I: Uppercase Roman numerals.
         - i: Lowercase Roman numerals.
     ``` html
-    <ol type="A">
+    <ol type="A" start = "4">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
@@ -194,12 +196,88 @@
 ---
 
 # HTML Tables
+### Structure
 - HTML tables are used to display data in tabular form.
 - HTML tables allow web developers to arrange data into rows and columns.
 - The `<table>` tag is used to define a table.
 - The `<tr>` tag is used to define a row in a table.
 - The `<td>` tag is used to define a data cell in a table.
+
+### Table Heading and Caption
 - The `<th>` tag is used to define a header cell in a table. The text in `<th>` elements are bold and centered by default.
 - The `<caption>` tag is used to add a caption to a table.
 
+### Border, CellSpacing and CellPadding
+- The `border` attribute of the `<table>` tag is used to specify the border of the table.
+- The `border` attribute can have the following values:
+        - 0: No border.
+        - 1: Border.
+- The `cellpadding` attribute of the `<table>` tag is used to specify the space between the cell wall and the cell content.
+- The `cellspacing` attribute of the `<table>` tag is used to specify the space between the cells.
 
+### Spanning Rows and Columns
+- The `colspan` attribute of the `<td>` tag is used to specify the number of columns a cell should span.
+- The `rowspan` attribute of the `<td>` tag is used to specify the number of rows a cell should span.
+
+### Table Height, Width and Background Color
+- The `width` attribute of the `<table>` tag is used to specify the width of the table.
+- The `height` attribute of the `<table>` tag is used to specify the height of the table.
+- The `bgcolor` attribute of the `<table>` tag is used to specify the background color of the table.
+- The `width`, `height`, and `bgcolor` attributes can also be used with the `<td>`, `<th>`, and `<tr>` tags.
+
+### Table Sections
+- The table can be divided into sections using the `<thead>`, `<tbody>`, and `<tfoot>` tags.
+- The `<thead>` tag is used to group the header content in a table.
+- The `<tbody>` tag is used to group the body content in a table.
+- The `<tfoot>` tag is used to group the footer content in a table.
+
+```html
+<table border="1" cellpadding="10" cellspacing="5" width ="400" height="200" bgcolor="yellow">
+    <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan = "2">Footer 1</td>
+        </tr>
+    </tfoot>
+</table>
+```
+---
+
+# HTML Frames
+- HTML frames are used to divide the browser window into multiple sections where each section can load a separate HTML document.
+- The `<frameset>` tag is used to define a set of frames.
+- The `<frame>` tag is used to define each individual frame.
+- The `src` attribute of the `<frame>` tag is used to specify the URL of the document that should be loaded into the frame.
+
+```html
+<frameset cols="25%,50%,25%">
+    <frame src="frame_a.htm">
+    <frame src="frame_b.htm">
+    <frame src="frame_c.htm">
+</frameset>
+```
+
+### HTML iframe
+- An `<iframe>` is used to display a web page within a web page.
+- The `src` attribute of the `<iframe>` tag is used to specify the URL of the page that should be loaded into the iframe.
+- Iframes are often used to display advertisements on a web page.
+```html
+<iframe src="https://www.w3schools.com"></iframe>
+<iframe src="https://www.w3schools.com" width="200" height="200"></iframe>
+```
+---
