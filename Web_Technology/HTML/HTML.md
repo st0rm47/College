@@ -281,3 +281,103 @@
 <iframe src="https://www.w3schools.com" width="200" height="200"></iframe>
 ```
 ---
+
+# HTML Forms
+- HTML forms are used to collect user input.
+- The `<form>` tag is used to create an HTML form.
+- The `action` attribute of the `<form>` tag is used to specify the URL of the page the form data should be submitted to.
+- The `method` attribute of the `<form>` tag is used to specify the HTTP method to be used when submitting the form data.
+- The `method` attribute can have two values:
+    - get: The form data is appended to the URL in name/value pairs.
+    - post: The form data is sent to the server as a separate HTTP message.
+
+### Form Input
+- The `<input>` tag is used to create an input field.
+- The `type` attribute of the `<input>` tag is used to specify the type of input field.
+- The `name` attribute of the `<input>` tag is used to specify the name of an input field.
+- The `value` attribute of the `<input>` tag is used to specify the value of an input field.
+- The `<textarea>` tag is used to create a multi-line text input field.
+- The `<maxlength>` attribute of the `<input>` tag is used to specify the maximum number of characters allowed in an input field.
+- The `required` attribute of the `<input>` tag is used to specify that an input field must be filled out before submitting the form.
+- The `placeholder` attribute of the `<input>` tag is used to specify a short hint that describes the expected value of an input field.
+
+
+```html
+<form action="submit.php" method="post">
+    First name: <input type="text" name="fname" maxlength="10"><br>
+    Last name: <input type="text" name="lname"><br>
+    Password: <input type="password" name="password" required><br>
+    <input type="submit" value="Submit">
+</form>
+```
+
+- The types of text input fields are:
+    - text: Single-line text input field.
+    - password: Password input field.
+    - radio: Radio button.
+    - select: Drop-down list.
+    - checkbox: Checkbox.
+    - submit: Submit button.
+    - reset: Reset button.
+    - button: Button.
+    - file: File upload field.
+    - hidden: Hidden input field.
+    - image: Image as a submit button.
+    - email: Email input field.
+    - url: URL input field.
+    - tel: Telephone input field.
+    - number: Number input field.
+    - range: Range input field.
+    - date: Date input field.
+    - month: Month input field.
+    - week: Week input field.
+    - time: Time input field.
+    - datetime-local: Local date and time input field.
+    - color: Color input field.
+    - search: Search input field.
+
+
+### Checkboxes
+- If the `type` attribute is set to `checkbox`, the input field will be a checkbox.
+```html
+<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+<input type="checkbox" name="vehicle3" value="Boat"> I have a boat<br>
+```
+
+### Radio Buttons
+- If the `type` attribute is set to `radio`, the input field will be a radio button.
+- Radio buttons are used when you want to let the user select one of a limited number of choices.
+```html
+<input type = "radio" value = "Male"> I am a Male <br>
+<input type = "radio" value = "Female"> I am a Female <br>
+```
+
+### Select Box
+- The `<select>` tag is used to create a drop-down list.
+- The `<option>` tag is used to define the options in the drop-down list.
+```html
+<select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+```
+
+### File Upload Box
+- The `<input>` tag with `type="file"` is used to create a file upload box.
+```html
+<input type="file" name="pic" accept="image/*">
+```
+
+### Button Controls
+- The `<input>` tag with `type="submit"` is used to create a submit button.
+- The `<input>` tag with `type="reset"` is used to create a reset button.
+- The `<button>` tag is used to create a button.
+```html
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<button type="button">Click Me!</button>
+```
+---
