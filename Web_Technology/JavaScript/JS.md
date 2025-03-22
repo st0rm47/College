@@ -101,3 +101,72 @@ var person = {
 delete person.age;
 person.hairColor = "black";
 ```
+
+## JavaScript DOM
+- The Document Object Model (DOM) is a programming interface for web documents.
+- It represents the structure of a document as a tree of objects.
+- The DOM allows you to manipulate the document structure, style, and content.
+
+## DOM Methods
+- The DOM provides methods to access and manipulate elements in the document.
+- You can use these methods to create, delete, and modify elements.
+
+```javascript
+document.getElementById(id) // Get an element by its id
+document.getElementsByTagName(name) // Get elements by tag name
+document.getElementsByClassName(name) // Get elements by class name
+element.innerHTML = new html content // Change the inner HTML of an element
+element.attribute = new value // Change the attribute value of an element
+element.style.property = new style // Change the style of an element
+document.createElement(element) // Create an element
+document.removeChild(element) // Remove an element
+
+
+### document.getElementById()
+- The getElementById() method returns the element that has the ID attribute with the specified value.
+- This method is one of the most common methods in the DOM.
+- It is used to get an element by its ID.
+- The ID attribute is unique within a document.
+- If no element has the specified ID, the method returns null.
+- The method is called on the document object.
+```javascript
+var element = document.getElementById("demo");
+element.innerHTML = "Hello, World!";
+```
+
+### document.getElementsByName()
+- The getElementsByName() method returns a collection of elements with the specified name attribute.
+- This method is used to get elements by their name attribute.
+- The name attribute is not unique within a document.
+- The method returns a NodeList object, which is an array-like object.
+- The method is called on the document object.
+
+```javascript
+var elements = document.getElementsByName("demo");
+elements[0].innerHTML = "Hello, World!";
+```
+
+### document.getElementsByTagName()
+- The getElementsByTagName() method returns a collection of elements with the specified tag name.
+- This method is used to get elements by their tag name.
+- The tag name is not unique within a document.
+- The method returns a NodeList object, which is an array-like object.
+- The method is called on the document object.
+
+```javascript
+var elements = document.getElementsByTagName("p");
+elements[0].innerHTML = "Hello, World!";
+```
+
+
+### innerHTML
+- The innerHTML property sets or returns the HTML content of an element.
+- The property is used to get or set the content of an element.
+- The content is represented as a string of HTML code.
+- The property is used to change the content of an element.
+- The property is called on an element object.
+
+```javascript
+document.getElementById("demo").innerHTML = "Hello, World!";
+```
+
