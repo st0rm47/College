@@ -170,3 +170,94 @@ elements[0].innerHTML = "Hello, World!";
 document.getElementById("demo").innerHTML = "Hello, World!";
 ```
 
+
+## Form Validation
+- Form validation is the process of checking if the form data is valid before submitting it to the server.
+- It helps to ensure that the data is accurate and complete.
+- You can use JavaScript to validate form data on the client side.
+
+### Basic Form Validation
+- The form must be checked to make sure all the mandatory fields are filled out.
+
+```javascript
+function validateForm() {
+  var x = document.getElementById("fname").value;
+  if (x == "") {
+    alert("Name is required");
+    return false;
+  }
+}
+```
+
+### Data Format Validation
+- The data entered in the form fields must be in the correct format.
+
+```javascript
+function validateForm() {
+  var age = document.getElementById("age").value;
+  if (age < 18 || age > 60) {
+    alert("Age must be between 18 and 60");
+    return false;
+  }
+```
+
+### Numeric Validation
+- The data entered in the form fields must be numeric.
+
+```javascript
+function validateForm() {
+  var x = document.getElementById("age").value;
+  var pattern = /^[0-9]+$/;
+  if (!x.match(pattern)) {
+    alert("Age must be a number");
+    return false;
+  }
+}
+```
+
+### Email Validation
+- The email address entered in the form field must be in the correct format.
+
+```javascript
+function validateForm() {
+  var email = document.getElementById("email").value;
+  var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!email.match(pattern)) {
+    alert("Invalid email address");
+    return false;
+  }
+}
+```
+
+### Password Validation
+- The password entered in the form field must meet certain criteria.
+
+```javascript
+function validateForm() {
+  var password = document.getElementById("password").value;
+  var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+  if (!password.match(pattern)) {
+    alert("Password must contain at least one digit, one lowercase and one uppercase letter, and be between 6 and 20 characters");
+    return false;
+  }
+}
+```
+
+### Checkbox Validation
+- At least one checkbox must be checked.
+
+```javascript
+function validateForm() {
+  var interests = document.getElementsByName("interests"),checked;
+  if (interests.length == 0) {
+    alert("Please select at least one interest");
+    return false;
+  }
+}
+```
+
+### Radio Button Validation
+- At least one radio button must be selected.
+
+```javascript
+function 
