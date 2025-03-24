@@ -248,10 +248,10 @@ function validateForm() {
 
 ```javascript
 function validateForm() {
-  var interests = document.getElementsByName("interests").checked;
+  var interests = document.querySelectorAll('input[name="interests"]:checked');
   if (interests.length == 0) {
-    alert("Please select at least one interest");
-    return false;
+      alert("Please select at least one interest");
+      return false;
   }
 }
 ```
@@ -261,10 +261,10 @@ function validateForm() {
 
 ```javascript
 function validateForm() {
-  var gender = document.getElementsByName("gender").checked;
+  var gender = document.querySelector('input[name="gender"]:checked');
   if (!gender) {
-    alert("Please select a gender");
-    return false;
+      alert("Please select a gender");
+      return false; 
   }
 }
 ```
@@ -283,18 +283,15 @@ function validateForm() {
 ```
 
 ### File Upload Validation
-- The file size and type must be validated before uploading.
+- The file input field must not be empty.
 
 ```javascript
 function validateForm() {
-  var file = document.getElementById("file").files[0];
-  if (file.size > 1024 * 1024) {
-    alert("File size must be less than 1MB");
-    return false;
-  }
-  if (!file.type.match("image.*")) {
-    alert("File must be an image");
-    return false;
+  var file = document.getElementById("file").value;
+  if (file == "") {
+      alert("Please upload a file.");
+      return false;
   }
 }
 ```
+---
