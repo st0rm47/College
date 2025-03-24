@@ -248,7 +248,7 @@ function validateForm() {
 
 ```javascript
 function validateForm() {
-  var interests = document.getElementsByName("interests"),checked;
+  var interests = document.getElementsByName("interests").checked;
   if (interests.length == 0) {
     alert("Please select at least one interest");
     return false;
@@ -260,4 +260,41 @@ function validateForm() {
 - At least one radio button must be selected.
 
 ```javascript
-function 
+function validateForm() {
+  var gender = document.getElementsByName("gender").checked;
+  if (!gender) {
+    alert("Please select a gender");
+    return false;
+  }
+}
+```
+
+### Select Box Validation
+- A value must be selected from the select box.
+
+```javascript
+function validateForm() {
+  var country = document.getElementById("country").value;
+  if (country == "") {
+    alert("Please select a country");
+    return false;
+  }
+}
+```
+
+### File Upload Validation
+- The file size and type must be validated before uploading.
+
+```javascript
+function validateForm() {
+  var file = document.getElementById("file").files[0];
+  if (file.size > 1024 * 1024) {
+    alert("File size must be less than 1MB");
+    return false;
+  }
+  if (!file.type.match("image.*")) {
+    alert("File must be an image");
+    return false;
+  }
+}
+```
