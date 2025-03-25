@@ -43,13 +43,6 @@
 - All HTML documents consist of nested HTML elements.
 ---
 
-<!-- # HTML Attributes
-- All HTML elements can have attributes
-- Attributes provide additional information about elements
-- Attributes are always specified in the opening tags.
-- Attributes usually come in name/value pairs like: name="value" -->
-
-
 # HTML Headings
 - HTML headings are defined with the `<h1>` to `<h6>` tags.
 - `<h1>` defines the most important heading. `<h6>` defines the least important heading.
@@ -93,9 +86,6 @@
 - The `&nbsp;` entity is used to add a single space.
 ---
 
-<!-- # HTML Text Formatting
-- HTML text formatting tags are used to format the text for better readability.
-- The `<mark>` tag is used to highlight the text. -->
 
 # Image Element
 - The `<img>` tag is used to embed an image in an HTML page.
@@ -381,3 +371,136 @@
 <button type="button">Click Me!</button>
 ```
 ---
+
+# HTML Attributes
+- HTML attributes provide additional information about HTML elements.
+- Attributes are always specified in the start tag.
+- Attributes are always specified in name/value pairs like this: `name="value"`
+- HTML attributes are case insensitive.
+- HTML attributes can be used with any HTML element.
+
+## Id and Class Attributes
+- The `id` attribute is used to specify a unique id for an HTML element.
+- The `class` attribute is used to specify a class for an HTML element.
+- The `class` attribute can be used to specify multiple classes for an HTML element.
+- The `class` attribute can be used to apply CSS styles to multiple elements.
+```html
+<p id="p1">This is a paragraph.</p>
+<p class="p1">This is another paragraph.</p>
+<p class="p1 p2">This is a third paragraph.</p>
+```
+- The `style` attribute is used to specify inline CSS styles for an HTML element.
+```html
+<p style="color:blue;">This is a blue paragraph.</p>
+<p style="color:red; font-size:20px;">This is a red paragraph.</p>
+```
+---
+
+# HTML Meta Tags
+- HTML meta tags are used to provide metadata about the HTML document.
+- Metadata is data (information) about data.
+- Metadata is not displayed on the page, but is machine parsable.
+- Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+- The `<meta>` tag is used to define metadata about an HTML document.
+- The `<meta>` tag is always placed inside the `<head>` section.
+- The `<meta>` tag has two required attributes:
+    - `name` - Specifies the name of the metadata.
+    - `content` - Specifies the value of the metadata.
+
+- The `<meta>` tag can also have the `http-equiv` attribute, which is used to provide an HTTP header for the information/value of the content attribute.
+- The `http-equiv` attribute can have the following values:
+    - content-type: Specifies the character set of the document.
+    - refresh: Specifies the number of seconds before the page should be refreshed.
+    - default-style: Specifies the default style sheet for the document.
+    - pragma: Specifies that the page should not be cached.
+    - expires: Specifies the expiration date of the page.
+```html
+<head>
+<meta name="description" content="This is a description of the page.">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="30">
+</head>
+```
+---
+
+# HTML Audio and Video
+- HTML5 introduced new elements for embedding audio and video in web pages.
+- The `<audio>` tag is used to embed audio files in a web page.
+- The `<video>` tag is used to embed video files in a web page.
+- The `controls` attribute is used to add audio controls like play, pause, and volume.
+- The `autoplay` attribute is used to specify that the audio or video should start playing as soon as it is loaded.
+```html
+<audio controls autoplay>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<video width="320" height="240" controls autoplay>
+    <source src="movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+```
+
+# HTML Canvas
+- The `<canvas>` element is used to draw graphics on a web page.
+- The `<canvas>` element is a container for graphics.
+- The `<canvas>` element has a `width` and `height` attribute to specify the size of the canvas.
+- The `<canvas>` element can be used to draw shapes, text, images, and other graphics.
+- The `<canvas>` element is used with JavaScript to draw graphics on the canvas.
+```html
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(20, 20, 150, 50);
+</script>
+```
+---
+
+# HTML Header and Footer
+- The `<header>` tag is used to define a header for a document or a section.
+- The `<footer>` tag is used to define a footer for a document or a section.
+- The `<header>` and `<footer>` tags can contain headings, paragraphs, links, images, and other HTML elements.
+```html
+<header>
+    <h1>This is a header</h1>
+    <p>This is a paragraph in the header.</p>
+</header>
+<footer>
+    <h1>This is a footer</h1>
+    <p>This is a paragraph in the footer.</p>
+</footer>
+```
+---
+
+# HTML Main and Section
+- The `<main>` tag is used to define the main content of a document.
+- The `<section>` tag is used to define a section in a document.
+- The `<main>` and `<section>` tags can contain headings, paragraphs, links, images, and other HTML elements.
+```html
+<main>
+    <h1>This is the main content</h1>
+    <p>This is a paragraph in the main content.</p>
+</main>
+<section>
+    <h1>This is a section</h1>
+    <p>This is a paragraph in the section.</p>
+</section>
+```
+---
+
+# HTML Figure and Figcaption
+- The `<figure>` tag is used to define self-contained content, like illustrations, diagrams, photos, code listings, etc.
+- The `<figcaption>` tag is used to define a caption for the `<figure>` element.
+- The `<figure>` and `<figcaption>` tags can contain headings, paragraphs, links, images, and other HTML elements.
+```html
+<figure>
+    <img src="image.jpg" alt="Image">
+    <figcaption>This is a caption for the image.</figcaption>
+</figure>
+```
+---
+
