@@ -504,3 +504,64 @@ ctx.fillRect(20, 20, 150, 50);
 ```
 ---
 
+# HTML Div and Span
+- The `<div>` tag is used to define a division or a section in an HTML document.
+- The `<div>` tag is a block-level element and is used to group block elements together.
+- The `<span>` tag is used to define a section in an HTML document.
+- The `<span>` tag is an inline element and is used to group inline elements together.
+- The `<div>` and `<span>` tags can be used to apply CSS styles to a group of elements.
+```html
+<div style="background-color:lightblue;">
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+</div>
+
+<span style="color:blue;">This is a blue text.</span>
+```
+---
+
+# HTML Events
+- HTML events are actions that can be detected by JavaScript.
+- HTML events can be triggered by user actions like clicking a button, submitting a form, moving the mouse, etc.
+- HTML events can be used to execute JavaScript code when an event occurs.
+- HTML events can be used to create interactive web pages.
+- HTML events can be used with HTML elements like `<button>`, `<input>`, `<form>`, `<a>`, etc.
+- HTML events can be used with JavaScript functions to execute code when an event occurs.
+
+## Window Events
+- The `onload` event occurs when the browser has finished loading the page.
+- The `onresize` event occurs when the browser window is resized.
+- The `onscroll` event occurs when the user scrolls the page.
+- The `onunload` event occurs when the user leaves the page.
+
+## HTML Form Events
+- The `onsubmit` event occurs when the form is submitted.
+- The `onreset` event occurs when the form is reset.
+- The `onchange` event occurs when the value of an input field changes.
+- The `onfocus` event occurs when an input field gains focus.
+- The `onblur` event occurs when an input field loses focus.
+- The `oninput` event occurs when the value of an input field is changed.
+- The `onselect` event occurs when the user selects some text in an input field.
+
+## Keyboard Events
+- The `onkeydown` event occurs when the user presses a key on the keyboard.
+- The `onkeyup` event occurs when the user releases a key on the keyboard.
+- The `onkeypress` event occurs when the user presses a key on the keyboard and releases it.
+- The `onkeypress` event is deprecated and should not be used.
+
+## Mouse Events
+- The `onclick` event occurs when the user clicks on an element.
+- The `ondblclick` event occurs when the user double-clicks on an element.
+- The `onmousedown` event occurs when the user presses the mouse button down on an element.
+- The `onmouseup` event occurs when the user releases the mouse button on an element.
+- The `onmouseover` event occurs when the user moves the mouse pointer over an element.
+- The `onmouseout` event occurs when the user moves the mouse pointer out of an element.
+- The `onmousemove` event occurs when the user moves the mouse pointer over an element.
+---
+
+# Examples
+
+
+
+
+
