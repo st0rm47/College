@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>jQuery Effects</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>jQuery Effects Example</h1>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="slideDown">Slide Down</button>
+    <button id="slideUp">Slide Up</button>
+    <button id="slideToggle">Slide Toggle</button>
+    <div class ="main"></div>
+
+    <hr><br>
+
+
+
+    <script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $(".main").hide(1000, function(){
+                alert("Div is hidden");
+            });
+        });
+
+        $("#show").click(function(){
+            $('.main').show(1000, function(){
+                alert("Div is shown");
+            });
+        });
+
+        $("#toggle").click(function(){
+            $('.main').toggle(1000, function(){
+                alert("Div is toggled");
+            });
+        });
+
+        $("#fadeIn").click(function(){
+            $('.main').fadeIn(1000, function(){
+                alert("Div is faded in");
+            });
+        });
+
+        $("#fadeOut").click(function(){
+            $('.main').fadeOut(1000, function(){
+                alert("Div is faded out");
+            });
+        });
+
+        $("#fadeToggle").click(function(){
+            $('.main').fadeToggle(1000, function(){
+                alert("Div is faded toggled");
+            });
+        });
+
+        $("#slideDown").click(function(){
+            $('.main').slideDown(1000, function(){
+                alert("Div is slid down");
+            });
+        });
+
+        $("#slideUp").click(function(){
+            $('.main').slideUp(1000, function(){
+                alert("Div is slid up");
+            });
+        });
+
+        $("#slideToggle").click(function(){
+            $('.main').slideToggle(1000, function(){
+                alert("Div is slid toggled");
+            });
+        });
+    });
+       
+    </script>
+
+</body>
+
+</html>
