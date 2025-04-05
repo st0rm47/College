@@ -204,13 +204,21 @@
 
 - [Lab Report 1: GCD](./DAA/GCD.cpp)
 - [Lab Report 2: Fibonacci Series](./DAA/Fibonacci_Series.cpp)
-- [Lab Report 3: Bubble Sort](./DAA/Bubble_Sort.cpp)
-- [Lab Report 4: Selection Sort](./DAA/Selection_Sort.cpp)
-- [Lab Report 5: Insertion Sort](./DAA/Insertion_Sort.cpp)
-- [Lab Report 6: Binary Search](./DAA/Binary_Search.cpp)
-- [Lab Report 7: Min Max Problem](./DAA/MinMax.cpp)
-- [Lab Report 8: Merge Sort](./DAA/Merge_Sort.cpp)
-- [Lab Report 9: Quick Sort](./DAA/Quick_Sort.cpp)
+- [Lab Report 3: Factorial](./DAA/Factorial.cpp)
+- [Lab Report 4: Linear Search](./DAA/Linear_Search.cpp)
+- [Lab Report 5: Bubble Sort](./DAA/Bubble_Sort.cpp)
+- [Lab Report 6: Selection Sort](./DAA/Selection_Sort.cpp)
+- [Lab Report 7: Insertion Sort](./DAA/Insertion_Sort.cpp)
+- [Lab Report 8: Binary Search](./DAA/Binary_Search.cpp)
+- [Lab Report 9: Min Max Problem](./DAA/MinMax.cpp)
+- [Lab Report 10: Merge Sort](./DAA/Merge_Sort.cpp)
+- [Lab Report 11: Quick Sort](./DAA/Quick_Sort.cpp)
+- [Lab Report 12: Heap Sort](./DAA/Heap_Sort.cpp)
+- [Lab Report 13: Fractional Knapsack Problem](./DAA/Fractional_Knapsack.cpp)
+- [Lab Report 14: Job Sequencing Problem](./DAA/Job_Sequencing.cpp)
+- [Lab Report 15: Kruskal's Algorithm](./DAA/Kruskal.cpp)
+- [Lab Report 16: Prim's Algorithm](./DAA/Prims.cpp)
+
 ---
 </details>
 
