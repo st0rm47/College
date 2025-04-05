@@ -196,6 +196,8 @@
 - [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
 - [Lab Report 3: Text Animation in Swish Max](./Multimedia/LAB_3/Readme.md)
 - [Lab Report 4: Bouncing Ball Animation in Macromedia Director](./Multimedia/LAB_4/Readme.md)
+- [Lab Report 5: Creating Simple Bill in Macromedia MX 11](./Multimedia/LAB_5/Readme.md)
+
 ---
 </details>
 
