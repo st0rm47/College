@@ -9,10 +9,10 @@
 Vector graphics and raster graphics are two fundamental types of digital images used in graphic design and multimedia.
 
 ### Vector Graphics
-Vector graphics are created using mathematical equations to define shapes, lines, and curves. They are resolution-independent, meaning they can be scaled to any size without losing quality. Common formats include SVG, AI, and EPS. They are ideal for logos, icons, and illustrations where scalability is important.
+Vector graphics are created using mathematical equations to define shapes, lines, and curves. They are resolution-independent, meaning they can be scaled to any size without losing quality. They are ideal for logos, icons, and illustrations where scalability is important.
 
 ### Raster Graphics
-Raster graphics, also known as bitmap images, are composed of a grid of pixels, where each pixel represents a specific color. They are resolution-dependent, meaning scaling them can result in a loss of quality. Common formats include JPEG, PNG, and BMP. They are best suited for photographs and detailed images where color depth and detail are crucial.
+Raster graphics, also known as bitmap images, are composed of a grid of pixels, where each pixel represents a specific color. They are resolution-dependent, meaning scaling them can result in a loss of quality.They are best suited for photographs and detailed images where color depth and detail are crucial.
 
 
 ### Differences Between Raster and Vector
