@@ -220,6 +220,8 @@
 - [Lab Report 14: Job Sequencing Problem](./DAA/Job_Sequencing.cpp)
 - [Lab Report 15: Kruskal's Algorithm](./DAA/Kruskal.cpp)
 - [Lab Report 16: Prim's Algorithm](./DAA/Prims.cpp)
+- [Lab Report 17: Dijkstra's Algorithm](./DAA/Dijkstra.cpp)
+- [Lab Report 18: Huffman Coding](./DAA/Huffman_Coding.cpp)
 
 ---
 </details>
@@ -229,6 +231,8 @@
 
 - [Assignment 1: HTML and CSS Basics](./Web_Technology/Assignment/Assignment1.md)
 - [Assignment 2: JavaScript Basics](./Web_Technology/Assignment/Assignment2.md)
+
+-[Lab Report 1: HTML Basics](./Web_Technology/Lab_Report_1/HTML_Basics.html)
 ---
 </details>
 
@@ -244,6 +248,10 @@
 
 <details>
 <summary>Cryptography</summary>
+
+- [Lab Report 1: Caesar Cipher](./Cryptography/Caesar_Cipher.cpp)
+
+
 
 </details>
 
