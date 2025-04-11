@@ -249,7 +249,14 @@
 <details>
 <summary>Cryptography</summary>
 
-- [Lab Report 1: Caesar Cipher](./Cryptography/Caesar_Cipher.cpp)
+- [Lab Report 1: Caesar Cipher](./Cryptography/Caesar_Cipher.py)
+
+- [Lab Report 3: Playfair Cipher](./Cryptography/Playfair_Cipher.py)
+- [Lab Report 4: Hill Cipher](./Cryptography/Hill_Cipher.py)
+- [Lab Report 5: Vigenere Cipher](./Cryptography/Vigenere_Cipher.py)
+- [Lab Report 6: Rail Fence Cipher](./Cryptography/Rail_Fence_Cipher.py)
+- [Lab Report 7: Euclidean Algorithm](./Cryptography/Euclidean_Algorithm.py)
+- [Lab Report 8: Extended Euclidean Algorithm](./Cryptography/Extended_Euclidean_Algorithm.py)
 
 
 
