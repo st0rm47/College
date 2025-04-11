@@ -38,7 +38,7 @@ def main():
         else:
             print("Invalid choice.")
             
-        print("\nCompiled by : Subodh Ghimire")            
+    print("\nCompiled by : Subodh Ghimire")            
     
 if __name__ == "__main__":
     main()
