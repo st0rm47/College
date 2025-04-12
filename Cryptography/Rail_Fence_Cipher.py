@@ -30,7 +30,6 @@ def rail_fence_encrypt(text, key):
         result += ''.join([c for c in r if c != ' '])
     return result
 
-
 # Function to decrypt using Rail Fence Cipher
 def rail_fence_decrypt(cipher, key):
     n = len(cipher)
@@ -74,26 +73,24 @@ def rail_fence_decrypt(cipher, key):
 
     return result
 
-
-# Main program
 def main():
     print("\t\t=====================")
     print("\t\t  Rail Fence Cipher  ")
     print("\t\t=====================")
 
+    key = int(input("Enter key (number of rails): "))
+    
     while True:
         print("\n1. Encrypt Text \n2. Decrypt Text \n3. Exit")
         choice = input("Enter your choice (1/2/3): ")
 
         if choice == '1':
             text = input("Enter plaintext: ")
-            key = int(input("Enter key (number of rails): "))
             encrypted = rail_fence_encrypt(text, key)
             print("Encrypted text:", encrypted)
 
         elif choice == '2':
             text = input("Enter ciphertext: ")
-            key = int(input("Enter key (number of rails): "))
             decrypted = rail_fence_decrypt(text, key)
             print("Decrypted text:", decrypted)
 
@@ -104,7 +101,7 @@ def main():
         else:
             print("Invalid choice!")
 
-        print("\nCompiled by: Subodh Ghimire")
+    print("\nCompiled by: Subodh Ghimire")
 
 if __name__ == "__main__":
     main()
