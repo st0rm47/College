@@ -189,17 +189,6 @@
 ---
 
 # 5TH SEMESTER
-<details>
-<summary>Multimedia Computing</summary>
-
-- [Lab Report 1: Logo Design in Macromedia MX 11](./Multimedia/LAB_1/Readme.md)
-- [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
-- [Lab Report 3: Text Animation in Swish Max](./Multimedia/LAB_3/Readme.md)
-- [Lab Report 4: Bouncing Ball Animation in Macromedia Director](./Multimedia/LAB_4/Readme.md)
-- [Lab Report 5: Creating Simple Bill in Macromedia MX 11](./Multimedia/LAB_5/Readme.md)
-
----
-</details>
 
 <details>
 <summary>Design and Analysis of Algorithms</summary>
@@ -222,9 +211,45 @@
 - [Lab Report 16: Prim's Algorithm](./DAA/Prims.cpp)
 - [Lab Report 17: Dijkstra's Algorithm](./DAA/Dijkstra.cpp)
 - [Lab Report 18: Huffman Coding](./DAA/Huffman_Coding.cpp)
+---
+</details>
+
+
+<details>
+<summary>System Analysis and Design</summary>
 
 ---
 </details>
+
+<details>
+<summary>Cryptography</summary>
+
+- [Lab Report 1: Caesar Cipher](./Cryptography/Caesar_Cipher.py)
+- [Lab Report 2: Monoalphabetic Substitution Cipher](./Cryptography/Monoalphabetic_Substitution_Cipher.py)
+- [Lab Report 3: Playfair Cipher](./Cryptography/Playfair_Cipher.py)
+- [Lab Report 4: Hill Cipher](./Cryptography/Hill_Cipher.py)
+- [Lab Report 5: Vigenere Cipher](./Cryptography/Vigenere_Cipher.py)
+- [Lab Report 6: Rail Fence Cipher](./Cryptography/Rail_Fence_Cipher.py)
+- [Lab Report 7: Euclidean Algorithm](./Cryptography/Euclidean_Algorithm.py)
+- [Lab Report 8: Extended Euclidean Algorithm](./Cryptography/Extended_Euclidean_Algorithm.py)
+- [Lab Report 9: Miller-Rabin Primality Test](./Cryptography/Miller_Rabin_Primality_Test.py)
+- [Lab Report 10: Euler's Theorem](./Cryptography/Eulers_Theorem.py)
+- [Lab Report 11: Primitive Root](./Cryptography/Primitive_Root.py)
+- [Lab Report 12: Discrete Logarithm](./Cryptography/Discrete_Logarithm.py)
+- [Lab Report 13: Diffie-Hellman Key Exchange](./Cryptography/Diffie_Hellman_Key_Exchange.py)
+- [Lab Report 14: Man-in-middle attack](./Cryptography/Man-in-middle_attack.py)
+- [Lab Report 15: RSA Algorithm](./Cryptography/RSA_Algorithm.py)
+- [Lab Report 16: ElGamal Cryptographic System](./Cryptography/ElGamal_Cryptographic_System.py)
+---
+</details>
+
+<details>
+<summary>Simulation and Modeling</summary>
+
+---
+</details>
+
+
 
 <details>
 <summary>Web Technology</summary>
@@ -232,36 +257,24 @@
 - [Assignment 1: HTML and CSS Basics](./Web_Technology/Assignment/Assignment1.md)
 - [Assignment 2: JavaScript Basics](./Web_Technology/Assignment/Assignment2.md)
 
--[Lab Report 1: HTML Basics](./Web_Technology/Lab_Report_1/HTML_Basics.html)
+- [Lab Report 1: HTML Basics](./Web_Technology/Practical/Lab_Report_1/HTML_Basics.md)
+- [Lab Report 2: CSS Basics](./Web_Technology/Practical/Lab_Report_2/CSS_Basics.md)
+- [Lab Report 3: JavaScript Basics](./Web_Technology/Practical/Lab_Report_3/JavaScript_Basics.md)
+
 ---
 </details>
 
-<details>
-<summary>Simulation and Modeling</summary>
-
-</details>
 
 <details>
-<summary>System Analysis and Design</summary>
+<summary>Multimedia Computing</summary>
 
+- [Lab Report 1: Logo Design in Macromedia MX 11](./Multimedia/LAB_1/Readme.md)
+- [Lab Report 2: Bouncing Ball Animation in Macromedia Flash](./Multimedia/LAB_2/Readme.md)
+- [Lab Report 3: Text Animation in Swish Max](./Multimedia/LAB_3/Readme.md)
+- [Lab Report 4: Bouncing Ball Animation in Macromedia Director](./Multimedia/LAB_4/Readme.md)
+- [Lab Report 5: Creating Simple Bill in Macromedia MX 11](./Multimedia/LAB_5/Readme.md)
+---
 </details>
-
-<details>
-<summary>Cryptography</summary>
-
-- [Lab Report 1: Caesar Cipher](./Cryptography/Caesar_Cipher.py)
-
-- [Lab Report 3: Playfair Cipher](./Cryptography/Playfair_Cipher.py)
-- [Lab Report 4: Hill Cipher](./Cryptography/Hill_Cipher.py)
-- [Lab Report 5: Vigenere Cipher](./Cryptography/Vigenere_Cipher.py)
-- [Lab Report 6: Rail Fence Cipher](./Cryptography/Rail_Fence_Cipher.py)
-- [Lab Report 7: Euclidean Algorithm](./Cryptography/Euclidean_Algorithm.py)
-- [Lab Report 8: Extended Euclidean Algorithm](./Cryptography/Extended_Euclidean_Algorithm.py)
-
-
-
-</details>
-
 
 ## How to Use
    >*Clone the repository to your local machine*
