@@ -388,7 +388,7 @@ sequenceDiagram
 
 > [!NOTE]
 > Our course focuses only on Web 1.0 and Web 2.0
-> 
+
 ### Web 3.0
 - Web 3.0 is the third phase of the web, emphasizing decentralization, artificial intelligence, and user control over data.
 - It aims to create a more intelligent, secure, and personalized web experience.
