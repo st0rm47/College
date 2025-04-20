@@ -175,7 +175,7 @@
 - Types: single-tier, two-tier, and multi-tier.
 
 <div align="center">
-  <img src="client-server.png" alt="Client Server Architecture" width="400">
+  <img src="images/client-server.png" alt="Client Server Architecture" width="400">
 </div>
 
 ### Single-Tier Architecture
@@ -187,7 +187,7 @@
 - Example: Local web server for website development.
 
 <div align="center">
-  <img src="single-tier.png" alt="Single Tier Architecture" width="400">
+  <img src="images/single-tier.png" alt="Single Tier Architecture" width="400">
 </div>
 
 ---
@@ -201,7 +201,7 @@
 - Example: A desktop application connecting to a remote database server.
 
 <div align="center">
-  <img src="two-tier.png" alt="Two Tier Architecture" width="400">
+  <img src="images/two-tier.png" alt="Two Tier Architecture" width="400">
 </div>
 
 ---
@@ -216,7 +216,7 @@
 - Example: A web application with a front-end client, a middle-tier application server, and a back-end database server.
 
 <div align="center">
-    <img src="multi-tier.png" alt="Multi Tier Architecture" width="400">
+    <img src="images/multi-tier.png" alt="Multi Tier Architecture" width="400">
 </div>
 
 ---
@@ -386,6 +386,9 @@ sequenceDiagram
 
 ---
 
+> [!NOTE]
+> Our course focuses only on Web 1.0 and Web 2.0
+> 
 ### Web 3.0
 - Web 3.0 is the third phase of the web, emphasizing decentralization, artificial intelligence, and user control over data.
 - It aims to create a more intelligent, secure, and personalized web experience.
@@ -422,6 +425,3 @@ sequenceDiagram
 | **Examples**         | Early websites             | Social media, blogs         | dApps, blockchain platforms |
 | **Security**         | Basic                      | Improved                    | Highly secure with blockchain |
 | **Focus**            | Information sharing        | User interaction            | Decentralization and AI     |
-
-
-
