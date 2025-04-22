@@ -21,7 +21,7 @@
 - Standards and protocols ensure seamless communication between devices and networks.
 
 <div align="center">
-  <img src="internet.png" alt="Internet Structure" width="400" >
+  <img src="images/internet.png" alt="Internet Structure" width="400" >
 </div>
 
 ### Uses of Internet
@@ -45,7 +45,7 @@
 - They can be integrated with systems like ERP or CRM to boost efficiency and productivity.
 
 <div align="center">
-  <img src="intranet.png" alt="Intranet Structure" width="400" >
+  <img src="images/intranet.png" alt="Intranet Structure" width="400" >
 </div>
 
 ### Uses of Intranet
