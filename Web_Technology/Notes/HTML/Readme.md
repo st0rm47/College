@@ -167,16 +167,6 @@ This is the second line of the comment -->
 
 ---
 
-> # HTML Spacing Tags
-- HTML spacing tags are used to add space between the elements.
-- The `<br>` tag is used to add a single line break.
-- The `<hr>` tag is used to add a horizontal line.
-- The `<pre>` tag is used to define preformatted text.
-- The `&nbsp;` entity is used to add a single space.
-
-
----
-
 > # Formatting Text Phrases
 - HTML text phrases are used to format the text for better readability.
 - The `<strong>` tag is used to highlight the important text. This makes the text bold.
@@ -185,7 +175,16 @@ This is the second line of the comment -->
 - The `<span>` tag is used to group inline elements together.
 - The `<tt>` tag is used to define teletype text.
 
---- 
+---
+
+> # HTML Spacing Tags
+- HTML spacing tags are used to add space between the elements.
+- The `<br>` tag is used to add a single line break.
+- The `<hr>` tag is used to add a horizontal line.
+- The `<pre>` tag is used to define preformatted text.
+- The `&nbsp;` entity is used to add a single space.
+
+---
 
 > # Image Element
 - The `<img>` tag is used to embed an image in an HTML page.
@@ -658,6 +657,17 @@ This is the second line of the comment -->
 
 ---
 
+### Textarea
+- The `<textarea>` tag is used to create a multi-line text input field.
+- The `rows` and `cols` attributes are used to specify the number of rows and columns in the textarea.
+textarea.
+- Example:
+    ```html
+    <textarea name = "textarea" rows="4" cols="50" placeholder="Enter text here..." maxlength="100"></textarea>
+    ```
+
+---
+
 ### Checkboxes
 - If the `type` attribute is set to `checkbox`, the input field will be a checkbox.
 - Checkboxes are used when you want to let the user select one or more options from a set of choices.
@@ -674,10 +684,11 @@ This is the second line of the comment -->
 ### Radio Buttons
 - If the `type` attribute is set to `radio`, the input field will be a radio button.
 - Radio buttons are used when you want to let the user select one of a limited number of choices.
+- The `name` attribute must be the same for all radio buttons in a group to ensure only one can be selected at a time.
 - Example:
     ```html
-    <input type = "radio" value = "Male"> I am a Male <br>
-    <input type = "radio" value = "Female"> I am a Female <br>
+    <input type = "radio" name = "gender" value = "Male"> I am a Male <br>
+    <input type = "radio" name = "gender" value = "Female"> I am a Female <br>
     ```
 
 ---
@@ -685,6 +696,7 @@ This is the second line of the comment -->
 ### Select Box
 - The `<select>` tag is used to create a drop-down list.
 - The `<option>` tag is used to define the options in the drop-down list.
+- The `value` attribute of the `<option>` tag is used to specify the value of the option.
 - Example:
     ```html
     <select>
@@ -745,6 +757,8 @@ This is the second line of the comment -->
 - They can be used with JavaScript functions to execute code when an event occurs.
 
 ### Window Events
+- They are used in the `<body>` tag to execute JavaScript code when the page is loaded, resized, or scrolled.
+- 
 | **Event**   | **Description**                                                                 |
 |-------------|---------------------------------------------------------------------------------|
 | `onload`    | Occurs when the browser has finished loading the page.                         |
@@ -753,6 +767,7 @@ This is the second line of the comment -->
 | `onunload`  | Occurs when the user leaves the page.                                          |
 
 ### HTML Form Events
+- They are used in the `<form>` tag to execute JavaScript code when the form is submitted, reset, or when an input field changes.
 | **Event**     | **Description**                                                                 |
 |---------------|---------------------------------------------------------------------------------|
 | `onsubmit`    | Occurs when the form is submitted.                                             |
@@ -764,6 +779,7 @@ This is the second line of the comment -->
 | `onselect`    | Occurs when the user selects some text in an input field.                     |
 
 ### Keyboard Events
+- They are used in the `<input>` tag to execute JavaScript code when the user presses a key on the keyboard.
 | **Event**      | **Description**                                                                 |
 |-----------------|---------------------------------------------------------------------------------|
 | `onkeydown`     | Occurs when the user presses a key on the keyboard.                            |
@@ -771,6 +787,7 @@ This is the second line of the comment -->
 | `onkeypress`    | Occurs when the user presses a key on the keyboard and releases it. *(Deprecated)* |
 
 ## Mouse Events
+- They are used in the `<button>`, `<input>`, and other elements to execute JavaScript code when the user interacts with the mouse.
 | **Event**       | **Description**                                                                 |
 |------------------|---------------------------------------------------------------------------------|
 | `onclick`        | Occurs when the user clicks on an element.                                     |
