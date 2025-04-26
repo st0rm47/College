@@ -1,0 +1,74 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Form Example</title>
+</head>
+<body>
+
+<h1>FORM</h1>
+<form onsubmit="return validateForm()">
+    
+    <!-- Text Input -->
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" maxlength="50" placeholder=" Enter your name" ><br><br>
+
+    <!-- Text Input -->
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" maxlength="50"><br><br>
+
+    <!-- Email Input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" ><br><br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100"><br><br>
+
+    <!-- Radio Buttons -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male">Male
+    <input type="radio" id="female" name="gender" value="Female">Female <br><br>
+
+    <!-- Checkbox -->
+    <label>Interests:</label><br>
+    <input type="checkbox" id="sports" name="interests" value="sports"> Sports <br>
+    <input type="checkbox" id="music" name="interests" value="music"> Music <br>
+    <input type="checkbox" id="travel" name="interests" value="travel"> Travel <br><br>
+    
+    <!-- Selection -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="nepal">Nepal</option>
+        <option value="india">India</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+    </select><br><br>
+
+    <!-- Textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+    <!-- File Input -->
+    <label for="file">Upload a file:</label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <!-- Hidden Input -->
+    <input type="hidden" name="form_token" value="12345">
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit" >
+
+    <!-- Reset Button -->
+    <input type="reset" value="Reset"> 
+    
+</form>
+    <script src="validation.js"></script>
+</body>
+</html>
