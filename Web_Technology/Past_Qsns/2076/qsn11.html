@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      .box {
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+      }
+
+      @media (max-width: 1023px){
+        .box {
+          background-color: gray;
+          font-size: 16px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .box {
+          background-color: blue;
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+<body>
+    <div class="box">
+      <h1>Responsive Design in Action</h1>
+    </div>
+  </body>
+</html>

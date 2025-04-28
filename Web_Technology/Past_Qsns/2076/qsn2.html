@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src = "image.jpg" alt = "image" width = "200px" height="200px" onmouseover = "changetext()" onmouseout = "changeback()">
+        <p id = "desc"> This is an image of a great person. </p>
+    </div>
+
+    <script>
+        function changetext(){
+            var x = document.getElementById("desc");
+            x.innerHTML= "This is the image of Nepal";
+        }
+        function changeback(){
+            var y = document.getElementById("desc");
+            y.innerHTML= "This is an image of a great person.";
+        }
+    </script>
+</body>
+</html>

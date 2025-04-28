@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://code.jquery.com/jquery-3.6.0.min-js"></script>
+    <title>JSON</title>
+</head>
+<body>
+    <h1> Parsing a JSON</h1>
+    <script>
+        var x = '{"name": "John Doe", "age": 30}';
+        var y = JSON.parse(x);
+
+        document.write(y.name);
+        document.write(y.age);
+    </script>
+</body>
+</html>
