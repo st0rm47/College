@@ -18,12 +18,12 @@
 - Declarations have properties and values.
 Properties are the aspects of the element to style, and values are the settings for those properties.
 - Example:
-```css
-h1 {
-  color: blue; /* Property: color, Value: blue */
-  font-size: 24px; /* Property: font-size, Value: 24px */
-}
-```
+    ```css
+    h1 {
+    color: blue; /* Property: color, Value: blue */
+    font-size: 24px; /* Property: font-size, Value: 24px */
+    }
+    ```
 - In this example, the selector is `h1`, and the properties are `color` and `font-size` with their respective values.
 - CSS rules are enclosed in curly braces `{}`.
 
@@ -229,6 +229,44 @@ Example:
     - HSL colors (e.g., `hsl(0, 100%, 50%)` for red).
     - HSLA colors (e.g., `hsla(0, 100%, 50%, 0.5)` for semi-transparent red).
 
+#### Named Colors
+- CSS provides a list of built-in color names that can be used directly in styles.
+- Some common color names include:
+    - `red`: Represents the color red.
+    - `green`: Represents the color green.
+    - `blue`: Represents the color blue.
+- Example:
+    ```css
+    h1 {
+        color: red; /* Sets the text color to red using a built-in color name */
+    }
+    ```
+- The above code sets the text color of all `<h1>` elements to red using a built-in color name.
+
+---
+
+#### Hexadecimal Color Format
+- The hexadecimal color format uses a six-digit code to represent colors.
+- The first two digits represent the red component, the next two represent the green component, and the last two represent the blue component.
+- Each component can take a value from 00 to FF (0-255 in decimal).
+- Example:
+    ```css
+    h1 {
+        color: #FF0000; /* Sets the text color to red using hexadecimal format */
+    }
+    ```
+- The above code sets the text color of all `<h1>` elements to red using the hexadecimal color format.
+- Hexadecimal colors can also be written in shorthand format using three digits.
+- Example:
+    ```css
+    h1 {
+        color: #F00; /* Sets the text color to red using shorthand hexadecimal format */
+    }
+    ```
+- The above code sets the text color of all `<h1>` elements to red using the shorthand hexadecimal color format.
+
+---
+
 #### RGB Color Format
 - The RGB color format uses the `rgb()` function to define colors based on their red, green, and blue components.
 - Each component can take a value from 0 to 255.
@@ -281,44 +319,6 @@ Example:
 
 ---
 
-#### Hexadecimal Color Format
-- The hexadecimal color format uses a six-digit code to represent colors.
-- The first two digits represent the red component, the next two represent the green component, and the last two represent the blue component.
-- Each component can take a value from 00 to FF (0-255 in decimal).
-- Example:
-    ```css
-    h1 {
-        color: #FF0000; /* Sets the text color to red using hexadecimal format */
-    }
-    ```
-- The above code sets the text color of all `<h1>` elements to red using the hexadecimal color format.
-- Hexadecimal colors can also be written in shorthand format using three digits.
-- Example:
-    ```css
-    h1 {
-        color: #F00; /* Sets the text color to red using shorthand hexadecimal format */
-    }
-    ```
-- The above code sets the text color of all `<h1>` elements to red using the shorthand hexadecimal color format.
-
----
-
-#### Built-in Color Names
-- CSS provides a list of built-in color names that can be used directly in styles.
-- Some common color names include:
-    - `red`: Represents the color red.
-    - `green`: Represents the color green.
-    - `blue`: Represents the color blue.
-- Example:
-    ```css
-    h1 {
-        color: red; /* Sets the text color to red using a built-in color name */
-    }
-    ```
-- The above code sets the text color of all `<h1>` elements to red using a built-in color name.
-
----
-
 > # CSS Backgrounds
 - CSS backgrounds are used to set the background color or image of an element.
 - The `background` property is a shorthand property for setting all background properties in one declaration.
@@ -354,7 +354,7 @@ Example:
     }
     ```
 
-### Border Width
+#### Border Width
 - The `border-width` property sets the width of the border.
 - It can take values in pixels (px), ems (em), or percentages (%).
 - Example:
@@ -374,7 +374,7 @@ Example:
 
 ---
 
-### Border Style
+#### Border Style
 - The `border-style` property sets the style of the border.
 - It can take values such as `none`, `solid`, `dashed`, `dotted`, `double`, `groove`, `ridge`, `inset`, and `outset`.
 - Example:
@@ -394,7 +394,7 @@ Example:
 
 ---
 
-### Border Color
+#### Border Color
 - The `border-color` property sets the color of the border.
 - It can take color names, hex values, RGB values, or HSL values.
 - Example:
@@ -414,7 +414,7 @@ Example:
 
 ---
 
-### Border Radius
+#### Border Radius
 - The `border-radius` property is used to create rounded corners for an element's border.
 - It can take values in pixels (px), ems (em), or percentages (%).
 - Example:
@@ -463,65 +463,6 @@ Example:
     ```css
     p {
         color: #ff5733; /* Sets the text color to a shade of orange */
-    }
-    ```
-
----
-
-#### `font-family`
-- **Purpose**: Specifies the font of the text.
-- **Details**: You can list multiple fonts as a fallback mechanism. If the first font is unavailable, the browser tries the next one.
-- **Use Case**: To ensure consistent typography across different devices.
-- **Example**:
-    ```css
-    p {
-        font-family: "Times New Roman", Georgia, serif; /* Uses Times New Roman, falls back to Georgia or any serif font */
-    }
-    ```
-
----
-
-#### `font-size`
-- **Purpose**: Sets the size of the text.
-- **Details**: Can be specified in:
-  - **Absolute units**: `px`, `pt`, etc.
-  - **Relative units**: `em`, `rem`, `%`, etc.
-- **Use Case**: To adjust text size for readability or responsiveness.
-- **Example**:
-    ```css
-    p {
-        font-size: 1.2em; /* Sets the font size to 1.2 times the parent element's font size */
-    }
-    ```
-
----
-
-#### `font-style`
-- **Purpose**: Specifies the style of the font.
-- **Details**: Common values are:
-  - `normal`: Default style.
-  - `italic`: Italicized text.
-  - `oblique`: Slanted text.
-- **Use Case**: To emphasize certain text (e.g., quotes or citations).
-- **Example**:
-    ```css
-    p {
-        font-style: oblique; /* Makes the text slanted */
-    }
-    ```
-
----
-
-#### `font-weight`
-- **Purpose**: Sets the weight (thickness) of the font.
-- **Details**: Can be specified as:
-  - Keywords: `normal`, `bold`, `lighter`, `bolder`.
-  - Numeric values: `100` (thin) to `900` (extra bold).
-- **Use Case**: To create visual hierarchy or emphasize headings.
-- **Example**:
-    ```css
-    p {
-        font-weight: 300; /* Sets the font weight to light */
     }
     ```
 
