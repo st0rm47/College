@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="mydiv" style="position: absolute; background-color: #ccc; width: 100px; height: 100px;"></div>
+
+    <button type = "button" id = "button" style = "position:relative">Animate</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#mydiv").animate({left: "300px"}, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
