@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .relative-box {
+            position: relative;
+            top:20px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .absolute-box {
+            position: absolute;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .fixed-box {
+            position: fixed;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+        .static-box {
+            position: static;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning in CSS</h1>
+    <div class="container">
+        <div class="absolute-box">Absolute</div>
+        <div class="relative-box">Relative</div>
+        <div class="fixed-box">Fixed</div>
+        <div class="sticky-box">Sticky</div>
+        <div class="static-box">Static</div>
+    </div>
+</body>
+</html>

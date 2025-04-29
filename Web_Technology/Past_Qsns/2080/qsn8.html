@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Chaining in jQuery</title>
+</head>
+<body>
+    <div class = "box" style = "width: 100px; height: 200px; background-color:gray; position:relative;"></div>
+
+    <button type = "button" id = "button">Slide</button>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".box").slideUp(1000).slideDown(1000);
+            });
+        });
+    </script>
+</body>
+</html>

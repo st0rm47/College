@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id = "heading"> DOM </h1>
+    <p> Welcome </p>
+    <p> This is DOM</p>
+
+    <script>
+        var x = document.getElementById("heading");
+        x.innerHTML = "Document Object Model";
+
+        var y = document.getElementsByTagName("p");
+        y[0].innerHTML = "We are learning about DOM";
+        y[1].innerHTML = "Thank you";
+    </script>
+</body>
+</html>
