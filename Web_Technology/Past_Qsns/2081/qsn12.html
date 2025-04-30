@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Overflow</title>
+    <style>
+        .clip, .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            width:150px;
+            border: 1px solid black;
+        }
+
+        .clip{
+            text-overflow:clip;
+        }
+        .ellipsis{
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div class = "clip">
+        This is a very long text that will be clipped and 
+    </div>
+
+    <div class = "ellipsis">
+        This is a very long text that will be ellipsed and 
+    </div>
+</body>
+</html>
