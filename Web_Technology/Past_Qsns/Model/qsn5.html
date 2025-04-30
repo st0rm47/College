@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <form>
+        <label for = "name">Name :</label>
+        <input type = "text" name = "name" id = "name">
+        <br><br>
+
+        <label>Country</label>
+        <select name = "country" id = "country">
+            <option value = "">Select a Country</option>
+            <option value = "Nepal">Nepal</option>
+            <option value = "USA">USA</option>
+        </select>
+        <br><br>
+
+        <label for = "gender"> Gender :</label>
+        <input type = "radio" name = "gender" id ="male"> Male
+        <input type = "radio" name = "gender" id ="female"> Female
+        <br><br>
+
+        <input type ="submit" id = "submit" value = "submit" onclick = "Hello()">
+    </form>
+    <script>
+        function Hello(){
+            alert("Registered");
+        }
+    </script>
+</body>
+</html>
