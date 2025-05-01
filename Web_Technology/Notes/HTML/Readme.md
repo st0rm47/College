@@ -758,7 +758,7 @@ textarea.
 
 ### Window Events
 - They are used in the `<body>` tag to execute JavaScript code when the page is loaded, resized, or scrolled.
-- 
+
 | **Event**   | **Description**                                                                 |
 |-------------|---------------------------------------------------------------------------------|
 | `onload`    | Occurs when the browser has finished loading the page.                         |
@@ -768,6 +768,7 @@ textarea.
 
 ### HTML Form Events
 - They are used in the `<form>` tag to execute JavaScript code when the form is submitted, reset, or when an input field changes.
+  
 | **Event**     | **Description**                                                                 |
 |---------------|---------------------------------------------------------------------------------|
 | `onsubmit`    | Occurs when the form is submitted.                                             |
@@ -780,6 +781,7 @@ textarea.
 
 ### Keyboard Events
 - They are used in the `<input>` tag to execute JavaScript code when the user presses a key on the keyboard.
+
 | **Event**      | **Description**                                                                 |
 |-----------------|---------------------------------------------------------------------------------|
 | `onkeydown`     | Occurs when the user presses a key on the keyboard.                            |
@@ -788,6 +790,7 @@ textarea.
 
 ## Mouse Events
 - They are used in the `<button>`, `<input>`, and other elements to execute JavaScript code when the user interacts with the mouse.
+  
 | **Event**       | **Description**                                                                 |
 |------------------|---------------------------------------------------------------------------------|
 | `onclick`        | Occurs when the user clicks on an element.                                     |
