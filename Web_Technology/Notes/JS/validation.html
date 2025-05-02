@@ -8,7 +8,7 @@
 <body>
 
 <h1>FORM</h1>
-<form onsubmit="return validateForm()">
+<form onsubmit="document.write('Form submitted successfully'); return validateForm();">
     
     <!-- Text Input -->
     <label for="fname">First Name:</label>
@@ -63,7 +63,7 @@
     <input type="hidden" name="form_token" value="12345">
 
     <!-- Submit Button -->
-    <input type="submit" value="Submit" >
+    <input type="submit" value="Submit">
 
     <!-- Reset Button -->
     <input type="reset" value="Reset"> 
