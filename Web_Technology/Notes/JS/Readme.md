@@ -150,7 +150,7 @@
 `bigint`:
 - Represents integers with arbitrary precision.
 - Can represent integer values larger than 
-$$ (2^{53} - 1). $$
+$$(2^{53} - 1)$$
 - Created by appending `n` to the end of an integer literal or using the `BigInt()` constructor.
 - Example:
     ```javascript
