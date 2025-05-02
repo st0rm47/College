@@ -1240,6 +1240,25 @@ p {
 
 ---
 
+#### Writing Mode
+- **Purpose**: Specifies the direction in which text is written and displayed.
+- **Details**: Common values are:
+  - `horizontal-tb`: Default horizontal writing mode (left to right, top to bottom).
+  - `vertical-rl`: Vertical writing mode (right to left, top to bottom).
+  - `vertical-lr`: Vertical writing mode (left to right, top to bottom).
+- **Use Case**: To support different languages and writing systems, such as Arabic or Chinese.
+- **Example**:
+    ```css
+    p {
+        writing-mode: vertical-rl; /* Sets the writing mode to vertical, right to left */
+    }
+    ```
+    - The above code will apply the following writing mode properties to the `<p>` element:
+    - The text will be displayed in a vertical writing mode, flowing from right to left and top to bottom.
+
+---
+
+
 > # Responsive Web Design
 - Responsive web design (RWD) ensures websites look good and work well on all devices, like desktops, tablets, and smartphones.
 - It uses flexible layouts, images, and CSS media queries to adjust the design based on the screen size.
