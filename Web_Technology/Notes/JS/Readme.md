@@ -149,7 +149,8 @@
 
 `bigint`:
 - Represents integers with arbitrary precision.
-- Can represent integer values larger than $$ (2^{53} - 1). $$
+- Can represent integer values larger than 
+$$ (2^{53} - 1). $$
 - Created by appending `n` to the end of an integer literal or using the `BigInt()` constructor.
 - Example:
     ```javascript
@@ -307,7 +308,7 @@
     | Operator | Description                     | Example                  |
     |----------|---------------------------------|--------------------------|
     | `&`      | Bitwise AND                    | `5 & 3` (1)              |
-    | `\|`      | Bitwise OR                     | `5 | 3` (7)              |
+    | `\|`      | Bitwise OR                     | `5 \| 3` (7)              |
     | `^`      | Bitwise XOR                    | `5 ^ 3` (6)              |
     | `~`      | Bitwise NOT                    | `~5` (-6)                |
     | `<<`     | Left shift                     | `5 << 1` (10)            |
