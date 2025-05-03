@@ -38,18 +38,18 @@ function validateForm() {
         return false;
     }
 
-    // Validate Gender (Radio Buttons)
-    var gender = document.querySelector('input[name="gender"]:checked');
-    if (!gender) {
-        alert("Please select a gender");
-        return false; 
-    }
-
     // Validate Interests (Checkboxes)
     var interests = document.querySelectorAll('input[name="interests"]:checked');
     if (interests.length == 0) {
         alert("Please select at least one interest");
         return false;
+    }
+
+    // Validate Gender (Radio Buttons)
+    var gender = document.querySelector('input[name="gender"]:checked');
+    if (!gender) {
+        alert("Please select a gender");
+        return false; 
     }
 
     // Validate Country (Dropdown)
