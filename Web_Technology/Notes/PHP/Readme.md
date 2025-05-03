@@ -297,7 +297,36 @@
         echo "$a is greater than $b";
     } else {
         echo "$a is less than or equal to $b";
+    } 
+
+    // Logical
+    if ($a > 5 && $b < 30) {
+        echo "Both conditions are true";
     }
+    if ($a < 5 || $b > 15) {
+        echo "At least one condition is true";
+    }
+    if (!($a == $b)) {
+        echo "$a is not equal to $b";
+    }
+
+    // Increment/Decrement
+    $a++; // Increment
+    $b--; // Decrement
+
+    echo $a; // Outputs: 11
+    echo $b; // Outputs: 19
+
+    // String Concatenation
+    $first_name = "John";
+    $last_name = "Doe";
+    $full_name = $first_name . " " . $last_name; // Concatenation
+    echo $full_name; // Outputs: John Doe
+
+    // Ternary Operator
+    $age = 18;
+    $status = ($age >= 18) ? "Adult" : "Minor"; // Ternary operator
+    echo $status; // Outputs: Adult
     ```
 
 ---
