@@ -1388,7 +1388,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Continue after creating the table
 
     // Insert data into table using form data
-    if if (isset($_POST["submit"])){    // Check if the form is submitted
+    if (isset($_POST["submit"])){    // Check if the form is submitted
         $first_name = $_POST["first_name"]; // Accessing the first name field from the form
         $last_name = $_POST["last_name"]; // Accessing the last name field from the form
         $address = $_POST["address"]; // Accessing the address field from the form
@@ -1426,7 +1426,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $sql); // Checks if the SQL command is executed successfully
 
     
-    if (mysqli_num_rows($result) > 0) { // Check if there are any rows returned
+    if ($result) { // Check if there are any rows returned
 
         // Output data of each row
         while ($row = mysqli_fetch_assoc($result)) { // Fetch each row as an associative array
@@ -1464,6 +1464,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     // Continue after retrieving data from the table
 
+    // Get the id of the record to be updated
+    $id = $_GET["updateid"]; // Accessing the id from the URL
+
+    // Fetch data from the table to display in the form for updating
+    $sql = "SELECT * FROM users"; // SQL command to select all columns from the users table
+    $result = mysqli_query($conn, $sql); // Checks if the SQL command is executed successfully
+
+    $row = mysqli_fetch_assoc($result); // Fetch the first row as an associative array
+
+    $first_name = $row["first_name"]; // Accessing the first name column from the row
+    $last_name = $row["last_name"]; // Accessing the last name column from the row
+    $address = $row["address"]; // Accessing the address column from the row
+    
+
     // Update data in the table using form data
     if (isset($_POST["update"])) { // Check if the form is submitted
 
@@ -1475,7 +1489,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // SQL command to update data in the table
         $sql = "UPDATE users SET first_name='$first_name', last_name='$last_name', address='$address' WHERE id='$id'";
 
-        
         $runsql = mysqli_query($conn, $sql); // Checks if the SQL command is executed successfully
 
         if ($runsql) {
@@ -1487,8 +1500,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
     ```
     - In the above example, we updated data in the `users` table using form data.
-    - We checked if the form is submitted and accessed the form data using the `$_POST` superglobal array.
-    - The SQL command to update data in the table is executed using the `mysqli_query()` function.
+    - We first get the  id of the record to be updated from the URL and fetch the existing data from the table to display in the form.
+    - We accessed the form data using the `$_POST` superglobal array and executed the SQL command to update data in the table using the `mysqli_query()` function.
+    - The `UPDATE` SQL command is used to modify existing records in a table.
+
 
 ---
 
@@ -1500,13 +1515,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     // Continue after updating data in the table
 
-    // Delete data from the table using form data
-    if (isset($_POST["delete"])) { // Check if the form is submitted
+    // Get the id of the record to be deleted
+    if (isset($_GET["deleteid"])) { // Check if the form is submitted
 
-        $id = $_POST["id"]; // Accessing the id field from the form
+        $id = $_GET["deleteid"]; // Accessing the id from the URL
 
         // SQL command to delete data from the table
-        $sql = "DELETE FROM users WHERE id='$id'"; // SQL command to delete data from the users table
+        $sql = "DELETE FROM users WHERE id='$id'"; // SQL command to delete a record from the users table
 
         $runsql = mysqli_query($conn, $sql); // Checks if the SQL command is executed successfully
 
@@ -1518,10 +1533,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     ?>
     ```
-    - In the above example, we deleted data from the `users` table using form data.
-    - We checked if the form is submitted and accessed the form data using the `$_POST` superglobal array.
-    - The SQL command to delete data from the table is executed using the `mysqli_query()` function.
-
+    - In the above example, we deleted data from the `users` table using the SQL command `DELETE FROM users WHERE id='$id'`.
+    - We first get the id of the record to be deleted from the URL and executed the SQL command to delete data from the table using the `mysqli_query()` function.
 ---
 
 ## Closing the Database Connection
