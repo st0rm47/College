@@ -30,6 +30,16 @@ function insertdb($conn, $first_name, $last_name, $address){
     }
 }
 
+// Check if form is submitted
+if (isset($_POST['submit'])){
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $address = $_POST['address'];
+    
+    // Call insertdb() method
+    insertdb($conn, $first_name, $last_name, $address);
+}
+
 // Method display()
 function display(){
     global $conn;
@@ -62,16 +72,6 @@ function display(){
     } else {
         echo "Error Displaying Data: " . mysqli_error($conn);
     }
-}
-
-// Check if form is submitted
-if (isset($_POST['submit'])){
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $address = $_POST['address'];
-    
-    // Call insertdb() method
-    insertdb($conn, $first_name, $last_name, $address);
 }
 ?>
 
