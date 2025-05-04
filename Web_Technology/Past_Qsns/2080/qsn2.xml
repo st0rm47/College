@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<person>
+    <name> Ram </name>
+    <age> 40 </age>
+    <pincode> 1001 </pincode>
+</person>
