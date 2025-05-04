@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<students xmlns:std = "https://example.com/student" xmlns:tc = "https://example.com/teacher">
+    <std:student id = "1001">
+        <std:name> Ram </std:name>
+        <std:age> 20 </std:age>
+    </std:student>
+
+    <tc:teacher id = "1002">
+        <tc:name> Ramesh </tc:name>
+        <tc:age> 22 </tc:age>
+    </tc:teacher>
+</students>

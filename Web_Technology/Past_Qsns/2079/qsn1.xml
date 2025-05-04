@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, age, address)>
+    <!ATTLIST student id CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT address (city, zipcode)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT zipcode (#PCDATA)>
+]>
+
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
