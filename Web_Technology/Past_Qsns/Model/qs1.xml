@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE weatherreport [
+    <!ELEMENT weatherreport EMPTY>
+    <!ATTLIST weatherreport 
+                date CDATA #REQUIRED
+                location CDATA #REQUIRED
+                city CDATA #REQUIRED
+                state CDATA #REQUIRED
+                temperature_range CDATA #REQUIRED
+    >
+]>
+
+<weatherreport date = "2025-05-04" location = "Baneshwor" city = "Kathmandu" state = "Bagmati" temperature_range = "8-35"/>
+
+<!-- Since the weatherreport element has EMPTY in DTD, all data must be in attributes and not inside the element body. 
+ In XML part, it should also have self closing tag.
+-->
+
+<!-- CDATA refers to any text string -->
