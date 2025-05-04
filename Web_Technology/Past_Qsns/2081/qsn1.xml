@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
