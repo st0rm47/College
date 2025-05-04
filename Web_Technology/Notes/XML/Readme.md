@@ -45,15 +45,18 @@
 ### Sample Code
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AJAX Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
     <script>
-        function loadData() {
+        function load(){
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.onload = function(){
+                if (xhr.status == 200 && xhr.readyState == 4){
                     document.getElementById("data").innerHTML = xhr.responseText;
+
                 }
             };
             xhr.open("GET", "data.txt", true);
@@ -62,21 +65,19 @@
     </script>
 </head>
 <body>
-    <h1>AJAX Example</h1>
-    <button onclick="loadData()">Load Data</button>
-    <div id="data"></div>
+    <button id = "button" onclick = "load()">Load Data</button>
+    <p id = "data"></p>
 </body>
 </html>
 ```
-- In this example, when the user clicks the "Load Data" button, an AJAX request is sent to fetch data from "data.txt".
-- The response is then displayed in the "data" div without reloading the entire page.
-- This demonstrates how AJAX can be used to create a more dynamic and interactive web experience.
-- The XMLHttpRequest object is used to send and receive data asynchronously, allowing the user to continue interacting with the page while the request is being processed.
-- The `onreadystatechange` event is used to check the status of the request and update the page when the response is received.
-- The `open` method is used to specify the request type (GET) and the URL of the resource to be fetched, while the `send` method is used to send the request to the server.
-- The `readyState` property indicates the current state of the request, and the `status` property indicates the HTTP status code of the response.
-- When the request is complete (readyState 4) and successful (status 200), the response text is inserted into the "data" div using `innerHTML`.
-- This allows for a seamless user experience, as the data is loaded and displayed without any page reloads or interruptions.
+- In this example, when the button is clicked, an AJAX request is sent to fetch data from `data.txt` file.
+- The response is then displayed in the `<p>` element with the id `data` without reloading the entire page.
+- The `XMLHttpRequest` object is used to create the AJAX request, and the `onload` event is used to handle the response when it is received.
+- The `open` method is used to specify the request type (GET) and the URL of the file to be fetched, and the `send` method is used to send the request to the server.
+- The `xhr.status` and `xhr.readyState` properties are used to check if the request was successful and if the response is ready to be processed.
+- The `innerHTML` property is used to update the content of the `<p>` element with the response data.
+- The `true` parameter in the `open` method indicates that the request should be asynchronous, allowing the user to continue interacting with the web page while the request is being processed.
+- The `load` function is called when the button is clicked, triggering the AJAX request to fetch the data from the specified file.
 
 ---
 
@@ -330,38 +331,40 @@ graph TD
 
 - Name Conflict Example:
     ```xml
-    <student>
-        <result>
-            <name>John</name>
-            <cgpa>3.5</cgpa>
-        </result>
-        <cv>
-            <name>Jane</name>
-            <cgpa>3.8</cgpa>
-        </cv>
-    </student>
-    ```
+    <students>
+        <student id = "1001">
+            <name> Ram </name>
+            <age> 20 </age>
+        </student>
 
-    - In this example, both the `<student>` and `<cv>` elements have child elements with the same name (`<name>` and `<cgpa>`), which can lead to confusion and conflicts.
-    - To avoid this, namespaces can be used to qualify the names of the elements and attributes.
+        <teacher id = "1002">
+            <name> Ramesh </name>
+            <age> 22 </age>
+        </teacher>
+    </students>
+    ```
+    - In this example, the `<name>` element is used for both the `<student>` and `<teacher>` elements, which can lead to confusion and naming conflicts.
+    - To avoid this conflict, namespaces can be used to differentiate between the two elements.
 
 - Namespace Example:
     ```xml
-    <student xmlns:stu="http://example.com/student"     
-            xmlns:cv="http://example.com/cv">
-        <stu:result>
-            <stu:name>John</stu:name>
-            <stu:cgpa>3.5</stu:cgpa>
-        </stu:result>
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <students xmlns:std = "https://example.com/student" xmlns:tc = "https://example.com/teacher">
+        <std:student id = "1001">
+            <std:name> Ram </std:name>
+            <std:age> 20 </std:age>
+        </std:student>
 
-        <cv:cv>
-            <cv:name>Jane</cv:name>
-            <cv:cgpa>3.8</cv:cgpa>
-        </cv:cv>
-    </student>
+        <tc:teacher id = "1002">
+            <tc:name> Ramesh </tc:name>
+            <tc:age> 22 </tc:age>
+        </tc:teacher>
+    </students>
     ```
-    - In this example, the `xmlns:stu` and `xmlns:cv` attributes define two different namespaces for the `<result>` and `<cv>` elements, respectively.
-    - The `stu:` and `cv:` prefixes are used to qualify the names of the elements and attributes, allowing them to coexist without conflict.
+    - In this example, the `xmlns:std` and `xmlns:tc` attributes define two different namespaces for the `<student>` and `<teacher>` elements, respectively.
+    - The `std:` and `tc:` prefixes are used to qualify the names of the elements and attributes, allowing them to coexist without conflict.
+    - The `std:` prefix is used for elements and attributes in the student namespace, while the `tc:` prefix is used for elements and attributes in the teacher namespace.
+
 
 ---
 
@@ -678,32 +681,49 @@ To convert an XML document to a DTD, follow these steps:
 #### Example:
 Given the following XML document:
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
-     <name>John Doe</name>
-     <address>
-          <street>123 Main St</street>
-          <city>New York</city>
-          <state>NY</state>
-          <zip>10001</zip>
-     </address>
-</data>
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
+
 ```
 
 The corresponding DTD would be:
 ```xml
-<!ELEMENT data (name, address)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT address (street, city, state, zip)>
-<!ELEMENT street (#PCDATA)>
-<!ELEMENT city (#PCDATA)>
-<!ELEMENT state (#PCDATA)>
-<!ELEMENT zip (#PCDATA)>
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, age, address)>
+    <!ATTLIST student id CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT address (city, zipcode)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT zipcode (#PCDATA)>
+]>
 ```
+- In this example:
+    - The root element is `students`, which contains one or more `student` elements.
+    - Each `student` element contains `name`, `age`, and `address` elements.
+    - The `student` element has an attribute `id` of type `CDATA`, which is required.
+    - The `address` element contains `city` and `zipcode` elements, both of which contain parsed character data (#PCDATA).
+- The DTD defines the structure and rules for the XML document, ensuring that it conforms to the defined schema.
 
-- The `data` element contains `name` and `address` as child elements.
-- The `address` element contains `street`, `city`, `state`, and `zip` as child elements.
-- Each child element contains parsed character data (`#PCDATA`).
 
 By following these steps, you can accurately define the structure and rules of an XML document in a DTD.
 
@@ -721,24 +741,42 @@ By following these steps, you can accurately define the structure and rules of a
 - Example:
 ```xml
 <?xml version = "1.0" encoding = "UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="note">
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "students">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="to" type="xs:string"/>
-                <xs:element name="from" type="xs:string"/>
-                <xs:element name="heading" type="xs:string"/>
-                <xs:element name="body" type="xs:string"/>
+                <xs:element name = "student">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name = "name" type = "xs:string"/>
+                            <xs:element name = "age" type = "xs:integer"/>
+                            <xs:element name = "address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name = "city" type = "xs:string"/>
+                                        <xs:element name = "zipcode" type = "xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name = "id" type = "xs:string" use = "required"/>
+                    </xs:complexType> 
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 </xs:schema>
 ```
-- In this example:
-  - The root element `<note>` is defined as a complex type containing a sequence of child elements.
-  - The child elements `<to>`, `<from>`, `<heading>`, and `<body>` are all of type `xs:string`, meaning they can contain text.
-  - The `xs:schema` element defines the XML Schema, and the `xmlns:xs` attribute specifies the XML Schema namespace.
-- This schema can be used to validate an XML document with the same structure.
+
+- In this example, the `students` element is defined as a complex type that contains a sequence of `student` elements.
+- Each `student` element contains a sequence of `name`, `age`, and `address` elements, where `address` is also defined as a complex type with a sequence of `city` and `zipcode` elements.
+- The `student` element has an attribute `id` of type `xs:string`, which is required.
+- The `xs:` prefix indicates that these elements and types are defined in the XML Schema namespace.
+- The `xs:schema` element is the root element of the XSD document, and it defines the schema for the XML document.
+- The `xs:element` elements define the elements in the XML document, and the `xs:complexType` elements define the structure of complex elements.
+- The `xs:sequence` elements define the order of child elements, and the `xs:attribute` element defines the attributes of the elements.
+- The `xs:string` and `xs:integer` types are built-in data types in XSD, and they specify the data types of the elements.
+
 ---
 
 ### XSD Elements
@@ -986,21 +1024,27 @@ Given the following XML document:
 
 The corresponding XSD would be:
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="data">
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+    <xs:element name = "students">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="address">
+                <xs:element name = "student">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="street" type="xs:string"/>
-                            <xs:element name="city" type="xs:string"/>
-                            <xs:element name="state" type="xs:string"/>
-                            <xs:element name="zip" type="xs:string"/>
+                            <xs:element name = "name" type = "xs:string"/>
+                            <xs:element name = "age" type = "xs:integer"/>
+                            <xs:element name = "address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name = "city" type = "xs:string"/>
+                                        <xs:element name = "zipcode" type = "xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
-                    </xs:complexType>
+                        <xs:attribute name = "id" type = "xs:string" use = "required"/>
+                    </xs:complexType> 
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
@@ -1008,9 +1052,14 @@ The corresponding XSD would be:
 </xs:schema>
 ```
 
-- The `data` element is defined as a complex type containing `name` and `address` as child elements.
-- The `address` element is also a complex type containing `street`, `city`, `state`, and `zip` as child elements.
-- Each child element is defined with its name and data type (`xs:string`).
+- In this example, the `data` element is defined as a complex type that contains a sequence of child elements (`name` and `address`).
+- The `address` element is also defined as a complex type with a sequence of child elements (`street`, `city`, `state`, and `zip`).
+- The `name` element is defined as a simple element of type `xs:string`, meaning it can contain text data.
+- The `address` element is defined as a complex element that contains a sequence of child elements (`street`, `city`, `state`, and `zip`), each of which is defined as a simple element of type `xs:string`.
+- The `xs:complexType` element defines the structure of the complex element, and the `xs:sequence` element specifies the order of the child elements.
+- The `xs:attribute` element defines the attributes of the `student` element, specifying their names, types, and constraints.
+- The `xs:schema` element is the root element of the XSD document, and it defines the schema for the XML document.
+- The `xs:element` elements define the elements in the XML document, and the `xs:complexType` elements define the structure of complex elements.
 
 By following these steps, you can accurately define the structure and rules of an XML document in an XSD.
 
@@ -1167,7 +1216,7 @@ By following these steps, you can accurately define the structure and rules of a
 ---
 
 ## Conversion of XML to XSLT
-- To convert an XML document to an XSLT, follow these steps:
+To convert an XML document to an XSLT, follow these steps:
 
 - **Identify the Root Element**:
     - Determine the root element of the XML document, which is the top-level element containing all other elements.
@@ -1175,60 +1224,103 @@ By following these steps, you can accurately define the structure and rules of a
 - **Analyze Child Elements and Relationships**:
     - Identify all child elements and their relationships, such as parent-child or sibling relationships.
 
+- **Define Stylesheet**:
+    - Create an XSLT stylesheet using the `<xsl:stylesheet>` element.
+    - Specify the version of XSLT being used (e.g., "1.0") and include the necessary namespaces.
+
+- **Define Output Method**:
+    - Use the `<xsl:output>` element to specify the desired output format (e.g., HTML, XML, text).
+    - Define the encoding and other output properties as needed.
+
 - **Define Templates**:
-    - For each element, define a template using the `<xsl:template>` element.
-    - Specify the `match` attribute to identify the nodes to be processed by this template.
-    - Define the transformation rules for the matched nodes using XSLT elements like `<xsl:value-of>`, `<xsl:for-each>`, and `<xsl:if>`.
+    - Create templates for each element or structure in the XML document using the `<xsl:template>` element.
+    - Use the `match` attribute to specify which nodes the template applies to.
 
-- **Define Output Format**:
-    - Specify the desired output format (e.g., HTML, plain text) using the appropriate XSLT elements.
-    - Use `<xsl:stylesheet>` to define the XSLT stylesheet and include the necessary namespaces.
 
-- **Create the XSLT**:
-    - Use the `<xsl:stylesheet>` element to include all templates and transformation rules.
-    - Ensure the stylesheet is well-formed and follows the XSLT syntax.
+- **Define Transformation Rules**:
+    - Inside each template, define the transformation rules using XSLT elements like `<xsl:value-of>`, `<xsl:for-each>`, and `<xsl:if>`.
+    - Use XPath expressions to select and manipulate the data from the XML document.
+
+- **Define Output Structure**:
+    - Specify the desired output structure using XSLT elements like `<xsl:element>`, `<xsl:text>`, and `<xsl:attribute>`.
+    - Create the necessary HTML or XML structure based on the transformation rules defined in the templates.
 
 - **Validate the XSLT**:
-    - Use an XSLT processor to ensure the XSLT document is valid and can be applied to the XML document.
+    - Use an XSLT processor or validator to ensure the XSLT document is well-formed and valid.
+    - Test the transformation by applying the XSLT to the XML document and checking the output.
 
-- **Apply the Transformation**:
-    - Use an XSLT processor to apply the transformation rules defined in the XSLT stylesheet to the XML document and generate the desired output.
 - **Example**:
 Given the following XML document:
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<note>
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-</note>
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
 ```
 
 The corresponding XSLT would be:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
-        <html>
-            <body>
-                <h2>Note</h2>
-                <p><strong>To:</strong> <xsl:value-of select="note/to"/></p>
-                <p><strong>From:</strong> <xsl:value-of select="note/from"/></p>
-                <p><strong>Heading:</strong> <xsl:value-of select="note/heading"/></p>
-                <p><strong>Body:</strong> <xsl:value-of select="note/body"/></p>
-            </body>
-        </html>
-    </xsl:template>
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsl:stylesheet xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
+<xsl:output method = "html"/>
+<xsl:template match = "/">
+    <html>
+        <head>
+            <title> Student Details</title>
+        </head>
+        <body>
+            <h1> Students </h1>
+            <table border = "1">
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>City</td>
+                    <td>Zipcode</td>
+                </tr>
+            
+                <xsl:for-each select = "students/student">
+                    <tr>
+                        <td><xsl:value-of select = "@id"/></td>
+                        <td><xsl:value-of select = "student/name"/></td>
+                        <td><xsl:value-of select = "student/age"/></td>
+                        <td><xsl:value-of select = "address/city"/></td>
+                        <td><xsl:value-of select = "address/zipcode"/></td> 
+                    </tr>
+                </xsl:for-each>
+            </table>
+        </body>
+    </html>
+</xsl:template>
 </xsl:stylesheet>
 ```
 
-- In this example, the XSLT stylesheet transforms the XML document into an HTML document.
-- The `<xsl:template>` element matches the root of the XML document and defines the structure of the output HTML document.
-- The `<xsl:value-of>` elements extract the values of the `to`, `from`, `heading`, and `body` elements from the XML document and insert them into the HTML output.
-- The output will be an HTML document displaying the note's content in a structured format.
-- The XSLT processor will apply the transformation rules defined in the XSLT stylesheet to the XML document and generate the corresponding HTML output.
+- In this example, the XSLT stylesheet defines a transformation that generates an HTML table displaying the student details.
+- The `<xsl:stylesheet>` element is the root element of the XSLT document, and it includes the necessary namespaces.
+- The `<xsl:output>` element specifies the output method as HTML.
+- The `<xsl:template>` element defines a template that matches the root node (`/`) of the XML document.
+- Inside the template, an HTML structure is created with a table to display the student details.
+- The `<xsl:for-each>` element iterates over each `student` element in the XML document, and the `<xsl:value-of>` elements extract the values of the `id`, `name`, `age`, `city`, and `zipcode` elements.
+- The `@id` syntax is used to access the attribute value of the `student` element.
+- The output will be an HTML document with a table displaying the student details, including their ID, name, age, city, and zipcode.
+
+
 
 ---
 
@@ -1317,93 +1409,78 @@ The corresponding XSLT would be:
 
 ### XML with Internal DTD
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE note [
-    <!ELEMENT note (to, from, heading, body)>
-    <!ELEMENT to (#PCDATA)>
-    <!ELEMENT from (#PCDATA)>
-    <!ELEMENT heading (#PCDATA)>
-    <!ELEMENT body (#PCDATA)>
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, age, address)>
+    <!ATTLIST student id CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT address (city, zipcode)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT zipcode (#PCDATA)>
 ]>
-<note>
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-</note>
+
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
 ```
 
 ---
 
 ### XML with External DTD
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE note SYSTEM "note.dtd">
-<note>
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-</note>
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<students>
+    <student id = "1001">
+        <name> Ram </name>
+        <age> 20 </age>
+        <address>
+            <city> Kathmandu </city>
+            <zipcode> A003 </zipcode>
+        </address>
+    </student>
+
+    <student id = "1002">
+        <name> Ramesh </name>
+        <age> 22 </age>
+        <address>
+            <city> Bhaktapur </city>
+            <zipcode> A004 </zipcode>
+        </address>
+    </student>
+</students>
+
 ```
 
 #### note.dtd
 ```dtd
-<!ELEMENT note (to, from, heading, body)>
-<!ELEMENT to (#PCDATA)>
-<!ELEMENT from (#PCDATA)>
-<!ELEMENT heading (#PCDATA)>
-<!ELEMENT body (#PCDATA)>
-```
-
----
-
-### XML with XSD
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<note xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="note.xsd">
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-</note>
-```
-
-#### note.xsd
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="note">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="to" type="xs:string"/>
-                <xs:element name="from" type="xs:string"/>
-                <xs:element name="heading" type="xs:string"/>
-                <xs:element name="body" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-</xs:schema>
-```
-
----
-
-### XSLT Example
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
-        <html>
-            <body>
-                <h2>Note</h2>
-                <p><strong>To:</strong> <xsl:value-of select="note/to"/></p>
-                <p><strong>From:</strong> <xsl:value-of select="note/from"/></p>
-                <p><strong>Heading:</strong> <xsl:value-of select="note/heading"/></p>
-                <p><strong>Body:</strong> <xsl:value-of select="note/body"/></p>
-            </body>
-        </html>
-    </xsl:template>
-</xsl:stylesheet>
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, age, address)>
+    <!ATTLIST student id CDATA #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT address (city, zipcode)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT zipcode (#PCDATA)>
+]>
 ```
 
 ---
@@ -1428,101 +1505,257 @@ return
 
 ---
 
-### Conversion of XML to DDT    
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
-     <name>John Doe</name>
-     <address>
-          <street>123 Main St</street>
-            <city>New York</city>
-            <state>NY</state>
-            <zip>10001</zip>
-        </address>
-</data>
-```
+### Conversion of XML to DDT  
+- `XML`:  
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <students>
+        <student id = "1001">
+            <name> Ram </name>
+            <age> 20 </age>
+            <address>
+                <city> Kathmandu </city>
+                <zipcode> A003 </zipcode>
+            </address>
+        </student>
 
-```dtd
-<!ELEMENT data (name, address)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT address (street, city, state, zip)>
-<!ELEMENT street (#PCDATA)>
-<!ELEMENT city (#PCDATA)>
-<!ELEMENT state (#PCDATA)>
-<!ELEMENT zip (#PCDATA)>
-```
+        <student id = "1002">
+            <name> Ramesh </name>
+            <age> 22 </age>
+            <address>
+                <city> Bhaktapur </city>
+                <zipcode> A004 </zipcode>
+            </address>
+        </student>
+    </students>
+    ```
+
+- `DTD`:
+    ```dtd
+    <!DOCTYPE students [
+        <!ELEMENT students (student+)>
+        <!ELEMENT student (name, age, address)>
+        <!ATTLIST student id CDATA #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        <!ELEMENT address (city, zipcode)>
+        <!ELEMENT city (#PCDATA)>
+        <!ELEMENT zipcode (#PCDATA)>
+    ]>
+    ```
 
 ---
 
 ### Conversion of XML to XSD
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="data">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="address">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="street" type="xs:string"/>
-                            <xs:element name="city" type="xs:string"/>
-                            <xs:element name="state" type="xs:string"/>
-                            <xs:element name="zip" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-</xs:schema>
-```
+
+- `XML`:
+    ```xml
+    <students>
+        <student id = "1001">
+            <name> Ram </name>
+            <age> 20 </age>
+            <address>
+                <city> Kathmandu </city>
+                <zipcode> A003 </zipcode>
+            </address>
+        </student>
+
+        <student id = "1002">
+            <name> Ramesh </name>
+            <age> 22 </age>
+            <address>
+                <city> Bhaktapur </city>
+                <zipcode> A004 </zipcode>
+            </address>
+        </student>
+    </students>
+    ```
+
+- `XSD`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+        <xs:element name = "students">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "student">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name = "name" type = "xs:string"/>
+                                <xs:element name = "age" type = "xs:integer"/>
+                                <xs:element name = "address">
+                                    <xs:complexType>
+                                        <xs:sequence>
+                                            <xs:element name = "city" type = "xs:string"/>
+                                            <xs:element name = "zipcode" type = "xs:string"/>
+                                        </xs:sequence>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                            <xs:attribute name = "id" type = "xs:string" use = "required"/>
+                        </xs:complexType> 
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+    ```
 
 ---
 
 ### Conversion of XML to XSLT
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <xsl:template match="/">
+
+- `XML`:
+    ```xml
+    <students>
+        <student id = "1001">
+            <name> Ram </name>
+            <age> 20 </age>
+            <address>
+                <city> Kathmandu </city>
+                <zipcode> A003 </zipcode>
+            </address>
+        </student>
+
+        <student id = "1002">
+            <name> Ramesh </name>
+            <age> 22 </age>
+            <address>
+                <city> Bhaktapur </city>
+                <zipcode> A004 </zipcode>
+            </address>
+        </student>
+    </students>
+    ```
+
+- `XSLT`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <xsl:stylesheet xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method = "html"/>
+    <xsl:template match = "/">
         <html>
+            <head>
+                <title> Student Details</title>
+            </head>
             <body>
-                <h2>Data</h2>
-                <p><strong>Name:</strong> <xsl:value-of select="data/name"/></p>
-                <p><strong>Address:</strong></p>
-                <ul>
-                    <li><strong>Street:</strong> <xsl:value-of select="data/address/street"/></li>
-                    <li><strong>City:</strong> <xsl:value-of select="data/address/city"/></li>
-                    <li><strong>State:</strong> <xsl:value-of select="data/address/state"/></li>
-                    <li><strong>Zip:</strong> <xsl:value-of select="data/address/zip"/></li>
-                </ul>
+                <h1> Students </h1>
+                <table border = "1">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>City</td>
+                        <td>Zipcode</td>
+                    </tr>
+                
+                    <xsl:for-each select = "students/student">
+                        <tr>
+                            <td><xsl:value-of select = "@id"/></td>
+                            <td><xsl:value-of select = "student/name"/></td>
+                            <td><xsl:value-of select = "student/age"/></td>
+                            <td><xsl:value-of select = "address/city"/></td>
+                            <td><xsl:value-of select = "address/zipcode"/></td> 
+                        </tr>
+                    </xsl:for-each>
+                </table>
             </body>
         </html>
     </xsl:template>
-</xsl:stylesheet>
-```
+    </xsl:stylesheet>
+    ```
 
 ---
 
-### Conversion of XML to XQuery
-```xquery
-let $doc := doc("data.xml")
-for $item in $doc//data
-return
-    <result>
-        <name>{ $item/name/text() }</name>
-        <address>
-            <street>{ $item/address/street/text() }</street>
-            <city>{ $item/address/city/text() }</city>
-            <state>{ $item/address/state/text() }</state>
-            <zip>{ $item/address/zip/text() }</zip>
-        </address>
-    </result>
-```
+### Namespace in XML
+- `Conflict`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <students>
+        <student id = "1001">
+            <name> Ram </name>
+            <age> 20 </age>
+        </student>
+
+        <teacher id = "1002">
+            <name> Ramesh </name>
+            <age> 22 </age>
+        </teacher>
+    </students>
+    ```
+
+
+- `Resolved`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <students xmlns:std = "https://example.com/student" xmlns:tc = "https://example.com/teacher">
+        <std:student id = "1001">
+            <std:name> Ram </std:name>
+            <std:age> 20 </std:age>
+        </std:student>
+
+        <tc:teacher id = "1002">
+            <tc:name> Ramesh </tc:name>
+            <tc:age> 22 </tc:age>
+        </tc:teacher>
+    </students>
+    ```
 
 ---
 
 
+### XSD Validation
+- `XML`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <person>
+        <name> Ram </name>
+        <age> 40 </age>
+        <pincode> 1001 </pincode>
+    </person>
+    ```
+
+- `XSD Validation`:
+    ```xml
+    <?xml version = "1.0" encoding = "UTF-8"?>
+    <xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name = "person">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "name">
+                    <xs:simpleType>
+                        <xs:restriction base = "xs:string">
+                            <xs:enumeration value = "Ram"/>
+                            <xs:enumeration value = "Shyam"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            
+                <xs:element name = "age">
+                    <xs:simpleType>
+                        <xs:restriction base ="xs:integer">
+                            <xs:minExclusive value = "10"/>
+                            <xs:maxExclusive value = "20"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <xs:element name = "pincode">
+                    <xs:simpleType>
+                        <xs:restriction base = "xs:integer">
+                            <xs:pattern value="\d{3}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element> 
+    </xs:schema>
+    ```
+
+---
 
 
 
