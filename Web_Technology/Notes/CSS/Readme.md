@@ -27,7 +27,7 @@ Properties are the aspects of the element to style, and values are the settings 
 - In this example, the selector is `h1`, and the properties are `color` and `font-size` with their respective values.
 - CSS rules are enclosed in curly braces `{}`.
 
-
+>[!IMPORTANT]
 > # Types of CSS
 
 ### Inline CSS
@@ -100,6 +100,7 @@ h1 {
 ```
 ---
 
+>[!IMPORTANT]
 > # CSS Selectors
 - CSS selectors are used to "find" (or select) the HTML elements you want to style.
 
@@ -219,6 +220,7 @@ Example:
 
 ---
 
+>[!IMPORTANT]
 > # CSS Colors
 - CSS colors are used to set the color of text, backgrounds, borders, and other elements.
 - CSS supports various color formats, including:
@@ -723,6 +725,7 @@ Example:
 
 ---
 
+
 > # CSS Lists
 - CSS lists are used to style HTML lists, including ordered lists (`<ol>`), unordered lists (`<ul>`), and definition lists (`<dl>`).
 - CSS provides properties to control the appearance of list items, including bullet styles, numbering styles, and spacing.
@@ -888,6 +891,7 @@ Example:
 
 ---
 
+>[!IMPORTANT]
 > # CSS Box Model
 - The CSS box model explains how elements are displayed as rectangular boxes on a web page.
 - It has four parts: content, padding, border, and margin.
@@ -1033,6 +1037,7 @@ div {
 
 ---
 
+>[!IMPORTANT]
 > # CSS Positioning
 - CSS positioning is used to control the placement of elements on a web page.
 - It allows you to specify how an element is positioned in relation to its normal position, its parent element, or the viewport.
@@ -1152,6 +1157,7 @@ p {
 
 ---
 
+>[!IMPORTANT]
 > # CSS Text Effects
 - CSS text effects are used to enhance the appearance of text in an HTML document.
 - They can be used to create various visual effects, such as shadows, gradients, and transformations.
@@ -1258,7 +1264,7 @@ p {
 
 ---
 
-
+>[!IMPORTANT]
 > # Responsive Web Design
 - Responsive web design (RWD) ensures websites look good and work well on all devices, like desktops, tablets, and smartphones.
 - It uses flexible layouts, images, and CSS media queries to adjust the design based on the screen size.

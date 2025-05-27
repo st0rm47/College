@@ -504,6 +504,7 @@ flowchart TD
 
 ---
 
+>[!IMPORTANT]
 > # JavaScript Functions
 - A function is a reusable block of code that performs a specific task.
 - Functions can take input parameters and return output values.
@@ -560,6 +561,7 @@ flowchart TD
 
 ---
 
+>[!IMPORTANT]
 > # Popup Boxes
 - Popup boxes are used to display messages or prompt the user for input.
 - Common types of popup boxes include `alert`, `confirm`, and `prompt`.
@@ -607,6 +609,7 @@ flowchart TD
 
 ---
 
+>[!IMPORTANT]
 > # Objects
 - JS objects are containers for named values called properties or methods.
 - Properties are values associated with an object.
@@ -721,6 +724,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+>[!IMPORTANT]
 > # JavaScript Arrays
 - An array is a special variable that can hold multiple values at once.
 - Arrays are used to store lists of items, such as numbers, strings, or objects.
@@ -845,6 +849,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+>[!IMPORTANT]
 > # Built-in Objects
 - JavaScript provides several built-in objects that are part of the language.
 - These objects provide useful methods and properties for various tasks.
@@ -1079,6 +1084,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+>[!IMPORTANT]
 > # HTML DOM
 - The Document Object Model (DOM) is a programming interface for web documents.
 - It represents the structure of a document as a tree of objects, allowing programming languages to manipulate the content and structure of web pages.
@@ -1142,6 +1148,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+>[!IMPORTANT]
 > # Form Validation
 - Form validation is the process of checking if the form data is valid before submitting it to the server.
 - It helps to ensure that the data is accurate and complete.
@@ -1294,6 +1301,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+
 > # Event Handling
 - Event handling is the process of responding to user interactions with a web page.
 - It allows you to execute JavaScript code when specific events occur, such as clicking a button, submitting a form, or moving the mouse.
@@ -1398,6 +1406,7 @@ console.log(person["lastName"]); // Bracket notation
 
 ---
 
+>[!IMPORTANT]
 > # Handling Cookies
 - A cookie is a small piece of data that is stored on the user's computer by the web browser while browsing a website.
 - Cookies are used to remember information about the user, such as login credentials, preferences, and shopping cart items.
@@ -1463,6 +1472,7 @@ sequenceDiagram
 
 ---
 
+>[!IMPORTANT]
 > # jQuery
 - jQuery is a fast, small, and feature-rich JavaScript library.
 - It simplifies HTML document traversal and manipulation, event handling, animation, and Ajax interactions for rapid web development.
