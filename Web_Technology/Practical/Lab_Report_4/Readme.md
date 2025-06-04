@@ -73,6 +73,7 @@
 
 <div align="center">
   <img src="images/2.2.png " alt="jQuery Append and Prepend Example" width="600">
+</div>
 
 ---
 
