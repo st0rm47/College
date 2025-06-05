@@ -89,10 +89,6 @@ Here is an example of each type of list in HTML:
 
 # 3. Create a form that has various input fields.
 
-A form in HTML is used to collect user input. It can contain various types of input fields such as text boxes, radio buttons, checkboxes, and submit buttons.
-
-Here is an example of a form with different input fields:
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -147,12 +143,11 @@ Here is an example of a form with different input fields:
 
 # 4. What is absolute and relative path reference? How can we insert images and links in an HTML page? 
 
-Paths are used to link to resources such as images, stylesheets, and other web pages. There are two types of paths:
-1. **Absolute Path**: This is a complete URL that points to a resource on the web. It includes the protocol domain name, and the path to the resource.
+Paths link to resources like images or pages.  
+- **Absolute path**: Full URL (e.g., `https://example.com/image.png`).  
+- **Relative path**: Path from the current file (e.g., `images/pic.png`).  
 
-2. **Relative Path**: This is a path that is relative to the current page's location. It does not include the domain name and is used to link to resources within the same website.
-
-To insert images and links using absolute and relative paths, you can use the `<img>` tag for images and the `<a>` tag for links.
+Use `<img src="...">` for images and `<a href="...">` for links.
 ```html
 <!DOCTYPE html>
 <html>
