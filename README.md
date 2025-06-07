@@ -211,6 +211,13 @@
 - [Lab Report 16: Prim's Algorithm](./DAA/Prims.cpp)
 - [Lab Report 17: Dijkstra's Algorithm](./DAA/Dijkstra.cpp)
 - [Lab Report 18: Huffman Coding](./DAA/Huffman_Coding.cpp)
+- [Lab Report 19: Matrix Chain Multiplication](./DAA/Matrix_Chain.cpp)
+- [Lab Report 20: 0/1 Knapsack Problem](./DAA/0_1Knapsack.cpp)
+- [Lab Report 21: Floyd Warshall Algorithm](./DAA/Flyod_Warshall.cpp)
+- [Lab Report 22: Subset Sum Problem](./DAA/SubSet_Problem.cpp)
+- [Lab Report 23: N-Queens Problem](./DAA/N_Queens.cpp)
+
+
 ---
 </details>
 
@@ -246,6 +253,14 @@
 <details>
 <summary>Simulation and Modeling</summary>
 
+- [Lab Report 1: Distributed Lag Model](./Simulation_Modeling/Lab_1.c)
+- [Lab Report 2: Bank Queue Analysis](./Simulation_Modeling/Lab_2.c)
+- [Lab Report 3: Stadium Time Entry Calculation](./Simulation_Modeling/Lab_3.c)
+- [Lab Report 4: Poisson Distribution](./Simulation_Modeling/Lab_4.c)
+- [Lab Report 5: Markov Chain](./Simulation_Modeling/Lab_5.c)
+- [Lab Report 6: Linear Congruential Method](./Simulation_Modeling/Lab_6.c)
+- [Lab Report 7: Multiplicative Congruential Method](./Simulation_Modeling/Lab_7.c)
+
 ---
 </details>
 
@@ -257,9 +272,11 @@
 - [Assignment 1: HTML and CSS Basics](./Web_Technology/Assignment/Assignment1.md)
 - [Assignment 2: JavaScript Basics](./Web_Technology/Assignment/Assignment2.md)
 
-- [Lab Report 1: HTML Basics](./Web_Technology/Practical/Lab_Report_1/HTML_Basics.md)
-- [Lab Report 2: CSS Basics](./Web_Technology/Practical/Lab_Report_2/CSS_Basics.md)
-- [Lab Report 3: JavaScript Basics](./Web_Technology/Practical/Lab_Report_3/JavaScript_Basics.md)
+- [Lab Report 1: HTML](./Web_Technology/Practical/Lab_Report_1/Readme.md)
+- [Lab Report 2: CSS](./Web_Technology/Practical/Lab_Report_2/Readme.md)
+- [Lab Report 3: JavaScript](./Web_Technology/Practical/Lab_Report_3/Readme.md)
+- [Lab Report 4: jQuery](./Web_Technology/Practical/Lab_Report_4/Readme.md)
+- [Lab Report 5: PHP](./Web_Technology/Practical/Lab_Report_5/Readme.md)
 
 ---
 </details>
