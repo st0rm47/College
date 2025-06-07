@@ -46,43 +46,54 @@ void matrixChainOrder(vector<int> &dims)
         }
     }
 
+    // Display DP Table
+    cout << "\nMatrix Chain Multiplication Table:" << endl;
+    cout << "\n+----------------------------------+" << endl;
+    cout << "|      ";
+    for (int j = 0; j < n; j++)
+        cout << "| " << setw(3) << (char)('A' + j) << "  ";
+    cout << "|" << endl;
+
+
+    cout << "+------";
+    for (int j = 0; j < n; j++)
+        cout << "+------";
+    cout << "+" << endl;
+
+    // Matrix rows
+    for (int i = 0; i < n; i++) {
+        cout << "|  " << (char)('A' + i) << "   ";
+        for (int j = 0; j < n; j++) {
+            cout << "|";
+            if (j < i)
+                cout << "      ";
+            else if (i == j)
+                cout << setw(6) << "0";
+            else
+                cout << setw(6) << m[i][j];
+        }
+        cout << "|" << endl;
+
+        // Row separator
+        cout << "+------";
+        for (int j = 0; j < n; j++)
+            cout << "+------";
+        cout << "+" << endl;
+    }
+    
     cout << "\nMinimum number of scalar multiplications: " << m[0][n - 1] << endl;
 
     cout << "Optimal parenthesization: ";
     char name = 'A';
     printParenthesis(0, n - 1, bracket, name);
     cout << endl;
-
-    // Display DP Table
-    cout << "\n+------------------ Matrix Cost Table ------------------+" << endl;
-    cout << "|      ";
-    for (int j = 0; j < n; j++)
-        cout << setw(6) << (char)('A' + j);
-    cout << "   |" << endl;
-    cout << "+------------------------------------------------------+" << endl;
-
-    for (int i = 0; i < n; i++)
-    {
-        cout << "| " << (char)('A' + i) << "  ";
-        for (int j = 0; j < n; j++)
-        {
-            if (j < i)
-                cout << setw(6) << " ";
-            else if (i == j)
-                cout << setw(6) << "0";
-            else
-                cout << setw(6) << m[i][j];
-        }
-        cout << "   |" << endl;
-    }
-    cout << "+------------------------------------------------------+" << endl;
 }
 
 int main()
 {
-    cout << "\t\t=============================" << endl;
-    cout << "\t\t  Matrix Chain Multiplication" << endl;
-    cout << "\t\t=============================" << endl;
+    cout << "\t\t===============================" << endl;
+    cout << "\t\t  Matrix Chain Multiplication  " << endl;
+    cout << "\t\t===============================" << endl;
 
     int n;
     cout << "\nEnter the number of matrices: ";
@@ -96,14 +107,14 @@ int main()
     }
 
     cout << "\nDimensions of matrices:" << endl;
-    cout << "+-----------+----------------+" << endl;
-    cout << "| Matrix    | Dimensions     |" << endl;
-    cout << "+-----------+----------------+" << endl;
+    cout << "+--------+------------+" << endl;
+    cout << "| Matrix | Dimensions |" << endl;
+    cout << "+--------+------------+" << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << "|    " << (char)('A' + i) << "      | " << setw(3) << dims[i] << " x " << setw(3) << dims[i + 1] << "      |" << endl;
+        cout << "|    " << (char)('A' + i) << "   | " << setw(3) << dims[i] << " x " << setw(3) << dims[i + 1] << "  |" << endl;
     }
-    cout << "+-----------+----------------+" << endl;
+    cout << "+--------+------------+" << endl;
 
     matrixChainOrder(dims);
 
