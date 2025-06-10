@@ -216,7 +216,7 @@
 - [Lab Report 21: Floyd Warshall Algorithm](./DAA/Flyod_Warshall.cpp)
 - [Lab Report 22: Subset Sum Problem](./DAA/SubSet_Problem.cpp)
 - [Lab Report 23: N-Queens Problem](./DAA/N_Queens.cpp)
-
+- [Lab Report 24: Vertex Cover Problem](./DAA/Vertex_Cover.cpp)
 
 ---
 </details>
@@ -224,6 +224,7 @@
 
 <details>
 <summary>System Analysis and Design</summary>
+- [Project: Facial Expression Recognition](./SAD/Face_Expression.pdf)
 
 ---
 </details>
@@ -260,7 +261,7 @@
 - [Lab Report 5: Markov Chain](./Simulation_Modeling/Lab_5.c)
 - [Lab Report 6: Linear Congruential Method](./Simulation_Modeling/Lab_6.c)
 - [Lab Report 7: Multiplicative Congruential Method](./Simulation_Modeling/Lab_7.c)
-
+- [Lab Report 8: GPSS Simulation]
 ---
 </details>
 
