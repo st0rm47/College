@@ -224,6 +224,7 @@
 
 <details>
 <summary>System Analysis and Design</summary>
+
 - [Project: Facial Expression Recognition](./SAD/Face_Expression.pdf)
 
 ---
@@ -261,7 +262,7 @@
 - [Lab Report 5: Markov Chain](./Simulation_Modeling/Lab_5.c)
 - [Lab Report 6: Linear Congruential Method](./Simulation_Modeling/Lab_6.c)
 - [Lab Report 7: Multiplicative Congruential Method](./Simulation_Modeling/Lab_7.c)
-- [Lab Report 8: GPSS Simulation]
+- [Lab Report 8: GPSS Simulation](./Simulation_Modeling/Simulation_GPSS.pdf)
 ---
 </details>
 
