@@ -297,6 +297,47 @@
 ---
 </details>
 
+---
+
+# 6TH SEMESTER
+
+<details>
+<summary>Net Centric Computing</summary>
+
+---
+</details>
+
+<details>
+<summary> Compiler Design and Construction</summary>
+
+---
+</details>
+
+<details>
+<summary>Software Engineering</summary>
+
+---
+</details>
+
+<details>
+<summary> Technical Writing</summary>
+
+---
+</details>
+
+<details>
+<summary>E-commerce</summary>
+
+---
+</details>
+
+<details>
+<summary>E-governance</summary>
+
+---
+</details>
+
+---
 ## How to Use
    >*Clone the repository to your local machine*
 
