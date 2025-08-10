@@ -39,21 +39,6 @@ namespace Lab4 {
             Console.WriteLine($"  Max: {ulong.MaxValue}");
             Console.WriteLine($"  Min: {ulong.MinValue}");
 
-            Console.WriteLine("\nfloat:");
-            Console.WriteLine($"  Max: {float.MaxValue}");
-            Console.WriteLine($"  Min: {float.MinValue}");
-
-            Console.WriteLine("\ndouble:");
-            Console.WriteLine($"  Max: {double.MaxValue}");
-            Console.WriteLine($"  Min: {double.MinValue}");
-
-            Console.WriteLine("\ndecimal:");
-            Console.WriteLine($"  Max: {decimal.MaxValue}");
-            Console.WriteLine($"  Min: {decimal.MinValue}");
-
-            Console.WriteLine("\nchar:");
-            Console.WriteLine($"  Min: \\u{((int)char.MinValue):X4}");
-            Console.WriteLine($"  Max: \\u{((int)char.MaxValue):X4}");
 
             Console.WriteLine("Made by: Subodh Ghimire");
             Console.ReadLine();
