@@ -392,6 +392,14 @@
    - [Lab Report 19 (d): Implementation of Exception Handling (Strings)](./Dot_NET/Lab19/Lab19d.cs)
    </details>
 
+- [Lab Report 20: Implementation of Delegates](./Dot_NET/Lab20.cs)
+- [Lab Report 21: Implementation of Razor View Engine (MVC-Model View Controller)](./Dot_NET/Lab21.cs)
+- [Lab Report 22: Implementation of Action Methods and Controller in ASP.NET MVC](./Dot_NET/Lab22.cs)
+- [Lab Report 23: Implementation of Action Methods in Controller](./Dot_NET/Lab23.cs)
+- [Lab Report 24: Implementation of ViewBag and ViewData in ASP.NET MVC](./Dot_NET/Lab24.cs)
+- [Lab Report 25: Implementation of TextBox Helper method in ASP.NET MVC](./Dot_NET/Lab25.cs)
+- [Lab Report 26: Implementation of form with HTML Helper method in ASP.NET MVC](./Dot_NET/Lab26.cs)
+- [Lab Report 27: Implementation of ValidationMessage and ValidationSummary Helper methods in ASP.NET MVC](./Dot_NET/Lab27.cs)
 
 
 ---
