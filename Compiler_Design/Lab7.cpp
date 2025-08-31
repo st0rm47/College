@@ -48,7 +48,7 @@ void removeLeftRecursion(string nt, vector<string> prods) {
 int main() {
     cout << "\t\t=================================" << endl;
     cout << "\t\t  Elimination of Left Recursion  " << endl;
-    cout << "\t\t=================================" << endl;\
+    cout << "\t\t=================================" << endl;
     
     int ntCount;
     cout << "Enter number of non-terminals: ";
