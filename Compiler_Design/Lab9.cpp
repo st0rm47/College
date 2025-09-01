@@ -1,99 +1,132 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+#include <cstdlib>
 using namespace std;
 
-struct Production { string lhs; vector<string> rhs; };
+char ip_sym[50], stackArr[50];
+int ip_ptr = 0, st_ptr = 0, len;
+char temp[2], temp2[2];
+char act[25];
 
-// Tokenize input string
-vector<string> tokenize(const string &s){
-    vector<string> tokens;
-    for(size_t i=0;i<s.size();){
-        if(i+1<s.size() && s.substr(i,2)=="id"){ tokens.push_back("id"); i+=2; }
-        else if(s[i]=='('||s[i]==')'||s[i]==',') { tokens.push_back(string(1,s[i])); i++; }
-        else if(isspace(s[i])) i++;
-        else { cerr<<"Unknown symbol: "<<s[i]<<endl; exit(1);}
-    }
-    return tokens;
-}
+void check();
 
-// Check if top of stack matches RHS
-bool match_top(const vector<string>& stack,const vector<string>& rhs){
-    if(stack.size()<rhs.size()) return false;
-    for(size_t i=0;i<rhs.size();i++)
-        if(stack[stack.size()-rhs.size()+i]!=rhs[i]) return false;
-    return true;
-}
+int main()
+{
+    cout << "\t\t=======================" << endl;
+    cout << "\t\t  Shift Reduce Parser  " << endl;
+    cout << "\t\t=======================" << endl;
 
-// Reduce as much as possible
-bool try_reduce(vector<string>& stack, const vector<Production>& G, const vector<string>& tokens, size_t index){
-    // Try longest RHS first
-    for(auto &p:G){
-        if(match_top(stack,p.rhs)){
-            for(size_t i=0;i<p.rhs.size();i++) stack.pop_back();
-            stack.push_back(p.lhs);
+    cout << "Grammar:" << endl;
+    cout << "E -> E + E" << endl;
+    cout << "E -> E * E" << endl;
+    cout << "E -> E / E" << endl;
+    cout << "E -> a | b" << endl;
 
-            stringstream ss;
-            ss<<left<<setw(20); for(auto &s:stack) ss<<s<<" ";
-            ss<<" | "<<setw(15); for(size_t j=index;j<tokens.size();j++) ss<<tokens[j];
-            ss<<" | Reduce: "<<p.lhs<<" ->"; for(auto &x:p.rhs) ss<<" "<<x;
-            cout<<ss.str()<<"\n";
+    cout << endl << "Enter the input symbol:\t";
+    cin >> ip_sym;
 
-            return true;
-        }
-    }
-    return false;
-}
+    len = strlen(ip_sym);
 
-int main(){
-    int n; cout<<"Enter number of productions: ";
-    cin>>n; cin.ignore();
+    // Print table header
+    cout << "+--------------------+-------------------------+-------------+" << endl;
+    cout << "|      STACK         |      INPUT SYMBOL       |    ACTION   |" << endl;
+    cout << "+--------------------+-------------------------+-------------+" << endl;
 
-    vector<Production> G;
-    cout<<"Enter productions (e.g. S->S+S):\n";
-    for(int i=0;i<n;i++){
-        string line; getline(cin,line);
-        size_t arrow=line.find("->");
-        string lhs=line.substr(0,arrow);
-        string rhs=line.substr(arrow+2);
-        vector<string> rhs_tokens;
-        for(size_t j=0;j<rhs.size();){
-            if(j+1<rhs.size() && rhs.substr(j,2)=="id"){ rhs_tokens.push_back("id"); j+=2; }
-            else if(rhs[j]=='('||rhs[j]==')'||rhs[j]==','||isalpha(rhs[j])){ rhs_tokens.push_back(string(1,rhs[j])); j++; }
-            else j++;
-        }
-        G.push_back({lhs,rhs_tokens});
-    }
+    // Initial state
+    cout << "| " << left << setw(19) << "$"
+         << "| " << setw(24) << (string(ip_sym) + "$")
+         << "| " << setw(12) << "--" << "|" << endl;
+    cout << "+--------------------+-------------------------+-------------+" << endl;
 
-    cout<<"Enter input string: ";
-    string input; getline(cin,input);
-    vector<string> tokens=tokenize(input);
+    strcpy(act, "Shift ");
+    temp[0] = ip_sym[ip_ptr];
+    temp[1] = '\0';
+    strcat(act, temp);
 
-    vector<string> stack; size_t index=0;
+    for (int i = 0; i < len; i++)
+    {
+        // Shift symbol into stack
+        stackArr[st_ptr] = ip_sym[ip_ptr];
+        stackArr[st_ptr + 1] = '\0';
+        ip_sym[ip_ptr] = ' ';
+        ip_ptr++;
 
-    cout<<left<<setw(20)<<"Stack"<<" | "<<setw(15)<<"Input"<<" | Action\n";
-    cout<<string(60,'-')<<"\n";
+        cout << "| " << left << setw(19) << ("$" + string(stackArr))
+             << "| " << setw(24) << (string(ip_sym) + "$")
+             << "| " << setw(12) << act << "|" << endl;
+        cout << "+--------------------+-------------------------+-------------+" << endl;
 
-    while(true){
-        // Keep reducing until no more possible
-        bool reduced;
-        do{
-            reduced = try_reduce(stack,G,tokens,index);
-        }while(reduced);
+        strcpy(act, "Shift ");
+        temp[0] = ip_sym[ip_ptr];
+        temp[1] = '\0';
+        strcat(act, temp);
 
-        // Shift next token if possible
-        if(index<tokens.size()){
-            stack.push_back(tokens[index]);
-            stringstream ss;
-            ss<<left<<setw(20); for(auto &s:stack) ss<<s<<" ";
-            ss<<" | "<<setw(15); for(size_t j=index+1;j<tokens.size();j++) ss<<tokens[j];
-            ss<<" | Shift: "<<tokens[index];
-            cout<<ss.str()<<"\n";
-            index++;
-        } else break;
+        check();
+        st_ptr++;
     }
 
-    // Final check
-    if(stack.size()==1 && stack[0]==G[0].lhs) cout<<"Accepted!\n";
-    else cout<<"Rejected!\n";
-
+    cout << "+--------------------+-------------------------+-------------+" << endl;
     return 0;
+}
+
+void check()
+{
+    int flag = 0;
+    temp2[0] = stackArr[st_ptr];
+    temp2[1] = '\0';
+
+    // Rule: a or b → E
+    if (!strcmp(temp2, "a") || !strcmp(temp2, "b"))
+    {
+        stackArr[st_ptr] = 'E';
+        stackArr[st_ptr + 1] = '\0';
+        cout << "| " << left << setw(19) << ("$" + string(stackArr))
+             << "| " << setw(24) << (string(ip_sym) + "$")
+             << "| " << setw(12) << ("E -> " + string(temp2)) << "|" << endl;
+        cout << "+--------------------+-------------------------+-------------+" << endl;
+        flag = 1;
+    }
+
+    if (!strcmp(temp2, "+") || !strcmp(temp2, "*") || !strcmp(temp2, "/"))
+        flag = 1;
+
+    if (strstr(stackArr, "E+E") || strstr(stackArr, "E*E") || strstr(stackArr, "E/E"))
+    {
+        string rule;
+        if (strstr(stackArr, "E+E"))
+            rule = "E -> E+E";
+        else if (strstr(stackArr, "E*E"))
+            rule = "E -> E*E";
+        else
+            rule = "E -> E/E";
+
+        strcpy(stackArr, "E");
+        st_ptr = 0;
+
+        cout << "| " << left << setw(19) << "$E"
+             << "| " << setw(24) << (string(ip_sym) + "$")
+             << "| " << setw(12) << rule << "|" << endl;
+        cout << "+--------------------+-------------------------+-------------+" << endl;
+
+        flag = 1;
+    }
+
+    if (!strcmp(stackArr, "E") && ip_ptr == len)
+    {
+        cout << "| " << left << setw(19) << "$E"
+             << "| " << setw(24) << (string(ip_sym) + "$")
+             << "| " << setw(12) << "ACCEPT" << "|" << endl;
+        cout << "+--------------------+-------------------------+-------------+" << endl;
+        exit(0);
+    }
+
+    if (flag == 0)
+    {
+        cout << "| " << left << setw(19) << ("$" + string(stackArr))
+             << "| " << setw(24) << ip_sym
+             << "| " << setw(12) << "REJECT" << "|" << endl;
+        cout << "+--------------------+-------------------------+-------------+" << endl;
+        exit(0);
+    }
 }
