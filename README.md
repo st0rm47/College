@@ -304,8 +304,8 @@
 <details>
 <summary>Net Centric Computing</summary>
 
-- [Lab Report 1: Installation of Visual Studio Code and .NET Framework with C#](./Dot_NET/Lab1.md)
-- [Lab Report 2: How to Open C# in Visual Studio](./Dot_NET/Lab2.cs)
+- Lab Report 1: Installation of Visual Studio Code and .NET Framework with C#
+- [Lab Report 2: Implementation of Basic Console output](./Dot_NET/Lab2.cs)
 
    <details>
    <summary>Lab Report 3</summary>
@@ -354,7 +354,7 @@
    <summary>Lab Report 14</summary>
 
    - [Lab Report 14 (a): Implementation of Compound Assignment Operators (+)](./Dot_NET/Lab14/Lab14a.cs)
-   - [Lab Report 14 (b): Implementation of Compound Assignment Operators (-)](./Dot_NET/Lab14/Lab14b.cs)
+   - [Lab Report 14 (b): Implementation of Compound Assignment Operators (/)](./Dot_NET/Lab14/Lab14b.cs)
    </details>
 
 - [Lab Report 15: Implementation of Conditional Operator](./Dot_NET/Lab15.cs)
@@ -403,10 +403,7 @@
 
 
 ---
-</details>
 
-<details>
-<summary> Compiler Design and Construction</summary>
 
 ---
 </details>
