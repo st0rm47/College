@@ -403,6 +403,23 @@
 
 
 ---
+</details>
+
+<details>
+<summary> Compiler Design and Construction</summary>
+
+- [Lab Report 1: WAP to implement DFA that accepts strings ending with 'ab'](./Compiler_Design/Lab1.cpp)
+- [Lab Report 2: WAP for comment validation](./Compiler_Design/Lab2.cpp)
+- [Lab Report 3: WAP to recognize strings under 'a*', 'a*b+', 'abb'](./Compiler_Design/Lab3.cpp)
+- [Lab Report 4: WAP to test whether a given identifier is valid or not](./Compiler_Design/Lab4.cpp)
+- [Lab Report 5: WAP to implement Lexical Analyzer](./Compiler_Design/Lab5.cpp)
+- [Lab Report 6: WAP to calculate firstpos(), lastpos(), and followpos() for any given grammar](./Compiler_Design/Lab6.cpp)
+- [Lab Report 7: WAP to remove left-recursion from any grammar](./Compiler_Design/Lab7.cpp)
+- [Lab Report 8: WAP to find out FIRST and FOLLOW sets for any given grammar](./Compiler_Design/Lab8.cpp)
+- [Lab Report 9: WAP to implement Shift Reduce Parser](./Compiler_Design/Lab9.cpp)
+- [Lab Report 10: WAP to implement LL(1) Parser](./Compiler_Design/Lab10.cpp)
+- [Lab Report 11: WAP to implement Intermediate Code Generator](./Compiler_Design/Lab11.cpp)
+- [Lab Report 12: WAP to implement Final Code Generator](./Compiler_Design/Lab12.cpp)
 
 
 ---
