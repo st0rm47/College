@@ -39,7 +39,6 @@ namespace Lab4 {
             Console.WriteLine($"  Max: {ulong.MaxValue}");
             Console.WriteLine($"  Min: {ulong.MinValue}");
 
-
             Console.WriteLine("Made by: Subodh Ghimire");
             Console.ReadLine();
         }
