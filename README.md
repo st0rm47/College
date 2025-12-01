@@ -393,13 +393,21 @@
    </details>
 
 - [Lab Report 20: Implementation of Delegates](./Dot_NET/Lab20.cs)
-- [Lab Report 21: Implementation of Razor View Engine (MVC-Model View Controller)](./Dot_NET/Lab21.cs)
-- [Lab Report 22: Implementation of Action Methods and Controller in ASP.NET MVC](./Dot_NET/Lab22.cs)
-- [Lab Report 23: Implementation of Action Methods in Controller](./Dot_NET/Lab23.cs)
-- [Lab Report 24: Implementation of ViewBag and ViewData in ASP.NET MVC](./Dot_NET/Lab24.cs)
-- [Lab Report 25: Implementation of TextBox Helper method in ASP.NET MVC](./Dot_NET/Lab25.cs)
-- [Lab Report 26: Implementation of form with HTML Helper method in ASP.NET MVC](./Dot_NET/Lab26.cs)
-- [Lab Report 27: Implementation of ValidationMessage and ValidationSummary Helper methods in ASP.NET MVC](./Dot_NET/Lab27.cs)
+- [Lab Report 21: CLI Commands in Shell](./Dot_NET/Lab21.md)
+- [Lab Report 22: Implementation of Razor View Engine (MVC-Model View Controller)](./Dot_NET/Lab22.md)
+- [Lab Report 23: Implementation of Action Methods in ASP.NET MVC](./Dot_NET/Lab23.md)
+- [Lab Report 24: Implementation of ViewData in ASP.NET MVC](./Dot_NET/Lab24.md)
+- [Lab Report 25: Implementation of HTML Helper method in ASP.NET MVC](./Dot_NET/Lab25.md)
+- [Lab Report 26: Creation of form with HTML Helper method in ASP.NET MVC](./Dot_NET/Lab26.md)
+- [Lab Report 27: Implementation of ValidationMessage and ValidationSummary Helper methods in ASP.NET Core MVC](./Dot_NET/Lab27.md)
+- [Lab Report 28: Implementation of Data Annotations in ASP.NET MVC](./Dot_NET/Lab28.md)
+- [Lab Report 29: Implementation of Attribute Based Routing in ASP.NET Core MVC](./Dot_NET/Lab29.md)
+- [Lab Report 30: Implementation of ASP.NET Web Application for XML/JSON format](./Dot_NET/Lab30.md)
+- [Lab Report 31: Implementation of JSON with jQuery](./Dot_NET/Lab31.md)
+- [Lab Report 32: Implementation of ADO.NET in ASP.NET Framework for Database Connectivity](./Dot_NET/Lab32.md)
+- [Lab Report 33: Implementation of CRUD Operations using Entity Framework in ASP.NET MVC](./Dot_NET/Lab33.md)
+- [Lab Report 34: Implementation of Form Validation using ReactJS](./Dot_NET/Lab34.md)
+
 
 
 ---
