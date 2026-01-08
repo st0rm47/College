@@ -436,11 +436,8 @@
 <details>
 <summary>Software Engineering</summary>
 
----
-</details>
-
-<details>
-<summary> Technical Writing</summary>
+- [Project: Abstractify](./SWE/Abstractify_Finalized.pdf)
+- [Source Code](https://github.com/Firojpaudel/arXiv_Summarizer)
 
 ---
 </details>
@@ -448,11 +445,16 @@
 <details>
 <summary>E-commerce</summary>
 
+- [Project: Mheecha](./Ecom/Ecommerce_Finalized.pdf)
+
 ---
 </details>
 
 <details>
 <summary>E-governance</summary>
+
+- [Project: Rastriya License Portal](./Egov/Egovernance_Finalized.pdf)
+- [Source Code](https://github.com/st0rm47/RLP-egovproj)
 
 ---
 </details>
