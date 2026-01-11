@@ -266,6 +266,7 @@ displayOrders();
 
 ### 6. styles.css
 ```css
+
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
@@ -422,3 +423,4 @@ input[type="text"], input[type="number"] {
         grid-template-columns: 1fr;
     }
 }
+```
