@@ -447,6 +447,18 @@
 
 - [Project: Mheecha](./Ecom/Ecommerce_Finalized.pdf)
 
+
+- [Write a program to create add products and display products in an ecommerce store. The products should include product name, price, description etc. Also implement search products feature to search items from data structure or table containing products.](./Ecom/Ecom1.md)  
+ 
+- [Write a program to display a product list and add to cart features for the products in an ecommerce store. Assuming that the list of products is already in a data structure or table for products. Also display the items in the cart list. ](./Ecom/Ecom2.md)
+
+- [Write a program to display a cart list and empty cart features in an ecommerce store. Assuming that the list of products is already in a data structure or table for cart. Also display the items in the cart list.](./Ecom/Ecom3.md)
+
+- [Write a program to implement add to cart and checkout features of an ecommerce store. Assuming that the list of products is already in a data structure or table for products. Also display the list of orders after checkout operation.](./Ecom/Ecom4.md)
+
+- [Write a program to view a product list and add to wish list features for the products in an ecommerce store. Assuming that the list of products is already in a datastructure or table for products. Also display the wish list. ](./Ecom/Ecom5.md)
+
+- [Combined All Features](./Ecom/Ecom_Combined.md)
 ---
 </details>
 
