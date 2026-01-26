@@ -3,7 +3,7 @@ class Variables {
     public static void main(){
         // Variables
         int x = 10;
-        String name = "Subodh";     //strings surrounded by double quotes
+        Strings name = "Subodh";     //strings surrounded by double quotes
         float y = 9.99f;    // f denotes float
         char z = 'D';   // char surrounded by single quotes
         boolean bool = true;
