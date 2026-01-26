@@ -1,7 +1,7 @@
 package Unitone;
 
 class Fundamentals {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         // This is a comment
 
         /*
