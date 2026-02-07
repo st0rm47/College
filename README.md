@@ -471,6 +471,40 @@
 ---
 </details>
 
+
+---
+
+# 7TH SEMESTER
+
+<details>
+<summary>Advanced Java Programming</summary>
+
+- [Basics of Java Programming](./Java/Basics/Unitone/)
+- [Database Connectivity using JDBC](./Java/JDBC/Unitfour/)
+
+---
+</details>
+
+<details>
+<summary>Data Warehousing and Data Mining</summary>
+
+---
+</details>
+
+
+<details>
+<summary>Software Project Management</summary>
+
+---
+</details>
+
+
+<details>
+<summary>Project Work</summary>
+
+---
+</details>
+
 ---
 ## How to Use
    >*Clone the repository to your local machine*
