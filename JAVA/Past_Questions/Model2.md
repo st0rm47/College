@@ -119,3 +119,214 @@ public class EmployeeFileWrite {
 - The `finally` block ensures that the Scanner resource is closed after use, preventing resource leaks
 - This program demonstrates proper exception handling while performing file I/O operations and user input.
 ---
+
+## Question 2: Write a program that divides the frame into five regions by using border layout and then add panels in the east, north and center region. Finally add some descriptive label in the north panel, buttons with icon in the east panel and a sample form in the center panel. You can further subdivide the center panel, if necessary. Prepare a program with three text boxes First Number, Second Number, and Result and four buttons add, subtract, multiply and divide. Handle  the events to perform the required operation and display results.
+
+```java
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class CalculatorApp extends JFrame implements ActionListener {
+
+    // Declare Buttons and Fields
+    JLabel firstnumber, secondnumber, result;
+    JTextField firsttext, secondtext, resulttext;
+    JButton add, sub, mul, div;
+
+    public CalculatorApp() {
+        // Set the title of the frame
+        setTitle("Calculator using BorderLayout");
+
+        // Set the size of the frame
+        setSize(400, 400);
+
+        // Set the layout of the frame
+        setLayout(new BorderLayout());
+
+        // North Panel
+        JPanel northPanel = new JPanel();
+        JLabel title = new JLabel("Simple Calculator Application", JLabel.CENTER);
+        northPanel.add(title);
+
+
+        // East Panel (Buttons with icons)
+        JPanel eastPanel = new JPanel();
+        eastPanel.setLayout(new GridLayout(4,1));
+
+        add = new JButton("Add");
+        sub = new JButton("Subtract");
+        mul = new JButton("Multiply");
+        div = new JButton("Divide");
+
+        // Add components to the east panel
+        eastPanel.add(add);
+        eastPanel.add(sub);
+        eastPanel.add(mul);
+        eastPanel.add(div);
+
+        // Center Panel (Form)
+        JPanel centerPanel = new JPanel();
+        centerPanel.setLayout(new GridLayout(3,2));
+
+        firstnumber = new JLabel("First Number", JLabel.CENTER);
+        firsttext = new JTextField(10);
+        secondnumber = new JLabel("Second Number", JLabel.CENTER);
+        secondtext = new JTextField(10);
+        result = new JLabel("Result", JLabel.CENTER);
+        resulttext = new JTextField(10);
+        resulttext.setEditable(false);
+
+        // Add components to the center panel
+        centerPanel.add(firstnumber);
+        centerPanel.add(firsttext);
+        centerPanel.add(secondnumber);
+        centerPanel.add(secondtext);
+        centerPanel.add(result);
+        centerPanel.add(resulttext);
+
+        // Add panels to the window
+        add(northPanel, BorderLayout.NORTH);
+        add(eastPanel, BorderLayout.EAST);
+        add(centerPanel, BorderLayout.CENTER);
+
+        // Event Handling
+        add.addActionListener(this);
+        sub.addActionListener(this);
+        mul.addActionListener(this);
+        div.addActionListener(this);
+
+        // Set App visibility
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        try {
+            double num1 = Double.parseDouble(firsttext.getText());
+            double num2 = Double.parseDouble(secondtext.getText());
+            double result = 0;
+            if (e.getSource() == add)
+                result = num1 + num2;
+            else if (e.getSource() == sub)
+                result = num1 - num2;
+            else if (e.getSource() == mul)
+                result = num1 * num2;
+            else if (e.getSource() == div)
+                result = num1 / num2;
+            resulttext.setText(String.valueOf(result));
+        } catch (Exception ex) {
+            resulttext.setText("Error");
+        }
+    }
+
+    public static void main(String[] args) {
+        new CalculatorApp();
+    }
+}
+```
+---
+
+
+## Question 3: What is Servlet? Create an application where an HTML file displays a form containing field company name, city and ESTD and a save button and when we click on save button it must save records in the database.  
+
+**Servlet**
+- A Servlet is a Java class that handles HTTP requests and generates HTTP responses.  
+- It runs inside a servlet container like Apache Tomcat.  
+- It is part of Java EE (Jakarta EE) technology for web development.  
+- It is mainly used to build dynamic, database-driven web applications.  
+
+**Features of Servlet**
+- It is platform independent because it is written in Java.  
+- It is highly efficient due to multithreading support.  
+- It is secure compared to traditional CGI programs.  
+- It can handle multiple client requests simultaneously.  
+- It provides better performance as it runs inside server memory. 
+
+**Working of Servlet**
+- The client sends a request through a web browser.  
+- The request is received by the web server.  
+- The server forwards the request to the servlet container.  
+- The servlet processes the request and performs required operations.  
+- The response is generated and sent back to the client. 
+
+**Example Application to Save Records in Database**
+1. Create an HTML form (index.html):
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Form</title>
+</head>
+<body>
+    <h2>Company Details</h2>
+    <form action="SaveServlet" method="post">
+        Company Name: <input type="text" name="cname"><br><br>
+        City: <input type="text" name="city"><br><br>
+        ESTD: <input type="text" name="estd"><br><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
+```
+
+2. Create a Servlet (SaveServlet.java):
+```java
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.sql.*;
+
+public class SaveServlet extends HttpServlet {
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String url = "jdbc:mysql://localhost:3306/test";
+        String username = "root";
+        String password = "password";
+
+        String cname = request.getParameter("cname");
+        String city = request.getParameter("city");
+        String estd = request.getParameter("estd");
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        try {
+            // Load the JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish a connection
+            Connection con = DriverManager.getConnection(
+                    url, username, password);
+
+            // Sql query to insert data
+            String sql = "INSERT INTO company (cname, city, estd) VALUES (?, ?, ?)";
+
+            // Create a PreparedStatement
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            // Set parameters
+            ps.setString(1, cname);
+            ps.setString(2, city);
+            ps.setString(3, estd);
+
+            // Execute the update
+            int i = ps.executeUpdate();
+            if (i > 0)
+                out.println("Record Saved Successfully");
+            else
+                out.println("Error Saving Record");
+
+            con.close();
+
+        } catch (Exception e) {
+            out.println(e);
+        }
+    }
+}
+```
+
+---
+
+  
