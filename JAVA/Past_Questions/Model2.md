@@ -633,3 +633,263 @@ public class MouseAdapterExample {
 - In the above examples, using MouseAdapter allows us to only implement the `mouseClicked` method.
 - While using MouseListener requires us to implement all methods, even if they are not needed.
 ---
+
+
+## Question 9: What is a prepared statement? When is it useful? Explain its use with suitable java code.
+
+**PreparedStatement**
+- A PreparedStatement is a feature of Java's JDBC API that allows you to execute parameterized SQL queries.
+-  It allows SQL statements to be precompiled and stored in a PreparedStatement object, which can then be executed multiple times with different parameters.
+-  It is created using the `Connection.prepareStatement()` method.
+-  It uses placeholders (?) for parameters in the SQL query, which can be set using setter methods (e.g., `setString()`, `setInt()`).
+
+
+**Advantages of PreparedStatement:**
+- **Performance**: Prepared statements are precompiled, which can improve performance when executing the same query multiple times with different parameters.
+  
+- **Security**: Prepared statements help prevent SQL injection attacks by treating parameters as data rather than executable code.
+
+- **Convenience**: Prepared statements provide a convenient way to set parameters without having to concatenate strings to build SQL queries.
+
+- **Type Safety**: Prepared statements allow you to set parameters using specific setter methods, which can help catch type-related errors at compile time.
+
+**Example of using PreparedStatement:**
+```java
+import java.sql.*;
+public class PreparedStatementExample {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/java";
+        String username = "root";
+        String password = "password";
+
+        try {
+            // Establishing a connection
+            Connection conn = DriverManager.getConnection(url, username, password);
+
+            // SQL query with placeholders
+            String sql = "SELECT * FROM employees WHERE id = ? AND name = ?";
+
+            // Creating a PreparedStatement
+            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+
+            // Setting parameters
+            preparedStatement.setInt(1, 1);
+            preparedStatement.setString(2, "John Doe");
+
+            // Executing the query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+- In the above example, we create a PreparedStatement with a SQL query that has placeholders for parameters.
+- We then set the parameters using `setInt()` and `setString()` methods before executing the query.
+- This approach is more secure and efficient compared to building SQL queries using string concatenation.
+
+
+---
+
+## Question 10: Write the steps for writing client and server programs using TCP with a suitable example. 
+
+**Steps for Writing Client Programs using TCP:**
+1. Import necessary packages (e.g., java.net, java.io).
+2. Create a Socket object to connect to the server using the server's IP address and port number.
+3. Obtain input and output streams from the socket to send and receive data.
+4. Write data to the output stream to send it to the server.
+5. Read data from the input stream to receive responses from the server.
+6. Close the socket and streams after communication is complete.
+```java
+import java.io.*;
+import java.net.*;
+public class TCPClient {
+    public static void main(String[] args) {
+        String serverAddress = "localhost"; // Server IP address
+        int port = 12345; // Server port number
+
+        try {
+            // Step 2: Create a Socket to connect to the server
+            Socket socket = new Socket(serverAddress, port);
+
+            // Step 3: Obtain input and output streams from the socket
+            DataInputStream input = new DataInputStream(socket.getInputStream());
+            DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+
+            // Step 4: Write data to the output stream to send it to the server
+            String message = "Hello, Server!";
+            output.writeUTF(message);
+
+            // Step 5: Read data from the input stream to receive responses from the server
+            String response = input.readUTF();
+            System.out.println("Response from server: " + response);
+
+            // Step 6: Close the socket and streams after communication is complete
+            input.close();
+            output.close();
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+}
+```
+
+**Steps for Writing Server Programs using TCP:**
+1. Import necessary packages (e.g., java.net, java.io).
+2. Create a ServerSocket object to listen for incoming client connections on a specific port.
+3. Accept client connections using the accept() method of the ServerSocket.
+4. Obtain input and output streams from the accepted socket to communicate with the client.
+5. Read data from the input stream to receive messages from the client.
+6. Write data to the output stream to send responses to the client.
+7. Close the socket and streams after communication is complete.
+```java
+import java.io.*;
+import java.net.*;
+public class TCPServer {
+    public static void main(String[] args) {
+        int port = 12345; // Port number to listen on
+
+        try {
+            // Step 2: Create a ServerSocket to listen for incoming connections
+            ServerSocket serverSocket = new ServerSocket(port);
+            System.out.println("Server is listening on port " + port);
+
+            // Step 3: Accept a client connection
+            Socket socket = serverSocket.accept();
+            System.out.println("Client connected");
+
+            // Step 4: Obtain input and output streams from the socket
+            DataInputStream input = new DataInputStream(socket.getInputStream());
+            DataOutputStream output = new DataOutputStream(socket.getOutputStream());
+
+            // Step 5: Read data from the input stream
+            String message = input.readUTF();
+            System.out.println("Message from client: " + message);
+
+            // Step 6: Write data to the output stream
+            String response = "Hello, Client!";
+            output.writeUTF(response);
+
+            // Step 7: Close the socket and streams after communication is complete
+            input.close();
+            output.close();
+            socket.close();
+            serverSocket.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+- In the above examples, the TCPServer listens for incoming connections on a specified port and responds to client messages, while the TCPClient connects to the server, sends a message, and receives a response.
+
+---
+
+## Question 11: What is JavaFX? How it is different from swing. Write a JavaFX program to create a form to read two numbers and display their sum on button click.
+
+**JavaFX**
+- JavaFX is a modern GUI framework in Java used to create rich internet applications with advanced user interfaces. 
+- It provides better graphics, media support, and flexibility compared to older GUI tools like Swing.
+- It replaces Swing as the modern standard for Java GUI development.  
+
+**Differences between JavaFX and Swing:**
+| Aspect | JavaFX | Swing |
+|--------|--------|-------|
+| Introduction | JavaFX is a newer GUI framework introduced in 2008. | Swing is an older GUI toolkit that has been part of Java since 1997. |
+| Architecture | JavaFX uses a scene graph architecture for rendering UI components. | Swing uses a lightweight component architecture. |
+| Graphics | JavaFX provides better graphics capabilities with hardware acceleration. | Swing relies on software rendering, which can be less efficient. |
+| Media Support | JavaFX has built-in support for audio and video playback. | Swing does not have native media support. |
+| UI Controls | JavaFX offers a wider range of modern UI controls and layouts. | Swing has a more limited set of UI controls. |
+| Performance | JavaFX generally offers better performance due to hardware acceleration. | Swing can be slower, especially for complex UIs. |
+
+**Example JavaFX program**
+```java
+package org.example.javafx;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+public class SumCalculator extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+
+        // Create UI components
+        Label num1label = new Label("Enter 1st number");
+        TextField num1Field = new TextField();
+
+        Label num2label = new Label("Enter 2nd number");
+        TextField num2Field = new TextField();
+
+        Button calculateButton = new Button("Calculate Sum");
+        Label resultLabel = new Label();
+
+        // Set up layout
+        VBox layout = new VBox(10);
+        layout.getChildren().addAll(num1label, num1Field, num2label, num2Field, calculateButton, resultLabel);
+
+        // Set button action
+        calculateButton.setOnAction(e -> {
+            try {
+                int num1 =   Integer.parseInt(num1Field.getText());
+                int num2 =   Integer.parseInt(num2Field.getText());
+                int sum = num1 + num2;
+                resultLabel.setText("Sum: " + sum);
+            } catch (Exception ex) {
+                resultLabel.setText("Please enter valid numbers.");
+            }
+        });
+
+        // Set up the scene and stage
+        Scene scene = new Scene(layout, 300, 200);
+        primaryStage.setTitle("Sum Calculator");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+```
+---
+
+## Question 12: What is RMI? Discuss stub and skeleton. Explain its role in creating distributed applications. 
+
+**RMI (Remote Method Invocation)**
+- RMI (Remote Method Invocation) is a Java API that allows an object running in one Java Virtual Machine (JVM) to invoke methods on an object running in another JVM, enabling distributed computing.
+- It is used for building distributed applications where communication happens over a network.
+- It follows a client-server architecture where the client can call methods on remote objects hosted by the server.
+- It uses stubs and skeletons to facilitate communication between the client and server.
+
+**Stub**
+- A stub is a simple object on the client side that represents the remote object on the server.  
+- It is used to send method calls from the client to the server.  
+- It works like a middleman between client and server.  
+- It changes the method call into a network request and sends it to the server (marshalling).  
+- It receives the result from the server and converts it back into a normal response for the client (unmarshalling).  
+
+**Skeleton**
+- A skeleton is a server-side object that receives requests from the client stub.  
+- It acts as a middleman between the stub and the actual remote object.  
+- It takes the request from the client and understands the method call.  
+- It converts the received data into a usable form for the server (unmarshalling).  
+- It calls the actual method on the remote object and gets the result.  
+- It sends the result back to the client through the stub.  
+
+**Role of RMI in Distributed Applications**
+
+- RMI allows programs running on different computers to communicate with each other over a network.  
+- It enables a method of one Java program to be called from another Java program located on a different machine.  
+- It makes distributed application development easier by hiding low-level network programming details.  
+- It allows developers to use normal method calls instead of writing complex socket programs.  
+- It improves modularity by separating client and server logic in different systems.  
+- It is widely used in client-server and enterprise-level distributed systems for remote communication.  
+
+---
+  
