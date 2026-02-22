@@ -328,5 +328,308 @@ public class SaveServlet extends HttpServlet {
 ```
 
 ---
+## Question 4: What is the difference between final, finally, and finalize keywords in Java?
 
+In Java, the keywords `final`, `finally`, and `finalize` serve different purposes:
+
+**final Keyword**
+
+- The final keyword is used to restrict modification of variables, methods, and classes.
+- A final variable acts as a constant and cannot be reassigned after initialization.
+- A final method cannot be overridden by a subclass.
+- A final class cannot be inherited by other classes.
+
+
+```java
+class FinalExample {
+    final int x = 10;
+
+    void display() {
+        // x = 20; // Error: cannot change final variable
+        System.out.println("Value of x: " + x);
+    }
+}
+```
+
+
+**finally Block**   
+- The finally block is used in exception handling to execute important code after try and catch blocks
+- The finally block is always executed whether an exception occurs or not.
+- It is mainly used for closing resources like files or database connections.
+
+```java
+class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            int a = 10 / 0;
+        } catch (Exception e) {
+            System.out.println("Exception handled");
+        } finally {
+            System.out.println("Finally block executed");
+        }
+    }
+}
+```
+
+**finalize() Method**
+
+- The finalize() method is called by the garbage collector before destroying an object.
+- It is defined in the Object class and can be overridden by the programmer.
+- It is used to perform cleanup operations before memory is released.
+- Execution of finalize() is not guaranteed every time.
+
+```java
+class FinalizeExample {
+    protected void finalize() {
+        System.out.println("Finalize method called");
+    }
+
+    public static void main(String[] args) {
+        FinalizeExample obj = new FinalizeExample();
+        obj = null;
+        System.gc();
+    }
+}
+```
+
+In summary,
+- `final` is a keyword used to declare constants, prevent method overriding, and inheritance.
+- `finally` is a block used in exception handling to ensure that certain code is executed regardless of exceptions.
+- `finalize` is a method that is called by the garbage collector before an object is destroyed, used for cleanup operations.
   
+---
+
+## Question 5: How is exception different from error? Differentiate throws and throw keywords. When is the block finally important?
+
+**Exception vs Error**
+
+| Aspect | Exception | Error |
+|--------|-----------|-------|
+| Definition | An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. | An error is a serious problem that a reasonable application should not try to catch. |
+| Nature | Exceptions are typically recoverable and can be handled by the application. | Errors are usually unrecoverable and indicate serious problems in the application or environment. |
+| Cause | Exceptions can be caused by user input, file handling issues, or other runtime conditions. | Errors are often caused by issues like memory leaks, stack overflow, or hardware failures. |
+| Handling | Exceptions can be caught and handled using try-catch blocks. | Errors are typically not handled by applications and are often fatal. |
+| Examples | IOException, NullPointerException, ArithmeticException | OutOfMemoryError, StackOverflowError |
+
+
+
+**throws vs throw**
+
+| Aspect | throw | throws |
+|--------|--------|-------|
+| Definition | The `throw` keyword is used to explicitly throw an exception from a method or block of code. |  The `throws` keyword is used in method signatures to declare that a method may throw one or more exceptions. |
+| Usage | Followed by an instance of an exception class. | Followed by a list of exception types that the method can throw. |
+| Followed by | Followed by an instance of an exception class. | Followed by a list of exception types that the method can throw. |
+| Number of exceptions | Can throw a single exception at a time. | Can declare multiple exceptions that a method may throw. |
+| Function | It is used to signal that an exception has occurred. | It is used to inform the caller of a method about potential exceptions that may be thrown. |
+| Example | `public void myMethod() { throw new IOException("File not found"); }` | `public void myMethod() throws IOException, SQLException { ... }` |
+
+
+**Importance of finally block**
+- The *finally* block is used to execute code after try and catch blocks.  
+- The block always executes whether an exception occurs or not.  
+- The block is important for closing resources like files and database connections.  
+- The block ensures proper cleanup and avoids resource leakage.  
+- The block may not execute in special cases such as System.exit().  
+
+
+---
+
+## Question 6: Explain flow layout manager with suitable constructors and demonstrate it by  using suitable java code.  
+
+**FlowLayout Manager**
+- A FlowLayout Manager is a layout manager in Java used to arrange components in a linear sequence, similar to text in a paragraph. 
+- It places components in a row and automatically wraps them to the next line when space is not sufficient.
+- The FlowLayout manager is used to arrange components in left-to-right flow.  
+- When the horizontal space is full, components are moved to the next line automatically.  
+- It is the default layout manager for Panel in Java AWT.  
+- It is simple and commonly used for basic GUI design.  
+
+
+***Constructors of FlowLayout***
+- `FlowLayout()` → Creates default FlowLayout with center alignment and default horizontal and vertical gaps.
+- `FlowLayout(int align)` → Creates FlowLayout with specified alignment (LEFT, CENTER, RIGHT).  
+- `FlowLayout(int align, int hgap, int vgap)` → Creates FlowLayout with alignment and custom horizontal and vertical gaps.
+
+***Common alignment constants:***
+- `FlowLayout.LEFT` → Aligns components to the left.  
+- `FlowLayout.CENTER` → Aligns components to the center.  
+- `FlowLayout.RIGHT` → Aligns components to the right.  
+
+
+```java
+import java.awt.*;
+
+public class FlowLayoutDemo extends Frame {
+
+    public FlowLayoutDemo() {
+        setTitle("FlowLayout Example");
+        setSize(400, 300);
+
+        // Setting FlowLayout with LEFT alignment and gaps
+        setLayout(new FlowLayout(FlowLayout.LEFT, 20, 20));
+
+        // Adding components
+        add(new Button("Button 1"));
+        add(new Button("Button 2"));
+        add(new Button("Button 3"));
+        add(new Button("Button 4"));
+        add(new Button("Button 5"));
+        add(new Button("Button 6"));
+
+        setVisible(true);
+
+        // Close window
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent e) {
+                dispose();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        new FlowLayoutDemo();
+    }
+}
+```
+
+---
+
+
+## Question 7:  Write a program to create a form with employee id, name, salary fields and two  buttons add and cancel using appropriate components.
+
+```java
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class EmployeeForm extends JFrame implements ActionListener {
+
+    // Declare Fields and Labels
+    JLabel l1, l2, l3;
+    JTextField t1, t2, t3;
+    JButton add, cancel;
+
+    public EmployeeForm() {
+
+        // Set the title of the frame
+        setTitle("Employee Form");
+
+        // Set the size of the frame
+        setSize(400, 300);
+
+        // Set the default close operation
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Set layout of the frame
+        setLayout(new GridLayout(4, 2, 10, 10));
+
+        // Labels and TextFields
+        l1 = new JLabel("Employee ID:");
+        l2 = new JLabel("Name:");
+        l3 = new JLabel("Salary:");
+
+        t1 = new JTextField();
+        t2 = new JTextField();
+        t3 = new JTextField();
+
+        // Buttons
+        add = new JButton("Add");
+        cancel = new JButton("Cancel");
+
+        // Adding components to the frame
+        add(l1);
+        add(t1);
+        add(l2);
+        add(t2);
+        add(l3);
+        add(t3);
+        add(add);
+        add(cancel);
+
+        // Event handling
+        add.addActionListener(this);
+        cancel.addActionListener(this);
+
+        // Add visibility
+        setVisible(true);
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == add) {
+            System.out.println("Employee Added:");
+            System.out.println("ID: " + t1.getText());
+            System.out.println("Name: " + t2.getText());
+            System.out.println("Salary: " + t3.getText());
+        }
+
+        if (e.getSource() == cancel) {
+            t1.setText("");
+            t2.setText("");
+            t3.setText("");
+        }
+    }
+    public static void main(String[] args) {
+        new EmployeeForm();
+    }
+}
+```
+
+---
+
+## Question 8: What is an adapter class? Explain advantages of adapter classes over listener interfaces with suitable examples.  
+
+**Adapter Class**
+- An adapter class in Java is a class that provides default implementations for all methods of an interface. 
+- It allows you to create a listener by extending the adapter class and overriding only the methods you need, rather than implementing all methods of the interface.
+- It is mainly used in event handling in Java AWT and Swing to simplify the process of creating event listeners.
+- Example: MouseAdapter, KeyAdapter, WindowAdapter are some of the commonly used adapter classes in Java.
+
+
+**Advantages of Adapter Classes over Listener Interfaces:**
+- **Simplicity**: 
+  - Adapter classes provide default implementations for all methods, allowing you to override only the methods you need.
+  -  This simplifies the code and reduces boilerplate.
+  
+- **Less Code**: 
+    - When using listener interfaces, you must implement all methods, even if you only need one or two. 
+    - Adapter classes eliminate the need to implement unused methods.
+  
+- **Improved Readability**: 
+  - Using adapter classes can make the code more readable and maintainable, as it focuses on the relevant methods rather than cluttering the code with empty method implementations.
+  
+- **Flexibility**: 
+  - Adapter classes allow you to create custom listeners by extending the adapter class, giving you more flexibility in handling events.
+
+**Example using MouseListener (without adapter):**
+```java
+import java.awt.*;
+import java.awt.event.*;
+public class MouseListenerExample extends MouseListener {
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse Clicked at: " + e.getPoint());
+    }
+    public void mousePressed(MouseEvent e) {}
+    public void mouseReleased(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {}
+}
+```
+
+**Example using MouseAdapter:**
+```java
+import java.awt.*;
+import java.awt.event.*;
+public class MouseAdapterExample {
+    
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse Clicked at: " + e.getPoint());
+    }
+}
+```
+
+- In the above examples, using MouseAdapter allows us to only implement the `mouseClicked` method.
+- While using MouseListener requires us to implement all methods, even if they are not needed.
+---
