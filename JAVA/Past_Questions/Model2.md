@@ -67,7 +67,7 @@
    - The thread is removed from the system by the JVM.  
    - It represents the end of the thread lifecycle. 
   
-        ![Thread Life Cycle Diagram](images\threads.png)
+        ![Thread Life Cycle Diagram](images/threads.png)
 
 
 
