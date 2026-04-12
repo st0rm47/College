@@ -479,8 +479,8 @@
 <details>
 <summary>Advanced Java Programming</summary>
 
-- [Basics of Java Programming](./tree/main/JAVA/Basics/Unitone/)
-- [Database Connectivity using JDBC](./Java/JDBC/Unitfour/)
+- [Basics of Java Programming](https://github.com/st0rm47/College/tree/main/JAVA/Basics/Unitone)
+- [Database Connectivity using JDBC](https://github.com/st0rm47/College/tree/main/Java/JDBC/Unitfour)
 - [Practicals](https://github.com/st0rm47/Java-Practicals)
 
 ---
