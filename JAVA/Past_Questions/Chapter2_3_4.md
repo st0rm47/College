@@ -218,6 +218,7 @@ public class SimpleForm extends JFrame implements ActionListener {
         add(other);
 
         JButton submitButton = new JButton("Submit");
+        submitButton.setActionCommand("Submit");
         submitButton.addActionListener(this);
         add(submitButton);
 
