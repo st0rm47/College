@@ -693,6 +693,7 @@ public class LoginForm extends JFrame implements ActionListener, KeyListener {
         userIdField.addKeyListener(this);
         passwordField.addKeyListener(this);
 
+        setFocusable(true);
         setVisible(true);
     }
 
@@ -732,6 +733,7 @@ public class LoginForm extends JFrame implements ActionListener, KeyListener {
     private void clearFields() {
         userIdField.setText("");
         passwordField.setText("");
+        userIdField.requestFocus();
     }
 
     @Override
