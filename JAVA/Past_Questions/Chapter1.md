@@ -237,7 +237,9 @@ public class VowelWordCopy {
 
 # Model 2
 
-## Question 1: **Example Program to Read Employee Data and Write to File:**
+## Question 1: Why is multithreading important? Explain thread life cycle with proper state diagram. Write a program that reads data of employees from the keyboard and write it into the file emp.doc using proper exception handling with try…catch blocks.
+
+**Example Program to Read Employee Data and Write to File:**
 
 ```java
 import java.io.FileWriter;
@@ -280,11 +282,118 @@ public class EmployeeFileWrite {
 }
 ```
 
+## Question 4: What is the difference between final, finally, and finalize keywords in Java?
+
+In Java, the keywords `final`, `finally`, and `finalize` serve different purposes:
+
+**final Keyword**
+
+- The final keyword is used to restrict modification of variables, methods, and classes.
+- A final variable acts as a constant and cannot be reassigned after initialization.
+- A final method cannot be overridden by a subclass.
+- A final class cannot be inherited by other classes.
+
+
+```java
+class FinalExample {
+    final int x = 10;
+
+    void display() {
+        // x = 20; // Error: cannot change final variable
+        System.out.println("Value of x: " + x);
+    }
+}
+```
+
+
+**finally Block**   
+- The finally block is used in exception handling to execute important code after try and catch blocks
+- The finally block is always executed whether an exception occurs or not.
+- It is mainly used for closing resources like files or database connections.
+
+```java
+class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            int a = 10 / 0;
+        } catch (Exception e) {
+            System.out.println("Exception handled");
+        } finally {
+            System.out.println("Finally block executed");
+        }
+    }
+}
+```
+
+**finalize() Method**
+
+- The finalize() method is called by the garbage collector before destroying an object.
+- It is defined in the Object class and can be overridden by the programmer.
+- It is used to perform cleanup operations before memory is released.
+- Execution of finalize() is not guaranteed every time.
+
+```java
+class FinalizeExample {
+    protected void finalize() {
+        System.out.println("Finalize method called");
+    }
+
+    public static void main(String[] args) {
+        FinalizeExample obj = new FinalizeExample();
+        obj = null;
+        System.gc();
+    }
+}
+```
+
+In summary,
+- `final` is a keyword used to declare constants, prevent method overriding, and inheritance.
+- `finally` is a block used in exception handling to ensure that certain code is executed regardless of exceptions.
+- `finalize` is a method that is called by the garbage collector before an object is destroyed, used for cleanup operations.
+
+
+## Question 5: How is exception different from error? Differentiate throws and throw keywords. When is the block finally important?
+
+**Exception vs Error**
+
+| Aspect | Exception | Error |
+|--------|-----------|-------|
+| Definition | An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. | An error is a serious problem that a reasonable application should not try to catch. |
+| Nature | Exceptions are typically recoverable and can be handled by the application. | Errors are usually unrecoverable and indicate serious problems in the application or environment. |
+| Cause | Exceptions can be caused by user input, file handling issues, or other runtime conditions. | Errors are often caused by issues like memory leaks, stack overflow, or hardware failures. |
+| Handling | Exceptions can be caught and handled using try-catch blocks. | Errors are typically not handled by applications and are often fatal. |
+| Examples | IOException, NullPointerException, ArithmeticException | OutOfMemoryError, StackOverflowError |
+
+
+
+**throws vs throw**
+
+| Aspect | throw | throws |
+|--------|--------|-------|
+| Definition | The `throw` keyword is used to explicitly throw an exception from a method or block of code. |  The `throws` keyword is used in method signatures to declare that a method may throw one or more exceptions. |
+| Usage | Followed by an instance of an exception class. | Followed by a list of exception types that the method can throw. |
+| Followed by | Followed by an instance of an exception class. | Followed by a list of exception types that the method can throw. |
+| Number of exceptions | Can throw a single exception at a time. | Can declare multiple exceptions that a method may throw. |
+| Function | It is used to signal that an exception has occurred. | It is used to inform the caller of a method about potential exceptions that may be thrown. |
+| Example | `public void myMethod() { throw new IOException("File not found"); }` | `public void myMethod() throws IOException, SQLException { ... }` |
+
+
+**Importance of finally block**
+- The *finally* block is used to execute code after try and catch blocks.  
+- The block always executes whether an exception occurs or not.  
+- The block is important for closing resources like files and database connections.  
+- The block ensures proper cleanup and avoids resource leakage.  
+- The block may not execute in special cases such as System.exit().  
+
+
+
 ---
 
 # 2080
 
-## Question 1: **Function to check if an array is a centered array:**
+## Question 1: Why do we need to synchronize the thread? Justify with an example. An array with an odd number of elements is said to be centered if all elements (except the middle one) are strictly greater than the value of the middle element. Note that only arrays with an odd number of elements have a middle element. Write a function that accepts an integer array and returns 1 if it is a centered array, otherwise it returns 0.
+
+**Function to check if an array is a centered array:**
 
 ```java
 import java.util.Scanner;
@@ -405,6 +514,9 @@ public class Magic {
 
 # Model 1 
 
+## Question 1: What are the uses of final modifier? Explain each use of the modifier with suitable example.
+
+
 ## Question 4: Write a java program that writes objects of Employee class in the file named emp.doc. Create Employee class as of your interest.
 
 ```java
@@ -451,12 +563,56 @@ public class EmployeeFile {
 }
 ```
 
+## Question 12: When thread synchronization is necessary? Explain with suitable example.
+
 
 ---
 
 # 2079
 
-## Question 1:Create a class Distance with private variables feet of type integer and inches of type floating point. Use suitable constructor, and methods for adding and comparing two distance objects. [Hint: 1 feet = 12 inches]
+## Question 1: Explain feature of object-oriented programming.  Create a class Distance with private variables feet of type integer and inches of type floating point. Use suitable constructor, and methods for adding and comparing two distance objects. [Hint: 1 feet = 12 inches]
+
+**Object-Oriented Programming (OOP) Features:**
+The features of OOP are given below:
+
+1. **Classes and Object:**
+- A class is a blueprint.
+- An object is a real item made from that blueprint.
+- Memory is created when object is made, not when class is written.
+- Example: `Vehicle` is a class, and `Car`, `Bike`, `Bus` are objects.
+
+2. **Abstraction:**
+- Abstraction means showing only important details.
+- Internal working is hidden from the user.
+- Example: We use a switch to turn light on/off, but we do not know its internal circuit.
+
+3. **Inheritance:**
+- Inheritance means one class can use properties and methods of another class.
+- Parent class gives features to child class.
+- It helps in code reuse and reduces repeated code.
+- Example: `Shape` is parent class; `Circle` and `Rectangle` are child classes.
+
+4. **Polymorphism:**
+- Polymorphism means "one name, many forms".
+- Same method name can do different tasks.
+- Types: compile-time polymorphism and run-time polymorphism.
+
+5. **Method Overloading:**
+- Same method name, but different parameter list.
+- Decided at compile time.
+- Example: `add(int, int)` and `add(float, float)`.
+
+6. **Method Overriding:**
+- Child class gives its own version of parent class method.
+- Same method signature is used.
+- Decided at run time.
+
+7. **Encapsulation:**
+- Encapsulation means wrapping data and methods in one class.
+- Data is kept safe using `private` variables.
+- Access is given through public methods like getters/setters.
+
+
 
 ```java
 
@@ -522,7 +678,16 @@ class Distance{
     }
 }
 ```
+
+##  Question 4: What is multithreading? How can you create multithreaded program in Java? Explain.
 ---
+
+# 2078
+
+## Question 4: What is package? How can you create your own package in Java? Explain with example.
+
+---
+
 
 # 2077
 
@@ -634,6 +799,9 @@ public class AllPossibilities {
 
 ```
 
+## Question 7: When does the finally block is mandatory in while handling exception? Describe with a suitable scenario.
+
+
 ## Question 9: What is the task of manifest file? Write the procedure to create it.
 
 **Manifest File**
@@ -679,4 +847,54 @@ public class AllPossibilities {
     ```
 This will execute the `main()` method in `MainClass` and print "Hello, World!" to the console.
 
----
+## Question 10: Why multiple inheritance is not allowed in Java using classes? Give an example.
+
+- Multiple inheritance is not allowed in Java using classes because it can lead to ambiguity and complexity. 
+- When a class inherits from two or more classes that have methods with the same signature, the compiler cannot determine which method to call, resulting in a "diamond problem". 
+- This can cause confusion and errors in the code.
+- To avoid this issue, Java does not allow multiple inheritance with classes. 
+- Instead, Java provides interfaces to achieve multiple inheritance without ambiguity.
+
+```java
+class A {
+    void display() {
+        System.out.println("Class A");
+    }
+}
+class B {
+    void display() {
+        System.out.println("Class B");
+    }
+}
+class C extends A, B { // This will cause a compile-time error due to multiple inheritance
+    public static void main(String[] args) {
+        C c = new C();
+        c.display(); // Which display method should be called? A's or B's?  
+        }
+}
+```
+
+In the above example, class C is trying to inherit from both class A and class B, which have a method named `display()`. This creates ambiguity for the compiler, as it cannot determine which `display()` method to call when an object of class C invokes it. This is why multiple inheritance using classes is not allowed in Java.
+
+Example using interfaces to achieve multiple inheritance:
+
+```java
+interface A {
+    void display();
+}
+interface B {
+    void display();
+}
+class C implements A, B {
+    public void display() {
+        System.out.println("Class C implementing both A and B");
+    }
+    public static void main(String[] args) {
+        C c = new C();
+        c.display(); // This will call the display method in class C
+    }
+}
+```
+In this example, class C implements both interfaces A and B, which allows it to provide its own implementation of the `display()` method without any ambiguity. This is how Java achieves multiple inheritance using interfaces while avoiding the issues associated with multiple inheritance using classes.
+
+## Question 12: Why synchronization in essential in multithreading? Describe.
