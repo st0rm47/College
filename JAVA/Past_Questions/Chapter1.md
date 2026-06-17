@@ -185,6 +185,7 @@ public class A {
 ```
 - In this version, the `while` loop is replaced with a `for` loop that initializes `i` to 0, checks if `i` is less than or equal to 100, and increments `i` by 2 in each iteration. The output will be the same as the original program, printing even numbers from 0 to 100.
 
+
 ## Question 8: Assume that a text file named “ONE.TXT” contains a paragraph of text. Write a program to copy the word that starts with vowel from “ONE.TXT” to another file “TWO.TXT”.
 
 ```java
