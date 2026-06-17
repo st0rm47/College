@@ -120,9 +120,11 @@ public class UDPClient2{
 
 ## Question 10: Write the steps for writing client and server programs using TCP with a suitable example.
 
+---
 
 # 2081
-## Write a socket program for a file server that makes a collection of files available for transmission to clients. When a client connects to the server, the server first reads a one-line command from the client. The command string can be of the form “GET <filename>”, where <filename> is a file name. The server checks whether the requested file actually exists. If so, it first sends the word “OK” as a message to the client. Then it sends the contents of the file and closes the connection. Otherwise, it sends “ERROR” to the client as message and closes the connection. Assume that there is no sub directories.
+
+## Question 1: Write a socket program for a file server that makes a collection of files available for transmission to clients. When a client connects to the server, the server first reads a one-line command from the client. The command string can be of the form “GET <filename>”, where <filename> is a file name. The server checks whether the requested file actually exists. If so, it first sends the word “OK” as a message to the client. Then it sends the contents of the file and closes the connection. Otherwise, it sends “ERROR” to the client as message and closes the connection. Assume that there is no sub directories.
 
 **Client Program:**
 ```java
@@ -263,6 +265,10 @@ public class FileServer {
 
 ---
 # 2080
+
+
+## Question 8: Discuss Java Mail API.
+
 
 ## Question 10: Write a TCP client-server system in which the client program sends two integers to a server program, which returns the greatest among them.
 
@@ -433,4 +439,18 @@ public class TCPServer {
     }
 }
 ```
+
+---
+
+# 2079
+
+## Question 8: Write Java program that send messages with each other using TCP socket.
+
+---
+
+# 2078
+
+## Question 8: What is Java Mail API ? How can you use this API to send email messages?
+
+---
 
