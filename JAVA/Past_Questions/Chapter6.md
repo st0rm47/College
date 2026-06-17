@@ -51,7 +51,7 @@ public class ColorChoiceBoxApp extends Application {
 
 # Model 2
 
-## Question 11:  Write a JavaFX program to create a form to read two numbers and display their sum on button click.
+## Question 11:  What is JavaFX? How it is different from swing.  Write a JavaFX program to create a form to read two numbers and display their sum on button click.
 **Example JavaFX program**
 ```java
 import javafx.application.Application;
@@ -102,6 +102,38 @@ public class SumCalculator extends Application {
     }
 }
 ```
+
+---
+
+# 2081
+
+## Question 4: How does JavaFX hyperlink control format text that functions as button? Illustrate with an example.
+
+---
+
+# 2080
+
+## Question 5: Write a JavaFX application with components, buttons, text fields, and labels, arranged in a VBox or HBox layout.
+
+---
+
+# Model 1
+
+## Question 9: How JavaFx differs from Swing? Explain steps of creating GUI using javaFx.
+
+---
+
+# 2079
+
+## Question 9:  What is JavaFX? Compare it with swing. Explain FlowPane layout of JavaFX.
+
+
+---
+
+# 2078
+
+## Question 9: Compare JavaFX with swing. Explain HBox and VBox layouts of JavaFX.
+
 
 ---
 
